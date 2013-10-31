@@ -21,10 +21,16 @@
 <body <?php body_class(); ?>>
 
 	<header role="banner">
-		<h1><a href="<?php echo home_url(); ?>/" rel="home"><?php bloginfo('name');?></a></h1>
+		<div class="logo">
+			<a href="<?php echo home_url(); ?>/" rel="home">
+				<h1><?php bloginfo('name');?></h1>
+				<h2><?php bloginfo('description');?></h2>
+			</a>
+		</div>
 
-		<nav role="navigation">
-			<?php wp_nav_menu(array('theme_location' => 'primary')); ?>
+		<div class="toggle-menu">menú</div>
+		<nav id="main-nav" role="navigation">
+			<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
 		</nav>
 	</header>
 

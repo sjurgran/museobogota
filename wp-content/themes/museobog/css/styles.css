@@ -1,22 +1,93 @@
 /* ==========================================================================
+   Fonts
+   NEXA: 900 Black - 800 Heavy - 700 XBold - 600 Bold - 400 Regular - 300 Book - 200 Light - 100 Thin
+   ========================================================================== */
+
+@font-face {
+    font-family: 'Nexa'; /* Nexa Regular */
+    src: url('../fonts/2875F4_D_0.eot');
+    src: url('../fonts/2875F4_D_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_D_0.woff') format('woff'),
+         url('../fonts/2875F4_D_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nexa'; /* Nexa Book */
+    src: url('../fonts/2875F4_4_0.eot');
+    src: url('../fonts/2875F4_4_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_4_0.woff') format('woff'),
+         url('../fonts/2875F4_4_0.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nexa'; /* Nexa XBold */
+    src: url('../fonts/2875F4_E_0.eot');
+    src: url('../fonts/2875F4_E_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_E_0.woff') format('woff'),
+         url('../fonts/2875F4_E_0.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+/* ==========================================================================
    Base
    ========================================================================== */
 
-body {}
-a {}
+body {
+    font-family: 'Nexa';
+    font-weight: 300;
+    padding: 0 20px;
+}
+a {
+    color: #000;
+}
 
 /* =============================================================================
-   Header
+   Layout - Header
    ========================================================================== */
 
 
 /* ==========================================================================
-   Content
+   Layout - Content
    ========================================================================== */
 
 
 /* ==========================================================================
-   Footer
+   Layout - Footer
+   ========================================================================== */
+
+
+/* ==========================================================================
+   Modules
+   ========================================================================== */
+
+.logo {
+    display: inline-block;
+    margin: 0 0 20px;
+    text-align: left;
+}
+.logo a {
+    text-decoration: none;
+}
+.logo h1 {
+    font-size: 1.87em;
+    font-weight: 700;
+    letter-spacing: -0.05em;
+    line-height: 1em;
+    margin: 0;
+    text-transform: lowercase;
+}
+.logo h2 {
+    font-size: 0.69em;
+    font-weight: 300;
+    line-height: 1em;
+    margin: 0;
+}
+
+/* ==========================================================================
+   States
    ========================================================================== */
 
 
