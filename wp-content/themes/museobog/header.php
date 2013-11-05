@@ -28,10 +28,13 @@
 			</a>
 		</div>
 
-		<div class="toggle-menu">menú</div>
+		<div class="toggle-menu icon-menu replace-icon">menú</div>
 		<nav id="main-nav" role="navigation">
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
 		</nav>
+
+		<div class="toggle-search icon-search replace-icon">buscar</div>
+		<?php get_search_form(); ?>
 	</header>
 
 	<!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
