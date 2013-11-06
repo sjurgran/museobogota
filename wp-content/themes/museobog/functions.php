@@ -18,7 +18,10 @@ function minimal_theme_setup() {
 	add_theme_support('automatic-feed-links');
 
 	// Custom menu support.
-	register_nav_menu('primary', 'Primary Menu');
+	register_nav_menus( array(
+		'primary' => 'Primary Menu',
+		'social' => 'Social Networks'
+	) );
 
 	// Most themes need featured images.
 	add_theme_support('post-thumbnails' );

@@ -24,10 +24,16 @@
 <body <?php body_class(); ?>>
 
 	<header role="banner" id="header">
+		<nav id="language-nav">
+			<ul class="menu manu-language">
+				<?php pll_the_languages(array('hide_if_empty' => 0)); ?>
+			</ul>
+		</nav>
+
 		<div class="logo">
 			<a href="<?php echo home_url(); ?>/" rel="home">
-				<h1><?php bloginfo('name');?></h1>
-				<h2><?php bloginfo('description');?></h2>
+				<h1><?php bloginfo('name'); ?></h1>
+				<h2><?php bloginfo('description'); ?></h2>
 			</a>
 		</div>
 
@@ -38,6 +44,10 @@
 
 		<div class="toggle-search icon-search replace-icon is-open">buscar</div>
 		<?php get_search_form(); ?>
+
+		<nav id="social-nav">
+			<?php wp_nav_menu(array('theme_location' => 'social', 'container' => false)); ?>
+		</nav>
 	</header>
 
 	<!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
