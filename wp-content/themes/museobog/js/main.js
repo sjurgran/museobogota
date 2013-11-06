@@ -12,4 +12,7 @@
 
 	$('.toggle-menu').on('click', toggleMainMenu);
 	$('.toggle-search').on('click', toggleSearchForm);
+
+	//oculto la busqueda al comienzo
+	$('.toggle-search').trigger('click');
 })(jQuery);
