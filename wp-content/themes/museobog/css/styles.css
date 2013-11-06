@@ -30,6 +30,15 @@
     font-weight: bold;
     font-style: normal;
 }
+@font-face {
+    font-family: 'Nexa'; /* Nexa Black */
+    src: url('../fonts/2875F4_A_0.eot');
+    src: url('../fonts/2875F4_A_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_A_0.woff') format('woff'),
+         url('../fonts/2875F4_A_0.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
 
 @font-face {
     font-family: 'icomoon';
@@ -57,6 +66,9 @@ body {
 a {
     color: #000;
 }
+a:active {
+    color: #b3b3b3;
+}
 
 /* =============================================================================
    Layout - Header
@@ -67,11 +79,34 @@ a {
 }
 
 #main-nav {
+    background: #000;
     height: 100%;
     left: -17em;
     position: absolute;
     top: 0;
     width: 17em;
+}
+#main-nav .menu {
+    text-align: left;
+    padding: 20px;
+}
+#main-nav .menu-item {
+    border-bottom: 2px solid #fff;
+    list-style: none;
+    padding: 1em 0;
+}
+#main-nav a {
+    color: #fff;
+    font-size: 1.56em;
+    font-weight: 900;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+#main-nav a:active {
+    color: #b3b3b3;
+}
+#main-nav a:after {
+    content: " >";
 }
 
 .toggle-menu {
