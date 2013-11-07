@@ -25,7 +25,7 @@
 
 	<header role="banner" id="header">
 		<nav id="language-nav">
-			<ul class="menu manu-language">
+			<ul class="menu menu-language">
 				<?php pll_the_languages(array('hide_if_empty' => 0)); ?>
 			</ul>
 		</nav>

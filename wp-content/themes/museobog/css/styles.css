@@ -92,7 +92,7 @@ a:active {
 }
 #main-nav .menu-item {
     border-bottom: 2px solid #fff;
-    list-style: none;
+    display: list-item;
     padding: 1em 0;
 }
 #main-nav a {
@@ -120,6 +120,12 @@ a:active {
     margin: 0.5em 0;
 }
 
+#social-nav {
+    position: absolute;
+    right: 20px;
+    top: 0;
+}
+
 /* ==========================================================================
    Layout - Content
    ========================================================================== */
@@ -134,7 +140,8 @@ a:active {
    Modules
    ========================================================================== */
 
-[class*="icon-"] {
+[class*="icon-"],
+#social-nav a {
     font: 1em/1 'icomoon';
     speak: none;
     text-transform: none;
@@ -144,12 +151,15 @@ a:active {
     -moz-osx-font-smoothing: grayscale;
 }
 
-.replace-icon {
+.replace-icon,
+#social-nav a {
     height: 1em;
     overflow: hidden;
-    width: 1.25em;
+    text-decoration: none;
+    width: 1.1em;
 }
-.replace-icon:before {
+.replace-icon:before,
+#social-nav a:before {
     display: block;
 }
 
@@ -161,6 +171,15 @@ a:active {
 }
 .icon-plus:before {
     content: "+";
+}
+#social-nav a[title="facebook"]:before {
+    content: "\e602";
+}
+#social-nav a[title="twitter"]:before {
+    content: "\e603";
+}
+#social-nav a[title="flickr"]:before {
+    content: "\e604";
 }
 
 .logo {
@@ -206,6 +225,36 @@ a:active {
     float: right;
     padding: 2px 0;
     vertical-align: middle;
+}
+
+/* http://csswizardry.com/2011/09/the-nav-abstraction/ */
+.menu {
+    list-style:none;
+    padding-left:0;
+}
+.menu li,
+.menu a {
+    display:inline-block;
+}
+
+.menu-language {
+    border-bottom: 2px solid #000;
+    margin: 0 0 1em;
+    padding: 1em 0;
+}
+.lang-item {
+    border-left: 1px solid #000;
+    font-size: 0.75em;
+    line-height: 1em;
+    padding: 0 0.5em;
+}
+.lang-item:first-child {
+    border-left: none;
+}
+.lang-item a {
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 /* ==========================================================================
