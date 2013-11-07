@@ -87,4 +87,78 @@ class Minimal_Wrapping {
 }
 add_filter('template_include', array('Minimal_Wrapping', 'wrap'), 99);
 
+/**
+ * Custom post types
+ */
+function museo_custom_post_types() {
+	$args = array(
+		'public' => true,
+		'label'  => 'Slider',
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+		'taxonomies' => array('post_tag')
+	);
+	register_post_type( 'slider', $args );
+
+	$args = array(
+		'public' => true,
+		'label'  => __('Events', 'museobog'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+		'taxonomies' => array('post_tag')
+	);
+	register_post_type( 'agenda', $args );
+}
+add_action('init', 'museo_custom_post_types');
+
+/**
+ * Custom fields
+ */
+function museo_custom_fields( $groups ) {
+	$my_group = array(
+		'agenda' => array(
+			array(
+				'id'     => 'dates',
+				'title'  => __('Dates', 'museobog'),
+				'fields' => array(
+					array(
+						'id'      => 'start_date',
+						'title'   => __('Start Date', 'museobog'),
+						'type'    => 'date',
+						'default' => date('Y-m-d'),
+						'desc'    => 'Format: <code>'.date('Y-m-d').'</code>'
+					),
+					array(
+						'id'      => 'end_date',
+						'title'   => __('End Date', 'museobog'),
+						'type'    => 'date',
+						'default' => date('Y-m-d'),
+						'desc'    => 'Format: <code>'.date('Y-m-d').'</code>'
+					)
+				)
+			)
+		),
+		'slider' => array(
+			array(
+				'id'     => 'info',
+				'title'  => __('Info', 'museobog'),
+				'fields' => array(
+					array(
+						'id'      => 'link',
+						'title'   => __('Link', 'museobog'),
+						'type'    => 'select',
+						'options' => array('kcSettings_options_cb', 'posts'),
+						'args'    => array(
+							'post_type' => 'agenda',
+							'args' => array('posts_per_page' => -1)
+						)
+					)
+				)
+			)
+		)
+	);
+
+	$groups[] = $my_group;
+	return $groups;
+}
+add_filter( 'kc_post_settings', 'museo_custom_fields' );
+
 ?>
