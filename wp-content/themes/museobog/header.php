@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html  <?php language_attributes(); ?>>
+<html <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 
@@ -37,12 +37,12 @@
 			</a>
 		</div>
 
-		<div class="toggle-menu icon-menu replace-icon">menú</div>
+		<div class="toggle-menu icon-menu replace-icon"><?php _e('Menu'); ?></div>
 		<nav id="main-nav" role="navigation">
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
 		</nav>
 
-		<div class="toggle-search icon-search replace-icon is-open">buscar</div>
+		<div class="toggle-search icon-search replace-icon is-open"><?php _e('Search'); ?></div>
 		<?php get_search_form(); ?>
 
 		<nav id="social-nav">
@@ -52,4 +52,3 @@
 
 	<!-- If you want to use an element as a wrapper, i.e. for styling only, then <div> is still the element to use -->
 	<div class="wrap">
-		<main role="main">
