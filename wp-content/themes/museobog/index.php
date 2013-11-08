@@ -11,15 +11,17 @@
 	?>
 
 		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<div>
+			<div class="slider-picture">
 				<?php the_post_thumbnail('full'); ?>
-				<h2><?php the_title(); ?></h2>
-				<h3><?php echo $the_tag->name; ?></h3>
+				<div class="slider-overlay">
+					<h2 class="slider-title"><?php the_title(); ?></h2>
+					<h3 class="slider-subtitle"><?php echo $the_tag->name; ?></h3>
+				</div>
 			</div>
-			<div>
+			<div class="slider-info">
 				<?php the_excerpt(); ?>
 			</div>
-			<div>
+			<div class="slider-text">
 				<?php the_content(); ?>
 			</div>
 		</article>

@@ -59,7 +59,6 @@ body {
     font-family: 'Nexa';
     font-weight: 300;
     left: 0;
-    padding: 0 20px;
     position: relative;
     transition: left 0.6s;
 }
@@ -69,12 +68,18 @@ a {
 a:active {
     color: #b3b3b3;
 }
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
 
 /* =============================================================================
    Layout - Header
    ========================================================================== */
 
 #header {
+    padding: 0 20px;
     text-align: center;
 }
 
@@ -255,6 +260,37 @@ a:active {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+.slider-picture {
+    position: relative;
+}
+.slider-overlay {
+    bottom: 5px;
+    left: 20px;
+    position: absolute;
+}
+.slider-title {
+    color: #fff;
+    font-size: 1.8em;
+    font-weight: 900;
+    line-height: 1;
+    margin: 0;
+    text-transform: uppercase;
+}
+.slider-subtitle {
+    color: #fff;
+    font-size: 1em;
+    font-weight: 300;
+    margin: 0;
+    text-transform: uppercase;
+}
+.slider-info {
+    display: inline-block;
+    margin: 0 20px;
+}
+.slider-text {
+    display: none;
 }
 
 /* ==========================================================================
