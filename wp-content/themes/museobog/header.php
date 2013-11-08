@@ -17,7 +17,8 @@
 	<!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js" media="all"></script><![endif]-->
 
 	<?php
-	wp_enqueue_script( 'main', get_bloginfo('template_directory').'/js/main.js', array('jquery'), null, true);
+	wp_enqueue_script('flexslider', get_bloginfo('template_directory').'/js/jquery.flexslider-min.js', array('jquery'), '2.2.0', true);
+	wp_enqueue_script('main', get_bloginfo('template_directory').'/js/main.js', array('jquery'), null, true);
 	wp_head();
 	?>
 </head>

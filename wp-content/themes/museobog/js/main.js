@@ -15,4 +15,8 @@
 
 	//oculto la busqueda al comienzo
 	$('.toggle-search').trigger('click');
+
+	if ($('.flexslider').length > 0) {
+		$('.flexslider').flexslider({animation: 'slide'});
+	}
 })(jQuery);

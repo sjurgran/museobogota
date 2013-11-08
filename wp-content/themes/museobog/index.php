@@ -1,4 +1,5 @@
-<section class="slider">
+<div class="flexslider">
+	<ul class="slides">
 	<?php
 	$slider_query = new WP_Query(array(
 		'post_type' => 'slider'
@@ -7,10 +8,12 @@
 	while ( $slider_query->have_posts() ) : $slider_query->the_post();
 
 		$posttags = get_the_tags();
-		$the_tag = reset($posttags);
+		if ($posttags) {
+			$the_tag = reset($posttags);
+		}
 	?>
 
-		<article <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+		<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 			<div class="slider-picture">
 				<?php the_post_thumbnail('full'); ?>
 				<div class="slider-overlay">
@@ -24,7 +27,7 @@
 			<div class="slider-text">
 				<?php the_content(); ?>
 			</div>
-		</article>
+		</li>
 
 	<?php
 	endwhile;
@@ -32,6 +35,7 @@
 	/* Restore original Post Data */
 	wp_reset_postdata();
 	?>
-</section>
+	</ul>
+</div>
 
 <main role="main">
