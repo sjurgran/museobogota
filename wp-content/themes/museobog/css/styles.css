@@ -73,6 +73,11 @@ img {
     max-width: 100%;
     vertical-align: middle;
 }
+h1 {
+    font-size: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+}
 
 /* =============================================================================
    Layout - Header
@@ -135,6 +140,13 @@ img {
    Layout - Content
    ========================================================================== */
 
+#main {
+    padding: 0 20px;
+}
+.main-block {
+    padding: 0 0 1em;
+    border-top: 2px solid #000;
+}
 
 /* ==========================================================================
    Layout - Footer
@@ -335,8 +347,8 @@ html[xmlns] .slides {display: block;}
 .slider-more {
     text-align: center;
 }
-.flex-control-nav,
-.flex-direction-nav {
+#main-slider .flex-control-nav,
+#main-slider .flex-direction-nav {
     display: none;
 }
 
@@ -355,6 +367,13 @@ html[xmlns] .slides {display: block;}
 .button:active {
     background: #b3b3b3;
     color: #fff;
+}
+
+#events-carousel {
+    padding: 0 50px;
+}
+#events-carousel li.agenda {
+    margin-right: 20px;
 }
 
 

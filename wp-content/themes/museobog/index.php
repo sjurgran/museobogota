@@ -1,8 +1,9 @@
-<div class="flexslider">
+<div id="main-slider" class="flexslider">
 	<ul class="slides">
 	<?php
 	$slider_query = new WP_Query(array(
-		'post_type' => 'slider'
+		'post_type' => 'slider',
+		'posts_per_page' => 4
 	));
 
 	while ( $slider_query->have_posts() ) : $slider_query->the_post();
@@ -43,4 +44,33 @@
 	</ul>
 </div>
 
-<main role="main">
+<main role="main" id="main">
+	<section class="main-block">
+		<h1 class="block-title">Calendario de eventos</h1>
+
+		<div id="events-carousel" class="flexslider">
+			<ul class="slides">
+			<?php
+			$carousel_query = new WP_Query(array(
+				'post_type' => 'agenda',
+				'posts_per_page' => 12
+			));
+
+			while ( $carousel_query->have_posts() ) : $carousel_query->the_post();
+			?>
+
+				<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+					<a href="<?php the_permalink(); ?>">
+						<?php the_post_thumbnail(); ?>
+					</a>
+				</li>
+
+			<?php
+			endwhile;
+
+			/* Restore original Post Data */
+			wp_reset_postdata();
+			?>
+			</ul>
+		</div>
+	</section>
