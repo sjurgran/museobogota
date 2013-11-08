@@ -348,6 +348,15 @@ html[xmlns] .slides {display: block;}
     text-decoration: none;
     text-transform: uppercase;
 }
+.button:hover {
+    background: #fff;
+    color: #000;
+}
+.button:active {
+    background: #b3b3b3;
+    color: #fff;
+}
+
 
 /* ==========================================================================
    States
