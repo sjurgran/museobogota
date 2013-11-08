@@ -11,22 +11,27 @@
 		if ($posttags) {
 			$the_tag = reset($posttags);
 		}
+
+		$event_id = get_post_meta( $post->ID, "_link", true );
+		$event_url = get_permalink( $event_id );
 	?>
 
 		<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-			<div class="slider-picture">
+			<a class="slider-picture" href="<?php echo $event_url; ?>">
 				<?php the_post_thumbnail('full'); ?>
 				<div class="slider-overlay">
 					<h2 class="slider-title"><?php the_title(); ?></h2>
-					<h3 class="slider-subtitle"><?php echo $the_tag->name; ?></h3>
+					<h3 class="slider-subtitle icon-plus"><?php echo $the_tag->name; ?></h3>
 				</div>
-			</div>
+			</a>
 			<div class="slider-info">
 				<?php the_excerpt(); ?>
 			</div>
 			<div class="slider-text">
 				<?php the_content(); ?>
 			</div>
+
+			<p class="slider-more"><a class="button" href="<?php echo $event_url; ?>">más información</a></p>
 		</li>
 
 	<?php

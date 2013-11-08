@@ -145,8 +145,9 @@ img {
    Modules
    ========================================================================== */
 
-[class*="icon-"],
-#social-nav a {
+[class*="icon-"]:before,
+[class*="icon-"]:after,
+#social-nav a:before {
     font: 1em/1 'icomoon';
     speak: none;
     text-transform: none;
@@ -174,7 +175,7 @@ img {
 .icon-menu:before {
     content: "\e601";
 }
-.icon-plus:before {
+.icon-plus:after {
     content: "+";
 }
 #social-nav a[title="facebook"]:before {
@@ -297,6 +298,7 @@ html[xmlns] .slides {display: block;}
 * html .slides {height: 1%;}
 
 .slider-picture {
+    display: block;
     position: relative;
 }
 .slider-overlay {
@@ -319,6 +321,10 @@ html[xmlns] .slides {display: block;}
     margin: 0;
     text-transform: uppercase;
 }
+.slider-subtitle:after {
+    margin-left: 0.5em;
+    font-size: 0.88em;
+}
 .slider-info {
     display: inline-block;
     margin: 0 20px;
@@ -326,9 +332,21 @@ html[xmlns] .slides {display: block;}
 .slider-text {
     display: none;
 }
+.slider-more {
+    text-align: center;
+}
 .flex-control-nav,
 .flex-direction-nav {
     display: none;
+}
+
+.button {
+    background: #000;
+    color: #fff;
+    font-weight: 600;
+    padding: 8px 12px 4px;
+    text-decoration: none;
+    text-transform: uppercase;
 }
 
 /* ==========================================================================
