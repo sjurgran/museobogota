@@ -78,6 +78,12 @@ h1 {
     font-weight: 900;
     text-transform: uppercase;
 }
+h5 {
+    font-size: 0.88em;
+    font-weight: bold;
+    margin: 0;
+    text-transform: uppercase;
+}
 
 /* =============================================================================
    Layout - Header
@@ -375,6 +381,36 @@ html[xmlns] .slides {display: block;}
 }
 #events-carousel li.agenda {
     margin-right: 20px;
+    position: relative;
+}
+.big-time {
+    color: #fff;
+    font-size: 1.38em;
+    font-weight: bold;
+    padding: 8px 2px;
+    position: absolute;
+    text-transform: uppercase;
+    z-index: 2;
+}
+.carousel-item-info {
+    -moz-box-sizing: border-box;
+    background: rgba(0, 0, 0, 0.8);
+    color: #fff;
+    display: none;
+    height: 100%;
+    left: 0;
+    padding: 2.5em 2px 4px;
+    position: absolute;
+    top: 0;
+    width: 100%;
+}
+li.agenda:hover .carousel-item-info {
+    display: block;
+}
+.carousel-item-info time {
+    bottom: 4px;
+    left: 2px;
+    position: absolute;
 }
 
 .flex-prev,

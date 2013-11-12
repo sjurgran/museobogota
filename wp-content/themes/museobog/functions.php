@@ -162,4 +162,28 @@ function museo_custom_fields( $groups ) {
 }
 add_filter( 'kc_post_settings', 'museo_custom_fields' );
 
+/**
+ * Format dates for carousel
+ */
+function format_event_date($date) {
+	if ( ! $date ) {
+		return date('Y');
+	}
+
+	$months = array('ene', 'feb', 'mar', 'abr', 'may', 'jun', 'jul', 'ago', 'sep', 'oct', 'nov', 'dic');
+
+	$date_array = explode('-', $date);
+	if ( ! isset($date_array[1]) ) {
+		return $date_array[0];
+	}
+
+	$month = $months[ $date_array[1]-1 ];
+
+	if ( ! isset($date_array[2]) ) {
+		return $month.' '.$date_array[0];
+	} else {
+		return $date_array[2].'/'.$month.'/'.$date_array[0];
+	}
+}
+
 ?>
