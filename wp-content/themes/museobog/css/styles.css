@@ -371,9 +371,35 @@ html[xmlns] .slides {display: block;}
 
 #events-carousel {
     padding: 0 50px;
+    position: relative;
 }
 #events-carousel li.agenda {
     margin-right: 20px;
+}
+
+.flex-prev,
+.flex-next {
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+    font-size: 2.5em;
+    font-weight: bold;
+    line-height: 32px;
+    margin-top: -16px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    top: 50%;
+    width: 32px;
+}
+.flex-prev {
+    left: 0;
+}
+.flex-next {
+    right: 0;
+}
+.flex-disabled {
+    display: none;
 }
 
 
