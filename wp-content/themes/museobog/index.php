@@ -14,3 +14,10 @@
 			</ul>
 		</div>
 	</section>
+
+	<section class="main-block">
+		<h1 class="block-title">Obra destacada del mes</h1>
+
+			<?php get_template_part( 'loop', 'featured' ); ?>
+		</div>
+	</section>
