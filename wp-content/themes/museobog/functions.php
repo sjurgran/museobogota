@@ -107,6 +107,14 @@ function museo_custom_post_types() {
 		'taxonomies' => array('post_tag')
 	);
 	register_post_type( 'agenda', $args );
+
+	$args = array(
+		'public' => true,
+		'label'  => __('Featured Works', 'museobog'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+		'taxonomies' => array('post_tag')
+	);
+	register_post_type( 'work', $args );
 }
 add_action('init', 'museo_custom_post_types');
 
