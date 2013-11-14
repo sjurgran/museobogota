@@ -2,7 +2,42 @@
 	</div>
 
 	<footer role="contentinfo">
-		<small>&copy; <?php bloginfo('name'); ?></small>
+		<div class="footer-block">
+			<img />
+			<h2>INSTITUTO DISTRITAL DE PATRIMONIO CULTURAL</h2>
+			<p>
+				Sector de Cutura, Recreación y Deporte<br />
+				Escenario Público de la Bogotá Humana
+			</p>
+		</div>
+
+		<?php dynamic_sidebar( 'footer' ); ?>
+
+		<div class="footer-block">
+			<p>
+				<a href="http://www.bogota.gov.co/portel/libreria/php/01.270403.html">Políticas de privacidad y términos de uso</a><br />
+				<a>Mapa del sitio</a>
+			</p>
+			<p>
+				Atención a la ciudadanía<br />
+				Defensor del ciudadano
+			</p>
+			<p>Inscríbase y reciba noticias</p>
+			<p>&copy; Derechos Reservados</p>
+			<p>
+				Diseño: mirona.com.co<br />
+				Desarrollo: 8manos.com
+			</p>
+		</div>
+
+		<div class="footer-logos">
+			<img />
+			<img />
+			<img />
+			<img />
+			<img />
+			<img />
+		</div>
 	</footer>
 
 	<?php wp_footer(); ?>

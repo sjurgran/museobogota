@@ -119,6 +119,20 @@ function museo_custom_post_types() {
 add_action('init', 'museo_custom_post_types');
 
 /**
+ * Widgets
+ */
+function museo_widgets_init() {
+
+	register_sidebar( array(
+		'name' => 'Footer',
+		'id' => 'footer',
+		'before_widget' => '<div id="%1$s" class="widget footer-block %2$s">',
+		'after_widget' => '</div>',
+	) );
+}
+add_action( 'widgets_init', 'museo_widgets_init' );
+
+/**
  * Custom fields
  */
 function museo_custom_fields( $groups ) {
