@@ -7,7 +7,7 @@ $carousel_query = new WP_Query(array(
 while ( $carousel_query->have_posts() ) : $carousel_query->the_post();
 ?>
 
-	<?php the_post_thumbnail('large'); ?>
+	<?php the_post_thumbnail('wide'); ?>
 	<div class="social-share"></div>
 	<p><?php the_excerpt(); ?></p>
 	<p><a class="button" href="<?php the_permalink(); ?>">más información</a></p>
