@@ -6,7 +6,7 @@
 
 <main role="main" id="main">
 	<section class="main-block">
-		<h1 class="block-title">Calendario de eventos</h1>
+		<h1 class="block-title"><?php _e('Calendario de eventos', 'museobog'); ?></h1>
 
 		<div id="events-carousel" class="flexslider">
 			<ul class="slides">
@@ -16,7 +16,7 @@
 	</section>
 
 	<section class="main-block">
-		<h1 class="block-title">Obra destacada del mes</h1>
+		<h1 class="block-title"><?php _e('Obra destacada del mes', 'museobog'); ?></h1>
 
 			<?php get_template_part( 'loop', 'featured' ); ?>
 		</div>

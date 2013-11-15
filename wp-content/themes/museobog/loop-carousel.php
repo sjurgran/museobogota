@@ -23,7 +23,7 @@ while ( $carousel_query->have_posts() ) : $carousel_query->the_post();
 				<?php the_title(); ?>
 				<br />
 				<?php echo $the_tag->name; ?>
-				<time>Hasta <?php echo $end_date; ?></time>
+				<time><?php _e('Hasta', 'museobog'); ?> <?php echo $end_date; ?></time>
 			</h5>
 		</a>
 	</li>

@@ -30,7 +30,7 @@ while ( $slider_query->have_posts() ) : $slider_query->the_post();
 			<?php the_content(); ?>
 		</div>
 
-		<p class="slider-more"><a class="button" href="<?php echo $event_url; ?>">más información</a></p>
+		<p class="slider-more"><a class="button" href="<?php echo $event_url; ?>"><?php _e('más información', 'museobog'); ?></a></p>
 	</li>
 
 <?php

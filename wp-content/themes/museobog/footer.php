@@ -16,17 +16,17 @@
 		<div class="footer-block">
 			<p>
 				<a href="http://www.bogota.gov.co/portel/libreria/php/01.270403.html">Políticas de privacidad y términos de uso</a><br />
-				<a>Mapa del sitio</a>
+				<a><?php _e('Mapa del sitio', 'museobog'); ?></a>
 			</p>
 			<p>
 				Atención a la ciudadanía<br />
 				Defensor del ciudadano
 			</p>
 			<p>Inscríbase y reciba noticias</p>
-			<p>&copy; Derechos Reservados</p>
+			<p>&copy; <?php _e('Derechos Reservados', 'museobog'); ?></p>
 			<p>
-				Diseño: mirona.com.co<br />
-				Desarrollo: 8manos.com
+				<?php _e('Diseño', 'museobog'); ?>: mirona.com.co<br />
+				<?php _e('Desarrollo', 'museobog'); ?>: 8manos.com
 			</p>
 		</div>
 

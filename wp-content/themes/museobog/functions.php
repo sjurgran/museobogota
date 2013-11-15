@@ -14,6 +14,8 @@ add_action('wp_enqueue_scripts', 'minimal_jquery_script');
  * Theme setup
  */
 function minimal_theme_setup() {
+	load_theme_textdomain( 'museobog', get_template_directory().'/languages' );
+
 	// Adds RSS feed links to <head> for posts and comments.
 	add_theme_support('automatic-feed-links');
 

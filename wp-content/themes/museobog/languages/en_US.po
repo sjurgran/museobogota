@@ -1,0 +1,63 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Museo\n"
+"POT-Creation-Date: 2013-11-15 09:42-0500\n"
+"PO-Revision-Date: 2013-11-15 09:42-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.5.7\n"
+"X-Poedit-KeywordsList: _;gettext;gettext_noop;_e\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-SearchPath-0: ..\n"
+
+#: ../footer.php:19
+msgid "Mapa del sitio"
+msgstr "Sitemap"
+
+#: ../footer.php:26
+msgid "Derechos Reservados"
+msgstr "All Rights Reserved"
+
+#: ../footer.php:28
+msgid "Diseño"
+msgstr "Design"
+
+#: ../footer.php:29
+msgid "Desarrollo"
+msgstr "Programming"
+
+#: ../header.php:41
+msgid "menú"
+msgstr "menu"
+
+#: ../header.php:46
+msgid "buscar"
+msgstr "search"
+
+#: ../index.php:9
+msgid "Calendario de eventos"
+msgstr "Events calendar"
+
+#: ../index.php:19
+msgid "Obra destacada del mes"
+msgstr "Featured work"
+
+#: ../loop-carousel.php:26
+msgid "Hasta"
+msgstr "Until"
+
+#: ../loop-featured.php:13 ../loop-slider.php:33
+msgid "más información"
+msgstr "more information"
+
+#: ../searchform.php:2
+msgid "Search"
+msgstr ""
+
+#~ msgid "Buscar"
+#~ msgstr "Search"

@@ -38,12 +38,12 @@
 			</a>
 		</div>
 
-		<div class="toggle-menu icon-menu replace-icon"><?php _e('Menu'); ?></div>
+		<div class="toggle-menu icon-menu replace-icon"><?php _e('menú', 'museobog'); ?></div>
 		<nav id="main-nav" role="navigation">
 			<?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
 		</nav>
 
-		<div class="toggle-search icon-search replace-icon is-open"><?php _e('Search'); ?></div>
+		<div class="toggle-search icon-search replace-icon is-open"><?php _e('buscar', 'museobog'); ?></div>
 		<?php get_search_form(); ?>
 
 		<nav id="social-nav">

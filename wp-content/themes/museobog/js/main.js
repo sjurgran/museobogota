@@ -30,7 +30,7 @@
 		$('#main-slider').flexslider({
 			animation: 'slide',
 			startAt: 1,
-			slideshow: false
+			slideshow: true
 		});
 	}
 
