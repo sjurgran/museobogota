@@ -107,7 +107,7 @@ function museo_custom_post_types() {
 
 	$args = array(
 		'public' => true,
-		'label'  => __('Events', 'museobog'),
+		'label'  => __('Eventos', 'museobog'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		'taxonomies' => array('post_tag')
 	);
@@ -115,7 +115,7 @@ function museo_custom_post_types() {
 
 	$args = array(
 		'public' => true,
-		'label'  => __('Collections', 'museobog'),
+		'label'  => __('Colecciones', 'museobog'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		'taxonomies' => array('post_tag')
 	);
@@ -123,7 +123,7 @@ function museo_custom_post_types() {
 
 	$args = array(
 		'public' => true,
-		'label'  => __('Featured Works', 'museobog'),
+		'label'  => __('Obras', 'museobog'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
 		'taxonomies' => array('post_tag')
 	);
@@ -153,18 +153,18 @@ function museo_custom_fields( $groups ) {
 		'agenda' => array(
 			array(
 				'id'     => 'dates',
-				'title'  => __('Dates', 'museobog'),
+				'title'  => __('Fechas', 'museobog'),
 				'fields' => array(
 					array(
 						'id'      => 'start_date',
-						'title'   => __('Start Date', 'museobog'),
+						'title'   => __('Fecha de inicio', 'museobog'),
 						'type'    => 'date',
 						'default' => date('Y-m-d'),
 						'desc'    => 'Format: <code>'.date('Y-m-d').'</code>'
 					),
 					array(
 						'id'      => 'end_date',
-						'title'   => __('End Date', 'museobog'),
+						'title'   => __('Fecha final', 'museobog'),
 						'type'    => 'date',
 						'default' => date('Y-m-d'),
 						'desc'    => 'Format: <code>'.date('Y-m-d').'</code>'
@@ -179,7 +179,7 @@ function museo_custom_fields( $groups ) {
 				'fields' => array(
 					array(
 						'id'      => 'link',
-						'title'   => __('Link', 'museobog'),
+						'title'   => __('Enlace', 'museobog'),
 						'type'    => 'select',
 						'options' => array('kcSettings_options_cb', 'posts'),
 						'args'    => array(
