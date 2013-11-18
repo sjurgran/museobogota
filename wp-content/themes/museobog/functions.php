@@ -109,7 +109,8 @@ function museo_custom_post_types() {
 		'public' => true,
 		'label'  => __('Eventos', 'museobog'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-		'taxonomies' => array('post_tag')
+		'taxonomies' => array('post_tag'),
+		'has_archive' => true
 	);
 	register_post_type( 'agenda', $args );
 
@@ -234,4 +235,44 @@ function format_event_date($date) {
 	}
 }
 
-?>
+/**
+ * Number of events
+ */
+function events_pagesize( $query ) {
+	if ( is_admin() || ! $query->is_main_query() ) {
+		return;
+	}
+
+	if ( is_post_type_archive('agenda') ) {
+		$query->set( 'posts_per_page', 18 );
+		return;
+	}
+}
+add_action( 'pre_get_posts', 'events_pagesize', 1 );
+
+/**
+ * Pagination
+ */
+function display_pagination($current_page, $total, $base_url='', $format='') {
+	echo '<nav class="pagination">';
+
+	$args = array(
+		'current' => $current_page,
+		'total' => $total,
+		'prev_text' => '<',
+		'next_text' => '>',
+	);
+	if ($base_url) {
+		$args['base'] = $base_url;
+	}
+	if ($format) {
+		$args['format'] = $format;
+	}
+	echo paginate_links($args);
+
+	echo '<span class="page_counter">';
+	printf( _n( '', 'Página %s de %s', $total, 'museobog' ), $current_page, $total );
+	echo '</span>';
+
+	echo '</nav>';
+}

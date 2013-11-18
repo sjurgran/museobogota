@@ -380,7 +380,8 @@ html[xmlns] .slides {display: block;}
     padding: 0 50px;
     position: relative;
 }
-#events-carousel li.agenda {
+li.agenda {
+    display: inline-block;
     margin-right: 20px;
     position: relative;
 }
