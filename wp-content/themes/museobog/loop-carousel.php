@@ -1,7 +1,10 @@
 <?php
 $carousel_query = new WP_Query(array(
 	'post_type' => 'agenda',
-	'posts_per_page' => 12
+	'posts_per_page' => 12,
+	'order' => 'ASC',
+	'orderby' => 'meta_value',
+	'meta_key' => '_start_date'
 ));
 
 while ( $carousel_query->have_posts() ) : $carousel_query->the_post();
