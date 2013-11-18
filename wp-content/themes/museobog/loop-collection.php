@@ -19,7 +19,7 @@ while ( $collection_query->have_posts() ) : $collection_query->the_post();
 	$date = get_post_meta( $post->ID, "_date", true );
 ?>
 	<div <?php post_class(); ?>>
-		<?php the_post_thumbnail('big-thumb'); ?>
+		<a href="<?php the_permalink(); ?>"><?php the_post_thumbnail('big-thumb'); ?></a>
 		<h2><?php the_title(); ?></h2>
 		<h3><?php echo $date; ?></h3>
 		<p><a class="button" href="<?php the_permalink(); ?>"><?php _e('más información', 'museobog'); ?></a></p>
