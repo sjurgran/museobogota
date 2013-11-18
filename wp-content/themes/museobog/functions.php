@@ -189,6 +189,19 @@ function museo_custom_fields( $groups ) {
 					)
 				)
 			)
+		),
+		'collection' => array(
+			array(
+				'id'     => 'date',
+				'title'  => __('Fecha', 'museobog'),
+				'fields' => array(
+					array(
+						'id'      => 'date',
+						'title'   => __('Fecha', 'museobog'),
+						'type'    => 'text'
+					)
+				)
+			)
 		)
 	);
 
