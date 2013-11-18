@@ -1,6 +1,7 @@
 <?php
 //get_permalink() returns the URL of the last post in The Loop, not the permalink for the current page
 $base_url = get_permalink();
+
 if ( get_query_var('page') ) {
 	$current_page = get_query_var('page');
 } else {
@@ -9,7 +10,7 @@ if ( get_query_var('page') ) {
 
 $collection_query = new WP_Query(array(
 	'post_type' => 'collection',
-	'posts_per_page' => 1,
+	'posts_per_page' => 9,
 	'paged' => $current_page
 ));
 
@@ -28,14 +29,19 @@ endwhile;
 
 echo '<nav class="pagination">';
 
-echo paginate_links( array(
-	'base' => $base_url.'%_%',
-	'format' => '%#%',
-	'current' => $current_page,
-	'total' => $collection_query->max_num_pages,
-	'prev_text' => '<',
-	'next_text' => '>',
-) );
+	$total = $collection_query->max_num_pages;
+	echo paginate_links( array(
+		'base' => $base_url.'%_%',
+		'format' => '%#%',
+		'current' => $current_page,
+		'total' => $total,
+		'prev_text' => '<',
+		'next_text' => '>',
+	) );
+
+	echo '<span class="page_counter">';
+	printf( _n( '', 'Página %s de %s', $total, 'museobog' ), $current_page, $total );
+	echo '</span>';
 
 echo '</nav>';
 
