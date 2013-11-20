@@ -118,13 +118,14 @@ function museo_custom_post_types() {
     );
     register_post_type('agenda', $args);
 
-    $args = array(
-        'public' => true,
-        'label' => __('Colecciones', 'museobog'),
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-        'taxonomies' => array('post_tag')
-    );
-    register_post_type('collection', $args);
+	$args = array(
+		'public' => true,
+		'label'  => __('Colecciones', 'museobog'),
+		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+		'taxonomies' => array('post_tag'),
+		'has_archive' => true
+	);
+	register_post_type( 'collection', $args );
 
     $args = array(
         'public' => true,
