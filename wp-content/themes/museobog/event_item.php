@@ -3,11 +3,14 @@ $posttags = get_the_tags();
 if ($posttags) {
 	$the_tag = reset($posttags);
 }
+$datePostStart = get_post_meta( $post->ID, "_start_date", true );
 
-$start_date = format_event_date(get_post_meta( $post->ID, "_start_date", true ));
+$start_date = format_event_date($datePostStart);
 $end_date = format_event_date(get_post_meta( $post->ID, "_end_date", true ));
-?>
 
+$GLOBALS["diff"][] = diffDate($datePostStart);
+?>
+    
 <li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 	<a href="<?php the_permalink(); ?>">
 		<time class="big-time"><?php echo $start_date; ?></time>
