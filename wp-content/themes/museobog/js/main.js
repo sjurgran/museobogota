@@ -37,9 +37,7 @@
     }
 
     if ($('#events-carousel').length > 0) {
-        date1 = new Date();
-        $(".big-time").each
-        console.log;
+        var start = $('#lower').val();
         $('#events-carousel').flexslider({
             animation: 'slide',
             animationLoop: false,
@@ -51,7 +49,7 @@
             controlNav: false,
             prevText: '<',
             nextText: '>',
-            startAt:2
+            startAt:start,
         });
     }
 

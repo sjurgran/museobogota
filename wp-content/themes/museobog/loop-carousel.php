@@ -6,7 +6,7 @@ $carousel_query = new WP_Query(array(
         'orderby' => 'meta_value',
         'meta_key' => '_start_date'
 ));
-
+global $diff;
 while ( $carousel_query->have_posts() ) : $carousel_query->the_post();
 ?>
 
@@ -17,3 +17,5 @@ endwhile;
 
 /* Restore original Post Data */
 wp_reset_postdata();
+?>
+<input id="lower" type="hidden" value="<? indexLower($diff); ?>" />
