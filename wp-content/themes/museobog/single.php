@@ -17,17 +17,20 @@
 				<h3><?php echo $the_tag->name; ?></h3>
 
 				<?php the_excerpt(); ?>
-
-				<div class="social-share"></div>
-
-				<div class="article-meta"></div>
-
-				<div class="related-articles">
-					<h2><?php _e('Eventos Relacionados'); ?></h2>
-				</div>
 			</div>
+
 			<div class="article-content">
 				<?php the_content(); ?>
+			</div>
+
+			<div class="article-meta">
+				<div class="social-share"></div>
+				<p>Artículo creado: </p>
+				<p>Modificado: </p>
+			</div>
+
+			<div class="related-articles">
+				<h2><?php _e('Eventos Relacionados'); ?></h2>
 			</div>
 
 		</article>
