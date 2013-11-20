@@ -12,3 +12,6 @@ wp-content/cache/
 wp-content/backups/
 sitemap.xml.gz
 github_update.php
+/nbproject/private/
+/ndproject/
+

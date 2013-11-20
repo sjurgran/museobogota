@@ -7,8 +7,8 @@
     font-family: 'Nexa'; /* Nexa Regular */
     src: url('../fonts/2875F4_D_0.eot');
     src: url('../fonts/2875F4_D_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_D_0.woff') format('woff'),
-         url('../fonts/2875F4_D_0.ttf') format('truetype');
+        url('../fonts/2875F4_D_0.woff') format('woff'),
+        url('../fonts/2875F4_D_0.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,8 +16,8 @@
     font-family: 'Nexa'; /* Nexa Book */
     src: url('../fonts/2875F4_4_0.eot');
     src: url('../fonts/2875F4_4_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_4_0.woff') format('woff'),
-         url('../fonts/2875F4_4_0.ttf') format('truetype');
+        url('../fonts/2875F4_4_0.woff') format('woff'),
+        url('../fonts/2875F4_4_0.ttf') format('truetype');
     font-weight: 300;
     font-style: normal;
 }
@@ -25,8 +25,8 @@
     font-family: 'Nexa'; /* Nexa XBold */
     src: url('../fonts/2875F4_E_0.eot');
     src: url('../fonts/2875F4_E_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_E_0.woff') format('woff'),
-         url('../fonts/2875F4_E_0.ttf') format('truetype');
+        url('../fonts/2875F4_E_0.woff') format('woff'),
+        url('../fonts/2875F4_E_0.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -34,8 +34,8 @@
     font-family: 'Nexa'; /* Nexa Black */
     src: url('../fonts/2875F4_A_0.eot');
     src: url('../fonts/2875F4_A_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_A_0.woff') format('woff'),
-         url('../fonts/2875F4_A_0.ttf') format('truetype');
+        url('../fonts/2875F4_A_0.woff') format('woff'),
+        url('../fonts/2875F4_A_0.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -157,7 +157,75 @@ h5 {
 /* ==========================================================================
    Layout - Footer
    ========================================================================== */
+footer{
+    padding: 0 20px;
+}
+footer h2, footer h2{
+    font-size: .8em;
+    font-weight: bolder;
 
+}
+footer p{
+    font-size: .8em;
+    line-height: 1.3em;
+}
+footer .footer-block,footer .footer-logos{
+    border-top: 2px solid #000;
+}
+footer .footer-logos ul {
+    text-align: center;
+    padding: 0;
+}
+footer .footer-logos ul li{
+    background-image: url("http://museobog.8manos.in/wp-content/themes/museobog/images/footer_botones_sprite_color.jpg");
+    background-repeat: no-repeat;
+    background-size: 779px 33px;
+    display: inline-block;
+    height: 33px;
+    line-height: 33px; 
+    margin: 0 0 10px 20px;   
+    width: 130px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url(filter.svg#gris);
+    
+}
+footer .footer-logos ul li:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: url(filter.svg#gris);
+}
+footer .footer-logos ul .alcadia{
+    background-position: 0 0;
+}
+footer .footer-logos ul .denuncia{
+    background-position: -130px 0;
+}
+footer .footer-logos ul .plan{
+    background-position: -260px 0;
+}
+footer .footer-logos ul .patrimonio{
+    background-position: -390px 0;
+}
+footer .footer-logos ul .humanidad {
+    background-position: -520px 0;    
+    width: 129px;
+    
+}
+footer .footer-logos ul .basuracero{
+    background-position: -650px 0;   
+}
+footer .imgBogota{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+}
 
 /* ==========================================================================
    Modules
@@ -165,7 +233,7 @@ h5 {
 
 [class*="icon-"]:before,
 [class*="icon-"]:after,
-#social-nav a:before {
+#social-nav a:before, .social-share a:before {
     font: 1em/1 'icomoon';
     speak: none;
     text-transform: none;
@@ -174,9 +242,12 @@ h5 {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
+.social-share a:before {
+    font: 2.5em/1 'icomoon';
+}
 
 .replace-icon,
-#social-nav a {
+#social-nav a, .social-share a{
     height: 1em;
     overflow: hidden;
     text-decoration: none;
@@ -196,13 +267,13 @@ h5 {
 .icon-plus:after {
     content: "+";
 }
-#social-nav a[title="facebook"]:before {
+#social-nav a[title="facebook"]:before, .social-share a[title="facebook"]:before  {
     content: "\e602";
 }
-#social-nav a[title="twitter"]:before {
+#social-nav a[title="twitter"]:before,.social-share a[title="twitter"]:before  {
     content: "\e603";
 }
-#social-nav a[title="flickr"]:before {
+#social-nav a[title="flickr"]:before,.social-share a[title="flickr"]:before  {
     content: "\e604";
 }
 
@@ -280,6 +351,53 @@ h5 {
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+}
+
+
+/* ==========================================================================
+   Obra
+   ========================================================================== */
+
+.social-share ul{
+    list-style: none;
+    padding: 0;
+    text-align: center;
+}
+.social-share ul li{
+    display: inline-block;
+    padding-left: 20px;
+    vertical-align: top;
+    width: 90px;
+}
+.social-share ul li span{
+    display:block;
+    font-weight: 600;
+}
+.social-share ul li .box-likes{
+    border: 3px solid #000;
+    box-sizing: border-box;
+    font-size: 1.5em;
+    height: 36px;
+    margin: 5px auto;
+    padding: 2px;
+    position: relative;
+    text-align: right;
+    width: 65px;
+
+}
+.social-share ul li .box-likes:before , .box-likes::after{
+    border-color: rgba(0,0,0,1)  rgba(0,0,0,0) ;
+    border-style: solid;
+    border-width: 0px 7px 14px;
+    bottom: 107%;  
+    content: '';  
+    left:40%;
+    position: absolute;
+}
+
+.social-share ul li .box-likes:after {  
+    border-color: rgba(255,255,255,1)  rgba(255,255,255,0) ;
+    top: -10px;
 }
 
 /*
@@ -475,3 +593,4 @@ li.agenda:hover .carousel-item-info {
 .aligncenter { display: block; margin: 0 auto; }
 .alignleft { float: left; }
 .alignright { float: right; }
+.center{ text-align: center;} 
