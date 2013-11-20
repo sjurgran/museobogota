@@ -157,7 +157,75 @@ h5 {
 /* ==========================================================================
    Layout - Footer
    ========================================================================== */
+footer{
+    padding: 0 20px;
+}
+footer h2, footer h2{
+    font-size: .8em;
+    font-weight: bolder;
 
+}
+footer p{
+    font-size: .8em;
+    line-height: 1.3em;
+}
+footer .footer-block,footer .footer-logos{
+    border-top: 2px solid #000;
+}
+footer .footer-logos ul {
+    text-align: center;
+    padding: 0;
+}
+footer .footer-logos ul li{
+    background-image: url("http://museobog.8manos.in/wp-content/themes/museobog/images/footer_botones_sprite_color.jpg");
+    background-repeat: no-repeat;
+    background-size: 779px 33px;
+    display: inline-block;
+    height: 33px;
+    line-height: 33px; 
+    margin: 0 0 10px 20px;   
+    width: 130px;
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+    filter: url(filter.svg#gris);
+    
+}
+footer .footer-logos ul li:hover{
+    filter: grayscale(0);
+    -webkit-filter: grayscale(0);
+    -moz-filter: grayscale(0);
+    -ms-filter: grayscale(0);
+    -o-filter: grayscale(0);
+    filter: url(filter.svg#gris);
+}
+footer .footer-logos ul .alcadia{
+    background-position: 0 0;
+}
+footer .footer-logos ul .denuncia{
+    background-position: -130px 0;
+}
+footer .footer-logos ul .plan{
+    background-position: -260px 0;
+}
+footer .footer-logos ul .patrimonio{
+    background-position: -390px 0;
+}
+footer .footer-logos ul .humanidad {
+    background-position: -520px 0;    
+    width: 129px;
+    
+}
+footer .footer-logos ul .basuracero{
+    background-position: -650px 0;   
+}
+footer .imgBogota{
+    display: block;
+    margin: 20px auto;
+    width: 200px;
+}
 
 /* ==========================================================================
    Modules
@@ -331,7 +399,7 @@ h5 {
     border-color: rgba(255,255,255,1)  rgba(255,255,255,0) ;
     top: -10px;
 }
- 
+
 /*
  * jQuery FlexSlider v2.2.0
  * http://www.woothemes.com/flexslider/

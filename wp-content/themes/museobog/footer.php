@@ -3,7 +3,7 @@
 
 	<footer role="contentinfo">
 		<div class="footer-block">
-			<img />
+                    <img src="<?php bloginfo('template_directory'); ?>/images/logo_bogota_color.svg" class="imgBogota"/>
 			<h2>INSTITUTO DISTRITAL DE PATRIMONIO CULTURAL</h2>
 			<p>
 				Sector de Cutura, Recreación y Deporte<br />
@@ -12,7 +12,6 @@
 		</div>
 
 		<?php dynamic_sidebar( 'footer' ); ?>
-
 		<div class="footer-block">
 			<p>
 				<a href="http://www.bogota.gov.co/portel/libreria/php/01.270403.html">Políticas de privacidad y términos de uso</a><br />
@@ -31,12 +30,14 @@
 		</div>
 
 		<div class="footer-logos">
-			<img />
-			<img />
-			<img />
-			<img />
-			<img />
-			<img />
+                    <ul>
+                        <li class="alcadia"></li>
+                        <li class="denuncia"></li>
+                        <li class="plan"></li>
+                        <li class="patrimonio"></li>
+                        <li class="humanidad"></li>
+                        <li class="basuracero"></li>
+                    </ul>
 		</div>
 	</footer>
 

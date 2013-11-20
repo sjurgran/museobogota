@@ -1,36 +1,41 @@
 <?php
 $carousel_query = new WP_Query(array(
-	'post_type' => 'agenda',
-	'posts_per_page' => 12
-));
+    'post_type' => 'agenda',
+    'posts_per_page' => 12,
+    
+        ));
+$diff = [];
+while ($carousel_query->have_posts()) : $carousel_query->the_post();
 
-while ( $carousel_query->have_posts() ) : $carousel_query->the_post();
+    $posttags = get_the_tags();
+    if ($posttags) {
+        $the_tag = reset($posttags);
+    }
+    $datePostStart = get_post_meta($post->ID, "_start_date", true);
+    $start_date = format_event_date($datePostStart);
+    $end_date = format_event_date(get_post_meta($post->ID, "_end_date", true));
 
-	$posttags = get_the_tags();
-	if ($posttags) {
-		$the_tag = reset($posttags);
-	}
+    $diff[] = diffDate($datePostStart);
+    echo diffDate($datePostStart)
+    ?>
 
-	$start_date = format_event_date(get_post_meta( $post->ID, "_start_date", true ));
-	$end_date = format_event_date(get_post_meta( $post->ID, "_end_date", true ));
-?>
+    <li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+        <a href="<?php the_permalink(); ?>">
+            <time class="big-time" data-time="<?php echo $datePostStart; ?>"><?php echo $start_date; ?></time>
+            <?php the_post_thumbnail(); ?>
+            <h5 class="carousel-item-info">
+                <?php the_title(); ?>
+                <br />
+                <?php echo $the_tag->name; ?>
+                <time><?php _e('Hasta', 'museobog'); ?> <?php echo $end_date; ?></time>
+            </h5>
+        </a>
+    </li>
 
-	<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-		<a href="<?php the_permalink(); ?>">
-			<time class="big-time"><?php echo $start_date; ?></time>
-			<?php the_post_thumbnail(); ?>
-			<h5 class="carousel-item-info">
-				<?php the_title(); ?>
-				<br />
-				<?php echo $the_tag->name; ?>
-				<time><?php _e('Hasta', 'museobog'); ?> <?php echo $end_date; ?></time>
-			</h5>
-		</a>
-	</li>
-
-<?php
+    <?php
 endwhile;
 
 /* Restore original Post Data */
 wp_reset_postdata();
-?>
+
+

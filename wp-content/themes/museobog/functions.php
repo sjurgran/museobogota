@@ -142,6 +142,7 @@ function museo_widgets_init() {
 		'before_widget' => '<div id="%1$s" class="widget footer-block %2$s">',
 		'after_widget' => '</div>',
 	) );
+       
 }
 add_action( 'widgets_init', 'museo_widgets_init' );
 
@@ -220,5 +221,14 @@ function format_event_date($date) {
 		return $date_array[2].'/'.$month.'/'.$date_array[0];
 	}
 }
-
+function diffDate($datei) {
+        
+        $datef = date("Y-m-d");
+        $datetime1 = new DateTime($datei);
+        $datetime2 = new DateTime($datef);
+        $intervalo = $datetime1->diff($datetime2);
+        (int) $intervalos = $intervalo->format('%a');
+        return $intervalos;
+    
+}
 ?>
