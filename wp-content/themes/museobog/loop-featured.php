@@ -9,18 +9,9 @@ while ( $featured_query->have_posts() ) : $featured_query->the_post();
 
 	<?php the_post_thumbnail('wide'); ?>
     <div class="social-share">
-        <ul>
-            <li>
-                <a title="facebook" href="http://facebook.com"></a>
-                <span>Like</span>
-                <div class="box-likes">106</div>
-            </li>
-            <li>
-                <a title="twitter" href="http://twitter.com"></a>
-                <span>Tweet</span>
-                <div class="box-likes">61</div>
-            </li>
-            <li><a title="flickr" href="http://flickr.com"></a></li>
+        <ul id="sharrre">
+            <li id="facebook-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Like"></li>
+            <li id="twitter-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Tweet"></li>
         </ul>
     </div>
 	<?php the_excerpt(); ?>

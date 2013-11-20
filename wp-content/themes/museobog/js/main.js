@@ -65,4 +65,31 @@
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(fitCarousel, 200);
     });
+
+    //botones share
+    $('#facebook-share').sharrre({
+        share: {
+            facebook: true
+        },
+        enableHover: false,
+        enableTracking: true,
+        template: '<a title="facebook" href="#"></a><span>Like</span><div class="box-likes">{total}</div>',
+        click: function(api, options){
+            api.simulateClick();
+            api.openPopup('facebook');
+        }
+    });
+    $('#twitter-share').sharrre({
+        share: {
+            twitter: true
+        },
+        enableHover: false,
+        enableTracking: true,
+        template: '<a title="twitter" href="#"></a><span>Tweet</span><div class="box-likes">{total}</div>',
+        click: function(api, options){
+            api.simulateClick();
+            api.openPopup('twitter');
+        }
+    });
+
 })(jQuery);
