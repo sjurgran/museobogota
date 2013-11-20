@@ -118,7 +118,8 @@ function museo_custom_post_types() {
 		'public' => true,
 		'label'  => __('Colecciones', 'museobog'),
 		'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-		'taxonomies' => array('post_tag')
+		'taxonomies' => array('post_tag'),
+		'has_archive' => true
 	);
 	register_post_type( 'collection', $args );
 
