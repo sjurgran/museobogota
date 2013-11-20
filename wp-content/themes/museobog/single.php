@@ -24,7 +24,13 @@
 			</div>
 
 			<div class="article-meta">
-				<div class="social-share"></div>
+			    <div class="social-share">
+			        <ul id="sharrre">
+			            <li id="facebook-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Like"></li>
+			            <li id="twitter-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Tweet"></li>
+			        </ul>
+			    </div>
+
 				<p>Artículo creado: <time itemprop="dateCreated" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d/m/Y, g:i a'); ?></time></p>
 				<p>Modificado: <time itemprop="dateModified" datetime="<?php the_modified_time('Y-m-d'); ?>"><?php the_modified_time('d/m/Y, g:i a'); ?></p>
 			</div>
