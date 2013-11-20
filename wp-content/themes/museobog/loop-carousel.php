@@ -1,41 +1,19 @@
 <?php
 $carousel_query = new WP_Query(array(
-    'post_type' => 'agenda',
-    'posts_per_page' => 12,
-    
-        ));
-$diff = [];
-while ($carousel_query->have_posts()) : $carousel_query->the_post();
+        'post_type' => 'agenda',
+        'posts_per_page' => 12,
+        'order' => 'ASC',
+        'orderby' => 'meta_value',
+        'meta_key' => '_start_date'
+));
 
-    $posttags = get_the_tags();
-    if ($posttags) {
-        $the_tag = reset($posttags);
-    }
-    $datePostStart = get_post_meta($post->ID, "_start_date", true);
-    $start_date = format_event_date($datePostStart);
-    $end_date = format_event_date(get_post_meta($post->ID, "_end_date", true));
+while ( $carousel_query->have_posts() ) : $carousel_query->the_post();
+?>
 
-    $diff[] = diffDate($datePostStart);
-    echo diffDate($datePostStart)
-    ?>
+        <?php get_template_part( 'event_item' ); ?>
 
-    <li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
-        <a href="<?php the_permalink(); ?>">
-            <time class="big-time" data-time="<?php echo $datePostStart; ?>"><?php echo $start_date; ?></time>
-            <?php the_post_thumbnail(); ?>
-            <h5 class="carousel-item-info">
-                <?php the_title(); ?>
-                <br />
-                <?php echo $the_tag->name; ?>
-                <time><?php _e('Hasta', 'museobog'); ?> <?php echo $end_date; ?></time>
-            </h5>
-        </a>
-    </li>
-
-    <?php
+<?php
 endwhile;
 
 /* Restore original Post Data */
 wp_reset_postdata();
-
-

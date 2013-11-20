@@ -16,6 +16,12 @@ Template Name: Collection
 		<?php endwhile; ?>
 	</section>
 
+	<section class="main-block">
+		<h1 class="block-title"><?php _e('Fondos fotográficos', 'museobog'); ?></h1>
+
+		<?php get_template_part( 'loop', 'collection' ); ?>
+	</section>
+
 	<?php
 	$args = array(
 		'post_type' => 'page',
@@ -40,6 +46,5 @@ Template Name: Collection
 	<section class="main-block">
 		<h1 class="block-title"><?php _e('Obra destacada del mes', 'museobog'); ?></h1>
 
-			<?php get_template_part( 'loop', 'featured' ); ?>
-		</div>
+		<?php get_template_part( 'loop', 'featured' ); ?>
 	</section>
