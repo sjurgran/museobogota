@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Museo\n"
-"POT-Creation-Date: 2013-11-15 13:38-0500\n"
-"PO-Revision-Date: 2013-11-15 13:39-0500\n"
+"POT-Creation-Date: 2013-11-27 12:11-0500\n"
+"PO-Revision-Date: 2013-11-27 12:14-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -15,85 +15,112 @@ msgstr ""
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-SearchPath-0: ..\n"
 
+#: ../404.php:4
+msgid "No hemos encontrado lo que buscabas"
+msgstr "It seems we can't find what you're looking for"
+
+#: ../404.php:6
+#, php-format
+msgid "Puedes regresar al <a href=\"%s\">inicio</a> o realizar una busqueda."
+msgstr ""
+"You can visit our <a href=\"%s\">home page</a> or search what you're looking "
+"for."
+
+#: ../archive.php:5 ../index.php:9
+msgid "Calendario de eventos"
+msgstr "Events calendar"
+
+#: ../archive.php:15
+msgid "Historial"
+msgstr "History"
+
 #: ../breadcrumb.php:2
 msgid "inicio"
 msgstr "home"
 
-#: ../footer.php:19
-msgid "Mapa del sitio"
-msgstr "Sitemap"
-
-#: ../footer.php:26
-msgid "Derechos Reservados"
-msgstr "All Rights Reserved"
-
-#: ../footer.php:28
-msgid "Diseño"
-msgstr "Design"
-
-#: ../footer.php:29
-msgid "Desarrollo"
-msgstr "Programming"
-
-#: ../functions.php:110
-msgid "Eventos"
-msgstr "Events"
-
-#: ../functions.php:118
-msgid "Colecciones"
-msgstr "Collections"
-
-#: ../functions.php:126
-msgid "Obras"
-msgstr "Featured Works"
-
-#: ../functions.php:156
-msgid "Fechas"
-msgstr "Dates"
-
-#: ../functions.php:160
-msgid "Fecha de inicio"
-msgstr "Start date"
-
-#: ../functions.php:167
-msgid "Fecha final"
-msgstr "End date"
-
-#: ../functions.php:178
-msgid "Info"
-msgstr ""
-
-#: ../functions.php:182
-msgid "Enlace"
-msgstr "Link"
-
-#: ../header.php:41
-msgid "menú"
-msgstr "menu"
-
-#: ../header.php:46
-msgid "buscar"
-msgstr "search"
-
-#: ../index.php:9
-msgid "Calendario de eventos"
-msgstr "Events calendar"
-
-#: ../index.php:19
-msgid "Obra destacada del mes"
-msgstr "Featured work"
-
-#: ../loop-carousel.php:26
+#: ../event_item.php:22
 msgid "Hasta"
 msgstr "Until"
 
-#: ../loop-featured.php:13 ../loop-slider.php:33
+#: ../footer.php:18
+msgid "Mapa del sitio"
+msgstr "Sitemap"
+
+#: ../footer.php:25
+msgid "Derechos Reservados"
+msgstr "All Rights Reserved"
+
+#: ../footer.php:27
+msgid "Diseño"
+msgstr "Design"
+
+#: ../footer.php:28
+msgid "Desarrollo"
+msgstr "Programming"
+
+#: ../functions.php:114
+msgid "Eventos"
+msgstr "Events"
+
+#: ../functions.php:123
+msgid "Colecciones"
+msgstr "Collections"
+
+#: ../functions.php:132
+msgid "Obras"
+msgstr "Featured Works"
+
+#: ../functions.php:164
+msgid "Fechas"
+msgstr "Dates"
+
+#: ../functions.php:168
+msgid "Fecha de inicio"
+msgstr "Start date"
+
+#: ../functions.php:175
+msgid "Fecha final"
+msgstr "End date"
+
+#: ../functions.php:186
+msgid "Info"
+msgstr ""
+
+#: ../functions.php:190
+msgid "Enlace"
+msgstr "Link"
+
+#: ../functions.php:204 ../functions.php:208
+msgid "Fecha"
+msgstr "Fecha"
+
+#: ../header.php:42
+msgid "menú"
+msgstr "menu"
+
+#: ../header.php:47
+msgid "buscar"
+msgstr "search"
+
+#: ../index.php:19 ../page-coleccion.php:47
+msgid "Obra destacada del mes"
+msgstr "Featured work"
+
+#: ../loop-collection.php:25 ../loop-featured.php:18 ../loop-slider.php:33
 msgid "más información"
 msgstr "more information"
+
+#: ../page-coleccion.php:20
+msgid "Fondos fotográficos"
+msgstr "Photographic collections"
 
 #: ../searchform.php:2
 msgid "Search"
 msgstr ""
+
+#: ../single.php:41
+msgid "Eventos Relacionados"
+msgstr "Related Events"
 
 #~ msgid "Buscar"
 #~ msgstr "Search"
