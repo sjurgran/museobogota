@@ -33,7 +33,7 @@
 		</nav>
 
 		<div class="logo">
-			<a href="<?php echo home_url(); ?>/" rel="home">
+			<a href="<?php echo pll_home_url('/'); ?>" rel="home">
 				<h1><?php bloginfo('name'); ?></h1>
 				<h2><?php bloginfo('description'); ?></h2>
 			</a>

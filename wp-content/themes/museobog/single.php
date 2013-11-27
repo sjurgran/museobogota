@@ -32,13 +32,13 @@
 					</ul>
 				</div>
 
-				<p>Artículo creado: <time itemprop="dateCreated" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d/m/Y, g:i a'); ?></time></p>
-				<p>Modificado: <time itemprop="dateModified" datetime="<?php the_modified_time('Y-m-d'); ?>"><?php the_modified_time('d/m/Y, g:i a'); ?></p>
+				<p><?php _e('Artículo creado', 'museobog'); ?>: <time itemprop="dateCreated" datetime="<?php the_time('Y-m-d'); ?>"><?php the_time('d/m/Y, g:i a'); ?></time></p>
+				<p><?php _e('Modificado', 'museobog'); ?>: <time itemprop="dateModified" datetime="<?php the_modified_time('Y-m-d'); ?>"><?php the_modified_time('d/m/Y, g:i a'); ?></p>
 			</div>
 		<?php endwhile; ?>
 
 		<div class="related-articles">
-			<h2><?php _e('Eventos Relacionados'); ?></h2>
+			<h2><?php _e('Eventos Relacionados', 'museobog'); ?></h2>
 
 			<ul>
 				<?php

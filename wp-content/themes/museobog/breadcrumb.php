@@ -1,5 +1,5 @@
 <nav class="menu breadcrumb">
-	<a class="crumb" href="<?php echo home_url('/'); ?>"><?php _e('inicio'); ?></a>
+	<a class="crumb" href="<?php echo pll_home_url('/'); ?>"><?php _e('inicio', 'museobog'); ?></a>
 
 	<?php
 	$before = '<span class="crumb">';
