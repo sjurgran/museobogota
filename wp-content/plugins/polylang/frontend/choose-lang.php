@@ -27,7 +27,7 @@ abstract class PLL_Choose_Lang {
 		$this->page_for_posts = get_option('page_for_posts');
 
 		if (PLL_AJAX_ON_FRONT || false === stripos($_SERVER['SCRIPT_NAME'], 'index.php'))
-			$this->set_language(empty($_REQUEST['lang']) ? $this->get_preferred_language() : $model->get_language($_REQUEST['lang']));
+			$this->set_language(empty($_REQUEST['lang']) ? $this->get_preferred_language() : $this->model->get_language($_REQUEST['lang']));
 
 		add_action('pre_comment_on_post', array(&$this, 'pre_comment_on_post')); // sets the language of comment
 		add_filter('parse_query', array(&$this, 'parse_main_query'), 2); // sets the language in special cases
@@ -51,8 +51,10 @@ abstract class PLL_Choose_Lang {
 
 		// set a cookie to remember the language. check headers have not been sent to avoid ugly error
 		// possibility to set PLL_COOKIE to false will disable cookie although it will break some functionalities
-		if (!headers_sent() && PLL_COOKIE !== false && (!isset($_COOKIE[PLL_COOKIE]) || $_COOKIE[PLL_COOKIE] != $curlang->slug))
-			setcookie(PLL_COOKIE, $curlang->slug, time() + 31536000 /* 1 year */, COOKIEPATH, $this->domain);
+		if (!headers_sent() && PLL_COOKIE !== false && (!isset($_COOKIE[PLL_COOKIE]) || $_COOKIE[PLL_COOKIE] != $curlang->slug)) {
+			$cookie_domain = 2 == $this->options['force_lang'] ? $this->domain : COOKIE_DOMAIN;
+			setcookie(PLL_COOKIE, $curlang->slug, time() + 31536000 /* 1 year */, COOKIEPATH, $cookie_domain);
+		}
 
 		$GLOBALS['text_direction'] = $curlang->is_rtl ? 'rtl' : 'ltr';
 		do_action('pll_language_defined', $curlang->slug, $curlang);
