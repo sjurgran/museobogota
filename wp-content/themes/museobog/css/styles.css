@@ -153,6 +153,39 @@ h5 {
     padding: 0 0 1em;
     border-top: 2px solid #000;
 }
+.main-block h2{
+    font-size: 1.2em;
+    font-weight: 900;
+    margin: .6em 0 0 0;
+    text-transform: uppercase;
+}
+.main-block h4{    
+    margin: 0;
+    line-height: 1em;
+}
+.main-block img {    
+    max-width: 280px;
+}
+.main-block p{    
+    margin: .9em 0;
+}
+#map-canvas {
+    height: 274px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+.labels {
+    color: red;
+    background-color: white;
+    font-family: "Lucida Grande", "Arial", sans-serif;
+    font-size: 10px;
+    font-weight: bold;
+    text-align: center;
+    width: 40px;     
+    border: 2px solid black;
+    white-space: nowrap;
+}
 
 /* ==========================================================================
    Layout - Footer
@@ -191,7 +224,7 @@ footer .footer-logos ul li{
     -ms-filter: grayscale(100%);
     -o-filter: grayscale(100%);
     filter: url(filter.svg#gris);
-    
+
 }
 footer .footer-logos ul li:hover{
     filter: grayscale(0);
@@ -216,7 +249,7 @@ footer .footer-logos ul .patrimonio{
 footer .footer-logos ul .humanidad {
     background-position: -520px 0;    
     width: 129px;
-    
+
 }
 footer .footer-logos ul .basuracero{
     background-position: -650px 0;   
@@ -353,6 +386,83 @@ footer .imgBogota{
     text-transform: uppercase;
 }
 
+/* ==========================================================================
+   agenda
+   ========================================================================== */
+nav.breadcrumb{
+    display: none;
+}
+
+article.agenda{
+    min-width: 280px
+}
+.article-info{
+    border-bottom: 2px solid #000;
+}
+.article-title h1{
+    line-height: .7em;
+    margin: 25px 0 0;
+}
+.article-title h3{
+    margin: 0;
+    font-size:.9em;
+    font-weight:normal;
+    text-transform: uppercase;
+
+}
+article-meta{
+    border-bottom: 1px solid #000;
+    padding-bottom: 1em;
+}
+.article-meta p{
+    margin:0;
+}
+.related-articles h2{
+    font-weight: 900;
+    text-transform: uppercase;
+}
+/* ==========================================================================
+    museo
+   ========================================================================== */
+input[type="text"]{
+    border: 2px solid #000;
+    margin-bottom: .5em;
+    min-width: 100%;
+    padding: 0.5em 0 .2em 0.5em;
+}
+input[type="submit"]{
+    border: none;
+    margin-top: .5em;
+    min-width: 50%;
+}
+.send-message{
+    font-size: .95em;
+    font-style: italic;
+    font-weight: 600;
+}
+::-webkit-input-placeholder {
+    color:#000;
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    color:#000;
+    font-weight: 100;
+    text-transform: uppercase;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    color:#000;
+    font-weight: 100;
+    text-transform: uppercase;  
+}
+
+:-ms-input-placeholder {  
+    color:#000;
+    font-weight: 100;
+    text-transform: uppercase;  
+}
 
 /* ==========================================================================
    Obra
@@ -500,12 +610,12 @@ html[xmlns] .slides {display: block;}
 }
 li.agenda {
     display: inline-block;
-    margin-right: 20px;
+    margin: 0 15px 15px 0;
     position: relative;
 }
 .big-time {
     color: #fff;
-    font-size: 1.38em;
+    font-size: 1.25em;
     font-weight: bold;
     padding: 8px 2px;
     position: absolute;
@@ -515,7 +625,9 @@ li.agenda {
 .carousel-item-info {
     -moz-box-sizing: border-box;
     background: rgba(0, 0, 0, 0.8);
+    box-sizing: border-box;
     color: #fff;
+    font-weight: 600;
     display: none;
     height: 100%;
     left: 0;
@@ -527,8 +639,15 @@ li.agenda {
 li.agenda:hover .carousel-item-info {
     display: block;
 }
+.carousel-item-info h5{
+    font-size: .8em;
+}
+.carousel-item-info p{
+    margin: 0;
+}
 .carousel-item-info time {
     bottom: 4px;
+    font-size: 0.9em;
     left: 2px;
     position: absolute;
 }

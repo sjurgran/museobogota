@@ -1,4 +1,65 @@
+var map;
+white = [
+    {
+        "featureType": "poi.attraction",
+        "elementType": "geometry",
+        "stylers": [
+            {"color": "#c9c9c8"}
+        ]
+    }, {
+        "featureType": "poi.business",
+        "elementType": "geometry",
+        "stylers": [
+            {"color": "#959495"}
+        ]
+    }, {
+        "featureType": "poi.government",
+        "elementType": "geometry",
+        "stylers": [
+            {"color": "#f2f2f4"}
+        ]
+    }, {
+        "featureType": "poi.government",
+        "stylers": [
+            {"color": "#c6c6c5"}
+        ]
+    }, {
+        "featureType": "poi.park",
+        "elementType": "geometry",
+        "stylers": [
+            {"color": "#ffffff"}
+        ]
+    }, {
+        "featureType": "landscape",
+        "stylers": [
+            {"color": "#ecebeb"}
+        ]
+    }, {
+    }
+
+];
 (function($) {
+
+    /*
+     * GOOGLE MAPS
+     */
+    function loadMapScript() {
+        var script = document.createElement("script");
+
+        script.type = "text/javascript";
+        script.src = "//maps.googleapis.com/maps/api/js?key=AIzaSyCrZ41krw8hACJ_MxtBKPRRzrtCEFyxrpA&sensor=false&callback=initializeMap";
+        document.body.appendChild(script);
+    }
+
+    if ($('#map-canvas').length > 0) {
+
+        loadMapScript();
+    }
+    /*
+     * CONF GOOGLE MAPS
+     */
+
+
     var resizeTimer;
 
     //menu principal (móvil)
@@ -49,7 +110,7 @@
             controlNav: false,
             prevText: '<',
             nextText: '>',
-            startAt:start,
+            startAt: start,
         });
     }
 
@@ -74,7 +135,7 @@
         enableHover: false,
         enableTracking: true,
         template: '<a title="facebook" href="#"></a><span>Like</span><div class="box-likes">{total}</div>',
-        click: function(api, options){
+        click: function(api, options) {
             api.simulateClick();
             api.openPopup('facebook');
         }
@@ -86,10 +147,40 @@
         enableHover: false,
         enableTracking: true,
         template: '<a title="twitter" href="#"></a><span>Tweet</span><div class="box-likes">{total}</div>',
-        click: function(api, options){
+        click: function(api, options) {
             api.simulateClick();
             api.openPopup('twitter');
         }
     });
 
 })(jQuery);
+function initializeMap() {
+    
+    var museoBogota = new google.maps.LatLng(4.596002290218719, -74.07288287008362);
+    var flagIcon_front = new google.maps.MarkerImage("http://museobog.8manos.in/wp-content/themes/museobog/images/marker1.png");
+    var flagIcon_front1 = new google.maps.MarkerImage("http://museobog.8manos.in/wp-content/themes/museobog/images/marker.png");
+    var mapOptions = {
+        scrollwheel: false,
+        zoom: 17,
+        center: museoBogota,
+        disableDefaultUI: true,
+        mapTypeId: google.maps.MapTypeId.ROADMAP,
+    }
+    map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+    var marker = new google.maps.Marker({
+        position: museoBogota,
+        map: map,
+        title: '',
+         icon: flagIcon_front,
+    });
+    var marker1 = new google.maps.Marker({
+        position: new google.maps.LatLng(4.594890078283823, -74.07349441373901),
+        map: map,
+        title: '',
+         icon: flagIcon_front1,
+    });    
+ 
+
+    map.setOptions({styles: white});
+}
+    
