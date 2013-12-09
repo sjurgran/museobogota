@@ -12,7 +12,7 @@
 		</div>
 
 		<?php dynamic_sidebar( 'footer' ); ?>
-		<div class="footer-block">
+		<div class="footer-block overflow-none">
 			<p>
 				<a href="http://www.bogota.gov.co/portel/libreria/php/01.270403.html">Políticas de privacidad y términos de uso</a><br />
 				<a><?php _e('Mapa del sitio', 'museobog'); ?></a>

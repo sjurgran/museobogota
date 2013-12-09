@@ -812,11 +812,18 @@ li.agenda:hover .carousel-item-info {
 
     
     .footer-block{
+        border-top: none !important;
         display: inline-block;
         margin-right: 13px;
+        width: 31%;
         vertical-align: top;
-        border-top: none !important;
         
+    }
+    .overflow-none{
+        margin-top: -235px;
+    }
+    .footer-block img{
+        margin: 0
     }
 
 }
