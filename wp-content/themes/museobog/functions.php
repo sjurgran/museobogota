@@ -286,6 +286,17 @@ function display_pagination($current_page, $total, $base_url = '', $format = '')
     echo '</nav>';
 }
 
+/**
+ * Título de imágen antes del captio en la gaĺería
+ */
+function add_title_before_caption($caption, $img_id) {
+    $output = '<span class="close-caption">X</span>';
+    $output .= '<h4 class="gallery-title">'.get_the_title($img_id).'</h4>';
+    $output .= '<p>'.$caption.'</p>';
+    return $output;
+}
+add_filter( 'cleaner_gallery_caption', 'add_title_before_caption', 20, 2 );
+
 //
 function diffDate($datei) {
 
@@ -299,9 +310,9 @@ function diffDate($datei) {
 
 //
 function indexLower($array) {
-    
-    $positionLower = $array[0]; 
-    $lower = 0; 
+
+    $positionLower = $array[0];
+    $lower = 0;
     for ($i = 0; $i < count($array); $i++) {
         if ($array[$i] <= $positionLower) {
             $positionLower = $array[$i];

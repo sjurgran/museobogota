@@ -9,13 +9,23 @@
             if ($posttags) {
                 $the_tag = reset($posttags);
             }
+
+            $gallery_args = array(
+                'size' => 'full',
+                'columns' => -1,
+                'link' => 'none',
+                'itemtag' => 'li',
+                'icontag' => 'span',
+                'captiontag' => 'div'
+            );
+            $gallery = gallery_shortcode( $gallery_args );
             ?>
 
             <?php the_post_thumbnail('full'); ?>
 
             <div class="article-title">
                 <h1><?php the_title(); ?></h1>
-                <h3><?php echo $the_tag->name; ?></h3> 
+                <h3><?php echo $the_tag->name; ?></h3>
             </div>
             <div class="article-content">
                 <?php the_content(); ?>
@@ -68,3 +78,9 @@
         </div>
 
     </article>
+
+    <section>
+        <div id="gallery-slider" class="flexslider">
+            <?php echo $gallery; ?>
+        </div>
+    </section>

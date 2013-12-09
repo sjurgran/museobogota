@@ -127,6 +127,16 @@ white = [
         resizeTimer = setTimeout(fitCarousel, 200);
     });
 
+    //galerías
+    if ($('#gallery-slider').length > 0) {
+        $('#gallery-slider').flexslider({
+            animation: 'slide',
+            controlNav: false,
+            prevText: '<',
+            nextText: '>'
+        });
+    }
+
     //botones share
     $('#facebook-share').sharrre({
         share: {
@@ -155,7 +165,7 @@ white = [
 
 })(jQuery);
 function initializeMap() {
-    
+
     var museoBogota = new google.maps.LatLng(4.596002290218719, -74.07288287008362);
     var flagIcon_front = new google.maps.MarkerImage("http://museobog.8manos.in/wp-content/themes/museobog/images/marker1.png");
     var flagIcon_front1 = new google.maps.MarkerImage("http://museobog.8manos.in/wp-content/themes/museobog/images/marker.png");
@@ -178,9 +188,9 @@ function initializeMap() {
         map: map,
         title: '',
          icon: flagIcon_front1,
-    });    
- 
+    });
+
 
     map.setOptions({styles: white});
 }
-    
+
