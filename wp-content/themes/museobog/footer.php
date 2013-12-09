@@ -31,12 +31,12 @@
 
 		<div class="footer-logos">
                     <ul>
-                        <li class="alcadia"></li>
-                        <li class="denuncia"></li>
-                        <li class="plan"></li>
-                        <li class="patrimonio"></li>
-                        <li class="humanidad"></li>
-                        <li class="basuracero"></li>
+                        <a href=""><li class="alcadia"></li></a>
+                        <a href=""><li class="denuncia"></li></a>
+                        <a href=""><li class="plan"></li></a>
+                        <a href=""><li class="patrimonio"></li></a>
+                        <a href=""><li class="humanidad"></li></a>
+                        <a href=""><li class="basuracero"></li></a>
                     </ul>
 		</div>
 	</footer>

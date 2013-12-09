@@ -84,6 +84,15 @@ h5 {
     margin: 0;
     text-transform: uppercase;
 }
+nav.breadcrumb{
+    display: none;
+    font-weight: bold;
+}
+nav.breadcrumb a, nav.breadcrumb .crumb{
+    margin-right: 4px;
+    text-transform: lowercase;
+    text-decoration: none;
+}
 
 /* =============================================================================
    Layout - Header
@@ -389,9 +398,7 @@ footer .imgBogota{
 /* ==========================================================================
    agenda
    ========================================================================== */
-nav.breadcrumb{
-    display: none;
-}
+
 
 article.agenda{
     min-width: 280px
@@ -417,20 +424,27 @@ article-meta{
 .article-meta p{
     margin:0;
 }
+.related-articles{
+    border-top: 2px solid #000;
+}
 .related-articles h2{
     font-weight: 900;
     text-transform: uppercase;
 }
+.related-articles h2 {
+    line-height: 1em;
+}
+
 /* ==========================================================================
     museo
    ========================================================================== */
-input[type="text"]{
+.main-block input[type="text"]{
     border: 2px solid #000;
     margin-bottom: .5em;
     min-width: 100%;
     padding: 0.5em 0 .2em 0.5em;
 }
-input[type="submit"]{
+.main-block input[type="submit"]{
     border: none;
     margin-top: .5em;
     min-width: 50%;
@@ -713,3 +727,96 @@ li.agenda:hover .carousel-item-info {
 .alignleft { float: left; }
 .alignright { float: right; }
 .center{ text-align: center;} 
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+@media (min-width:720px) {
+    nav.breadcrumb{
+        display: block;
+
+    }
+    .article-post{
+        position: relative;
+    }
+    .article-title, .article-content, .article-meta, .related-articles{
+        display:block;
+        width:33%; 
+
+    }
+    .article-info{        
+        border: none;
+        float:right;
+        margin: 0 0 0 33%;
+        top:0;
+        position: absolute;
+        vertical-align:top;
+        width: 67%;
+    }
+    .article-info p{        
+        margin: 0
+    }
+    .article-title h1 {
+        font-size: 2.3em;
+        line-height: normal;
+    }
+    .article-title h3{
+        font-size: 1.3em;
+    }
+    .article-info p{
+        padding-left: 1em;
+    }
+
+    .social-share ul li{
+        display: block;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+    }
+    .social-share ul li  a{
+        height: auto;
+        width: auto;
+    }
+    .social-share ul li .box-likes,.social-share ul li  a,.social-share ul li span{
+        display: inline-block;
+        padding-right: 10px;
+        vertical-align: middle;
+    }
+
+    .social-share ul li .box-likes:before, .box-likes::after {
+        border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 1);
+        border-style: solid;
+        border-width: 6px 14px 6px 0px;
+        content: '';
+        bottom: 32%;
+        left: -25%;
+        position: absolute;
+    }
+    .social-share ul li .box-likes:after {
+        border-color: rgba(0, 0, 0, 0) rgba(255, 255, 255, 1);
+        top: 7px;
+        left: -10px;
+    }
+    .social-share ul li  a{
+        font: .8em/1 'icomoon';
+    }
+    .social-share ul li .box-likes{
+        border-width: 2px;
+        font-size: 1.3em;
+        height: 32px;
+        margin-left: 15px;
+        width: 60px;
+    }
+    .social-share ul li span{
+        height: 12px;
+    }
+
+    
+    .footer-block{
+        display: inline-block;
+        margin-right: 13px;
+        vertical-align: top;
+        border-top: none !important;
+        
+    }
+
+}

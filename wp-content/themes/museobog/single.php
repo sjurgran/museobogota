@@ -22,7 +22,7 @@
             ?>
 
             <?php the_post_thumbnail('full'); ?>
-
+        <div class="article-post">
             <div class="article-title">
                 <h1><?php the_title(); ?></h1>
                 <h3><?php echo $the_tag->name; ?></h3>
@@ -63,6 +63,7 @@
                     'post__not_in' => array($post->ID),
                     'orderby' => 'rand',
                 ));
+                
                 while ($related_query->have_posts()) : $related_query->the_post();
                     ?>
 
@@ -76,7 +77,7 @@
                 ?>
             </ul>
         </div>
-
+        </div>    
     </article>
 
     <section>
