@@ -731,6 +731,72 @@ li.agenda:hover .carousel-item-info {
    Media Queries
    ========================================================================== */
 @media (min-width:720px) {
+    /* ==========================================================================
+      Header
+      ========================================================================== */   
+    header #main-nav{
+        background: none;
+        color: #000;
+        left: 0;
+        position: relative;
+    }
+    header #main-nav a{
+        color: #000;
+        line-height: 1.2em;
+    }
+
+
+    header #main-nav a:after {
+        content: "";
+    }
+    header #main-nav ul li{
+        padding: 0 !important;
+    }
+    header #social-nav{
+        position: relative;
+    }
+    header #form-search{
+        position: absolute;
+    }
+    header .search-form{
+        background: none;
+        padding: 0;
+        position: relative;
+        width: 290px;
+
+    }
+    
+    header .search-form input[type="submit"]{
+        color: #000;
+        left: 25px;
+        position: absolute;
+        top: 5px;
+    }
+    header .search-form input[type="search"]{
+        background: none;
+        border-radius: 1em;
+        border: 2px solid #000;
+        box-sizing: border-box;
+        color: #000;
+        height: 30px;  
+        padding: 7px 0 0 26px; 
+        -moz-box-sizing: border-box;
+    }
+    header .logo{
+        display: block;
+        margin: 0;
+        text-align: left;
+        position: absolute;
+        top: 15px;
+    }
+
+
+
+    .toggle-menu , toggle-search{
+        display: none;
+    }
+
+
     nav.breadcrumb{
         display: block;
 
@@ -810,20 +876,24 @@ li.agenda:hover .carousel-item-info {
         height: 12px;
     }
 
-    
+
     .footer-block{
         border-top: none !important;
         display: inline-block;
         margin-right: 13px;
         width: 31%;
         vertical-align: top;
-        
+
     }
     .overflow-none{
         margin-top: -235px;
     }
     .footer-block img{
         margin: 0
+    }
+    footer .footer-content{
+        border-top: 2px solid #000;
+        padding-top: 25px;
     }
 
 }

@@ -87,8 +87,9 @@ white = [
     $('.toggle-search').on('click', toggleSearchForm);
 
     //oculto la busqueda al comienzo
-    $('.toggle-search').trigger('click');
-
+    if ($(windos).width() < 720) {
+        $('.toggle-search').trigger('click');
+    }
     if ($('#main-slider').length > 0) {
         $('#main-slider').flexslider({
             animation: 'slide',
@@ -181,13 +182,13 @@ function initializeMap() {
         position: museoBogota,
         map: map,
         title: '',
-         icon: flagIcon_front,
+        icon: flagIcon_front,
     });
     var marker1 = new google.maps.Marker({
         position: new google.maps.LatLng(4.594890078283823, -74.07349441373901),
         map: map,
         title: '',
-         icon: flagIcon_front1,
+        icon: flagIcon_front1,
     });
 
 
