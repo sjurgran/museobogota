@@ -87,7 +87,7 @@ white = [
     $('.toggle-search').on('click', toggleSearchForm);
 
     //oculto la busqueda al comienzo
-    if ($(windos).width() < 720) {
+    if ($(window).width() < 720) {
         $('.toggle-search').trigger('click');
     }
     if ($('#main-slider').length > 0) {

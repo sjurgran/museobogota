@@ -168,14 +168,14 @@ nav.breadcrumb a, nav.breadcrumb .crumb{
     margin: .6em 0 0 0;
     text-transform: uppercase;
 }
-.main-block h4{    
+.main-block h4{
     margin: 0;
     line-height: 1em;
 }
-.main-block img {    
+.main-block img {
     max-width: 280px;
 }
-.main-block p{    
+.main-block p{
     margin: .9em 0;
 }
 #map-canvas {
@@ -191,7 +191,7 @@ nav.breadcrumb a, nav.breadcrumb .crumb{
     font-size: 10px;
     font-weight: bold;
     text-align: center;
-    width: 40px;     
+    width: 40px;
     border: 2px solid black;
     white-space: nowrap;
 }
@@ -211,21 +211,21 @@ footer p{
     font-size: .8em;
     line-height: 1.3em;
 }
-footer .footer-block,footer .footer-logos{
+.footer-block, .footer-logos{
     border-top: 2px solid #000;
 }
-footer .footer-logos ul {
+.footer-logos ul {
     text-align: center;
     padding: 0;
 }
-footer .footer-logos ul li{
+.footer-logos ul li{
     background-image: url("http://museobog.8manos.in/wp-content/themes/museobog/images/footer_botones_sprite_color.jpg");
     background-repeat: no-repeat;
     background-size: 779px 33px;
     display: inline-block;
     height: 33px;
-    line-height: 33px; 
-    margin: 0 0 10px 20px;   
+    line-height: 33px;
+    margin: 0 0 10px 20px;
     width: 130px;
     filter: grayscale(100%);
     -webkit-filter: grayscale(100%);
@@ -235,7 +235,7 @@ footer .footer-logos ul li{
     filter: url(filter.svg#gris);
 
 }
-footer .footer-logos ul li:hover{
+.footer-logos ul li:hover{
     filter: grayscale(0);
     -webkit-filter: grayscale(0);
     -moz-filter: grayscale(0);
@@ -243,27 +243,27 @@ footer .footer-logos ul li:hover{
     -o-filter: grayscale(0);
     filter: url(filter.svg#gris);
 }
-footer .footer-logos ul .alcadia{
+.footer-logos ul .alcadia{
     background-position: 0 0;
 }
-footer .footer-logos ul .denuncia{
+.footer-logos ul .denuncia{
     background-position: -130px 0;
 }
-footer .footer-logos ul .plan{
+.footer-logos ul .plan{
     background-position: -260px 0;
 }
-footer .footer-logos ul .patrimonio{
+.footer-logos ul .patrimonio{
     background-position: -390px 0;
 }
-footer .footer-logos ul .humanidad {
-    background-position: -520px 0;    
+.footer-logos ul .humanidad {
+    background-position: -520px 0;
     width: 129px;
 
 }
-footer .footer-logos ul .basuracero{
-    background-position: -650px 0;   
+.footer-logos ul .basuracero{
+    background-position: -650px 0;
 }
-footer .imgBogota{
+.imgBogota{
     display: block;
     margin: 20px auto;
     width: 200px;
@@ -463,19 +463,19 @@ article-meta{
 :-moz-placeholder { /* Firefox 18- */
     color:#000;
     font-weight: 100;
-    text-transform: uppercase;  
+    text-transform: uppercase;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
     color:#000;
     font-weight: 100;
-    text-transform: uppercase;  
+    text-transform: uppercase;
 }
 
-:-ms-input-placeholder {  
+:-ms-input-placeholder {
     color:#000;
     font-weight: 100;
-    text-transform: uppercase;  
+    text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -513,13 +513,13 @@ article-meta{
     border-color: rgba(0,0,0,1)  rgba(0,0,0,0) ;
     border-style: solid;
     border-width: 0px 7px 14px;
-    bottom: 107%;  
-    content: '';  
+    bottom: 107%;
+    content: '';
     left:40%;
     position: absolute;
 }
 
-.social-share ul li .box-likes:after {  
+.social-share ul li .box-likes:after {
     border-color: rgba(255,255,255,1)  rgba(255,255,255,0) ;
     top: -10px;
 }
@@ -637,7 +637,6 @@ li.agenda {
     z-index: 2;
 }
 .carousel-item-info {
-    -moz-box-sizing: border-box;
     background: rgba(0, 0, 0, 0.8);
     box-sizing: border-box;
     color: #fff;
@@ -726,14 +725,14 @@ li.agenda:hover .carousel-item-info {
 .aligncenter { display: block; margin: 0 auto; }
 .alignleft { float: left; }
 .alignright { float: right; }
-.center{ text-align: center;} 
+.center{ text-align: center;}
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media (min-width:720px) {
     /* ==========================================================================
       Header
-      ========================================================================== */   
+      ========================================================================== */
     header #main-nav{
         background: none;
         color: #000;
@@ -765,7 +764,7 @@ li.agenda:hover .carousel-item-info {
         width: 290px;
 
     }
-    
+
     header .search-form input[type="submit"]{
         color: #000;
         left: 25px;
@@ -778,9 +777,8 @@ li.agenda:hover .carousel-item-info {
         border: 2px solid #000;
         box-sizing: border-box;
         color: #000;
-        height: 30px;  
-        padding: 7px 0 0 26px; 
-        -moz-box-sizing: border-box;
+        height: 30px;
+        padding: 7px 0 0 26px;
     }
     header .logo{
         display: block;
@@ -792,7 +790,7 @@ li.agenda:hover .carousel-item-info {
 
 
 
-    .toggle-menu , toggle-search{
+    .toggle-menu, .toggle-search{
         display: none;
     }
 
@@ -806,10 +804,10 @@ li.agenda:hover .carousel-item-info {
     }
     .article-title, .article-content, .article-meta, .related-articles{
         display:block;
-        width:33%; 
+        width:33%;
 
     }
-    .article-info{        
+    .article-info{
         border: none;
         float:right;
         margin: 0 0 0 33%;
@@ -818,7 +816,7 @@ li.agenda:hover .carousel-item-info {
         vertical-align:top;
         width: 67%;
     }
-    .article-info p{        
+    .article-info p{
         margin: 0
     }
     .article-title h1 {
@@ -879,21 +877,21 @@ li.agenda:hover .carousel-item-info {
 
     .footer-block{
         border-top: none !important;
-        display: inline-block;
+        float: left;
         margin-right: 13px;
-        width: 31%;
         vertical-align: top;
+        width: 31%;
 
-    }
-    .overflow-none{
-        margin-top: -235px;
     }
     .footer-block img{
         margin: 0
     }
-    footer .footer-content{
+    .footer-content{
         border-top: 2px solid #000;
         padding-top: 25px;
+    }
+    .footer-logos {
+        clear: both;
     }
 
 }
