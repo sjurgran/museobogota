@@ -739,6 +739,9 @@ li.agenda:hover .carousel-item-info {
     #language-nav {
         text-align: center;
     }
+    .menu-language {
+        padding: 2em 0 1em;
+    }
 
     #main-nav {
         background: none;
@@ -764,13 +767,21 @@ li.agenda:hover .carousel-item-info {
         float: right;
         position: static;
     }
+    #social-nav a {
+        height: 1.5em;
+        margin-left: 4px;
+        width: 1.6em;
+    }
+    #social-nav a:before {
+        font-size: 1.5em;
+    }
 
     .search-form{
         background: none;
         padding: 0;
         position: absolute;
         right: 20px;
-        top: 15px;
+        top: 1.5em;
         width: 25%;
     }
     .search-form input[type="submit"] {
@@ -794,7 +805,13 @@ li.agenda:hover .carousel-item-info {
         margin: 0;
         text-align: left;
         position: absolute;
-        top: 15px;
+        top: 1em;
+    }
+    .logo h1 {
+        font-size: 1.9em;
+    }
+    .logo h2 {
+        font-size: 0.7em;
     }
 
     .toggle-menu, .toggle-search{
