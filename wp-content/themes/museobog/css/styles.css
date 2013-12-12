@@ -733,54 +733,63 @@ li.agenda:hover .carousel-item-info {
     /* ==========================================================================
       Header
       ========================================================================== */
-    header #main-nav{
+    #header {
+        text-align: left;
+    }
+    #language-nav {
+        text-align: center;
+    }
+
+    #main-nav {
         background: none;
         color: #000;
-        left: 0;
-        position: relative;
+        display: inline-block;
+        position: static;
     }
-    header #main-nav a{
+    #main-nav .menu {
+        padding: 0;
+    }
+    #main-nav .menu-item {
+        padding: 0 ;
+    }
+    #main-nav a {
         color: #000;
         line-height: 1.2em;
     }
-
-
-    header #main-nav a:after {
+    #main-nav a:after {
         content: "";
     }
-    header #main-nav ul li{
-        padding: 0 !important;
+
+    #social-nav {
+        float: right;
+        position: static;
     }
-    header #social-nav{
-        position: relative;
-    }
-    header #form-search{
-        position: absolute;
-    }
-    header .search-form{
+
+    .search-form{
         background: none;
         padding: 0;
-        position: relative;
-        width: 290px;
-
+        position: absolute;
+        right: 20px;
+        top: 15px;
+        width: 25%;
     }
-
-    header .search-form input[type="submit"]{
+    .search-form input[type="submit"] {
         color: #000;
-        left: 25px;
+        left: 10px;
         position: absolute;
         top: 5px;
     }
-    header .search-form input[type="search"]{
+    .search-form input[type="search"] {
         background: none;
         border-radius: 1em;
-        border: 2px solid #000;
+        border: 1px solid #000;
         box-sizing: border-box;
         color: #000;
-        height: 30px;
-        padding: 7px 0 0 26px;
+        padding: 5px 0 2px 30px;
+        width: 100%;
     }
-    header .logo{
+
+    .logo{
         display: block;
         margin: 0;
         text-align: left;
@@ -788,12 +797,9 @@ li.agenda:hover .carousel-item-info {
         top: 15px;
     }
 
-
-
     .toggle-menu, .toggle-search{
         display: none;
     }
-
 
     nav.breadcrumb{
         display: block;
