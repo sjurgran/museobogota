@@ -94,7 +94,9 @@ white = [
         $('#main-slider').flexslider({
             animation: 'slide',
             startAt: 1,
-            slideshow: true
+            slideshow: false,
+            prevText: '<',
+            nextText: '>'
         });
     }
 

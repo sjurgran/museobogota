@@ -675,8 +675,9 @@ li.agenda:hover .carousel-item-info {
     color: #fff;
     font-size: 2.5em;
     font-weight: bold;
-    line-height: 32px;
+    line-height: 24px;
     margin-top: -16px;
+    padding-top: 8px;
     position: absolute;
     text-align: center;
     text-decoration: none;
@@ -826,6 +827,33 @@ li.agenda:hover .carousel-item-info {
         display: none;
     }
 
+    #main-slider {
+        position: relative;
+    }
+    #main-slider .flex-control-nav,
+    #main-slider .flex-direction-nav {
+        display: block;
+    }
+    .flex-prev {
+        top: 150px;
+        left: 20px;
+    }
+    .flex-next {
+        top: 150px;
+        right: 20px;
+    }
+    .slider-info {
+        margin-right: 2%;
+        vertical-align: top;
+        width: 30%;
+    }
+    .slider-text {
+        display: inline-block;
+        margin: 0;
+        vertical-align: top;
+        width: 62%;
+    }
+
     nav.breadcrumb{
         display: block;
 
@@ -876,7 +904,6 @@ li.agenda:hover .carousel-item-info {
         padding-right: 10px;
         vertical-align: middle;
     }
-
     .social-share ul li .box-likes:before, .box-likes::after {
         border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 1);
         border-style: solid;
