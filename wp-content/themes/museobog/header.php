@@ -48,6 +48,7 @@
 		<?php get_search_form(); ?>
 
 		<nav id="social-nav">
+			<img src="<?php bloginfo('template_directory'); ?>/images/logo_bogota_ByN.svg" class="img_bogota_header"/>
 			<?php wp_nav_menu(array('theme_location' => 'social', 'container' => false)); ?>
 		</nav>
 	</header>

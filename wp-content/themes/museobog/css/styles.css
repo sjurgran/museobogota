@@ -150,6 +150,9 @@ nav.breadcrumb a, nav.breadcrumb .crumb{
     right: 20px;
     top: 0;
 }
+.img_bogota_header {
+    display: none;
+}
 
 /* ==========================================================================
    Layout - Content
@@ -290,7 +293,7 @@ footer p{
 
 .replace-icon,
 #social-nav a, .social-share a{
-    height: 1em;
+    height: 1.1em;
     overflow: hidden;
     text-decoration: none;
     width: 1.1em;
@@ -766,6 +769,11 @@ li.agenda:hover .carousel-item-info {
     #social-nav {
         float: right;
         position: static;
+        text-align: right;
+    }
+    .img_bogota_header {
+        display: inline;
+        width: 132px;
     }
     #social-nav a {
         height: 1.5em;
