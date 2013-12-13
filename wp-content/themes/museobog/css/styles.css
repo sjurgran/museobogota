@@ -397,6 +397,9 @@ footer p{
     text-decoration: none;
     text-transform: uppercase;
 }
+.lang-item a:hover {
+    color: #b3b3b3;
+}
 
 /* ==========================================================================
    agenda
