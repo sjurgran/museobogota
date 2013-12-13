@@ -65,8 +65,16 @@ body {
 a {
     color: #000;
 }
+a:hover {
+    color: #b3b3b3;
+}
 a:active {
     color: #b3b3b3;
+}
+/* font problems */
+p a,
+.lang-item a {
+    padding: 0.25em 0 0;
 }
 img {
     height: auto;
@@ -396,9 +404,6 @@ footer p{
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
-}
-.lang-item a:hover {
-    color: #b3b3b3;
 }
 
 /* ==========================================================================
@@ -868,7 +873,7 @@ li.agenda:hover .carousel-item-info {
         display: inline-block;
         margin: 0;
         vertical-align: top;
-        width: 62%;
+        width: 63%;
     }
 
     .main-block {
@@ -879,12 +884,12 @@ li.agenda:hover .carousel-item-info {
         display: inline-block;
         margin-right: 2%;
         vertical-align: top;
-        width: 30%;
+        width: 32%;
     }
     .home-featured p {
         display: inline-block;
         vertical-align: top;
-        width: 62%;
+        width: 65%;
     }
     .home-featured p.more-info-button {
         display: block;
@@ -973,10 +978,13 @@ li.agenda:hover .carousel-item-info {
     .footer-block{
         border-top: none !important;
         float: left;
-        margin-right: 13px;
+        margin-left: 2%;
         vertical-align: top;
-        width: 31%;
+        width: 32%%;
 
+    }
+    .footer-block:first-child{
+        margin-left: 0;
     }
     .footer-block img{
         margin: 0
