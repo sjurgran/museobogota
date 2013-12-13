@@ -815,13 +815,13 @@ li.agenda:hover .carousel-item-info {
         top: 1.5em;
         width: 25%;
     }
-    .search-form input[type="submit"] {
+    .search-submit  {
         color: #000;
         left: 10px;
         position: absolute;
         top: 5px;
     }
-    .search-form input[type="search"] {
+    input.search-field {
         background: none;
         border-radius: 1em;
         border: 1px solid #000;
