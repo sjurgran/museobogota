@@ -176,7 +176,7 @@ nav.breadcrumb a, nav.breadcrumb .crumb{
     line-height: 1em;
 }
 .main-block img {
-    max-width: 280px;
+    /*max-width: 280px;*/
 }
 .main-block p{
     margin: .9em 0;
@@ -604,6 +604,9 @@ html[xmlns] .slides {display: block;}
     display: none;
 }
 
+.more-info-button {
+    text-align: center;
+}
 .button {
     background: #000;
     color: #fff;
@@ -729,11 +732,15 @@ li.agenda:hover .carousel-item-info {
 .aligncenter { display: block; margin: 0 auto; }
 .alignleft { float: left; }
 .alignright { float: right; }
-.center{ text-align: center;}
+
 /* ==========================================================================
    Media Queries
    ========================================================================== */
 @media (min-width:720px) {
+
+    h1 {
+        font-size: 1.75em;
+    }
     /* ==========================================================================
       Header
       ========================================================================== */
@@ -852,6 +859,26 @@ li.agenda:hover .carousel-item-info {
         margin: 0;
         vertical-align: top;
         width: 62%;
+    }
+
+    .main-block {
+        border: 0;
+    }
+
+    .home-share {
+        display: inline-block;
+        margin-right: 2%;
+        vertical-align: top;
+        width: 30%;
+    }
+    .home-featured p {
+        display: inline-block;
+        vertical-align: top;
+        width: 62%;
+    }
+    .home-featured p.more-info-button {
+        display: block;
+        width: auto;
     }
 
     nav.breadcrumb{

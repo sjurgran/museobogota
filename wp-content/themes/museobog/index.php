@@ -15,7 +15,7 @@
 		</div>
 	</section>
 
-	<section class="main-block">
+	<section class="main-block home-featured">
 		<h1 class="block-title"><?php _e('Obra destacada del mes', 'museobog'); ?></h1>
 
 		<?php get_template_part( 'loop', 'featured' ); ?>

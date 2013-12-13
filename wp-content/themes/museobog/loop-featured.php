@@ -8,14 +8,14 @@ while ( $featured_query->have_posts() ) : $featured_query->the_post();
 ?>
 
 	<?php the_post_thumbnail('wide'); ?>
-    <div class="social-share">
+    <div class="social-share home-share">
         <ul id="sharrre">
             <li id="facebook-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Like"></li>
             <li id="twitter-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Tweet"></li>
         </ul>
     </div>
 	<?php the_excerpt(); ?>
-    <p class="center" ><a class="button" href="<?php the_permalink(); ?>"><?php _e('más información', 'museobog'); ?></a></p>
+    <p class="more-info-button"><a class="button" href="<?php the_permalink(); ?>"><?php _e('más información', 'museobog'); ?></a></p>
 
     <?php
 endwhile;
