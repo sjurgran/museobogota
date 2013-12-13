@@ -770,6 +770,13 @@ li.agenda:hover .carousel-item-info {
         color: #000;
         line-height: 1.2em;
     }
+    #main-nav a:hover {
+        font-style: italic;
+    }
+    #main-nav a:active {
+        color: #b3b3b3;
+        font-style: normal;
+    }
     #main-nav a:after {
         content: "";
     }
