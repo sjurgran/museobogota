@@ -862,12 +862,10 @@ li.agenda:hover .carousel-item-info {
     #main-slider .flex-direction-nav {
         display: block;
     }
-    .flex-prev {
-        top: 150px;
+    #main-slider .flex-prev {
         left: 20px;
     }
-    .flex-next {
-        top: 150px;
+    #main-slider .flex-next {
         right: 20px;
     }
     .slider-info {

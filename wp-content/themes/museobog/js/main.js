@@ -73,6 +73,12 @@ white = [
         $('.search-form').toggleClass('height-zero');
     }
 
+    var getNavPosition = function() {
+        var img_height = $('#main-slider .slider-picture').height();
+        var nav_position_top = Math.round(img_height / 2);
+        $('#main-slider .flex-prev, #main-slider .flex-next').css('top', nav_position_top);
+    }
+
     var getCarouselSize = function() {
         //window size for 1 item 296 = 20+50+156+50+20
         items = Math.ceil(($(window).width() - 296) / 176); //176 es lo que se necesita para meter otro elemento
@@ -95,8 +101,10 @@ white = [
             animation: 'slide',
             startAt: 1,
             slideshow: false,
+            touch: false,
             prevText: '<',
-            nextText: '>'
+            nextText: '>',
+            start: getNavPosition
         });
     }
 
