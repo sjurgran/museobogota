@@ -519,7 +519,7 @@ article-meta{
     box-sizing: border-box;
     font-size: 1.5em;
     height: 36px;
-    margin: 5px auto;
+    margin: 10px auto;
     padding: 2px;
     position: relative;
     text-align: right;
@@ -643,8 +643,7 @@ html[xmlns] .slides {display: block;}
     position: relative;
 }
 li.agenda {
-    display: inline-block;
-    margin: 0 15px 15px 0;
+    margin-right: 20px;
     position: relative;
 }
 .big-time {
@@ -909,6 +908,9 @@ li.agenda:hover .carousel-item-info {
         margin-right: 2%;
         vertical-align: top;
         width: 32%;
+    }
+    .home-share ul li:first-child {
+        padding: 0;
     }
     .home-featured p {
         display: inline-block;
