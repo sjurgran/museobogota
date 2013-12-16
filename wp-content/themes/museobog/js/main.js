@@ -77,6 +77,7 @@ white = [
         var img_height = $('#main-slider .slider-picture').height();
         var nav_position_top = Math.round(img_height / 2);
         $('#main-slider .flex-prev, #main-slider .flex-next').css('top', nav_position_top);
+        $('.flex-control-nav').css('top', img_height-32);
     }
 
     var getCarouselSize = function() {

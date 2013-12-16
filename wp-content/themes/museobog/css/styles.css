@@ -879,6 +879,26 @@ li.agenda:hover .carousel-item-info {
         vertical-align: top;
         width: 63%;
     }
+    .flex-control-nav {
+        right: 20px;
+        position: absolute;
+    }
+    .flex-control-nav li {
+        display: inline-block;
+        margin-left: 16px;
+    }
+    .flex-control-nav a {
+        border-radius: 50%;
+        border: 5px solid #fff;
+        color: transparent;
+        cursor: pointer;
+        display: inline-block;
+        height: 11px;
+        width: 11px;
+    }
+    .flex-control-nav a.flex-active {
+        border-color: #000;
+    }
 
     .main-block {
         border: 0;
