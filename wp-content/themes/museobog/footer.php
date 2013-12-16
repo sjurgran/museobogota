@@ -32,12 +32,12 @@
 
         <div class="footer-logos">
             <ul>
-                <a href=""><li class="alcadia"></li></a>
-                <a href=""><li class="denuncia"></li></a>
-                <a href=""><li class="plan"></li></a>
-                <a href=""><li class="patrimonio"></li></a>
-                <a href=""><li class="humanidad"></li></a>
-                <a href=""><li class="basuracero"></li></a>
+                <li class="alcadia"><a href="#"></a></li>
+                <li class="denuncia"><a href="#"></a></li>
+                <li class="plan"><a href="#"></a></li>
+                <li class="patrimonio"><a href="#"></a></li>
+                <li class="humanidad"><a href="#"></a></li>
+                <li class="basuracero"><a href="#"></a></li>
             </ul>
         </div>
     </div>
