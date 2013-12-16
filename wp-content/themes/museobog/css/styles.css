@@ -925,8 +925,9 @@ li.agenda:hover .carousel-item-info {
     }
 
     nav.breadcrumb{
+        border-top: 2px solid #000;
         display: block;
-
+        padding: 1em 0 3em;
     }
     .article-post{
         position: relative;
@@ -1021,6 +1022,16 @@ li.agenda:hover .carousel-item-info {
     }
     .footer-logos {
         clear: both;
+    }
+
+    article.category-exposiciones {
+        display: inline-block;
+        margin-right: 1%;
+        vertical-align: top;
+        width: 32%;
+    }
+    article.category-exposiciones:last-child {
+        margin-right: 0;
     }
 
 }
