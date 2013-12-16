@@ -101,6 +101,9 @@ nav.breadcrumb a, nav.breadcrumb .crumb{
     text-transform: lowercase;
     text-decoration: none;
 }
+input[type="search"]:focus {
+    outline: none;
+}
 
 /* =============================================================================
    Layout - Header
@@ -222,6 +225,9 @@ footer p{
     font-size: .8em;
     line-height: 1.3em;
 }
+footer a{
+    text-decoration: none;
+}
 .footer-block, .footer-logos{
     border-top: 2px solid #000;
 }
@@ -301,10 +307,10 @@ footer p{
 
 .replace-icon,
 #social-nav a, .social-share a{
-    height: 1.1em;
+    height: 1.125em;
     overflow: hidden;
     text-decoration: none;
-    width: 1.1em;
+    width: 1.125em;
 }
 .replace-icon:before,
 #social-nav a:before {
@@ -645,7 +651,7 @@ li.agenda {
     color: #fff;
     font-size: 1.25em;
     font-weight: bold;
-    padding: 8px 2px;
+    padding: 8px 4px;
     position: absolute;
     text-transform: uppercase;
     z-index: 2;
@@ -658,7 +664,7 @@ li.agenda {
     display: none;
     height: 100%;
     left: 0;
-    padding: 2.5em 2px 4px;
+    padding: 2.5em 4px 4px;
     position: absolute;
     top: 0;
     width: 100%;
@@ -675,7 +681,7 @@ li.agenda:hover .carousel-item-info {
 .carousel-item-info time {
     bottom: 4px;
     font-size: 0.9em;
-    left: 2px;
+    left: 4px;
     position: absolute;
 }
 
@@ -799,7 +805,7 @@ li.agenda:hover .carousel-item-info {
         width: 132px;
     }
     #social-nav a {
-        height: 1.5em;
+        height: 1.6em;
         margin-left: 4px;
         width: 1.6em;
     }
@@ -931,22 +937,23 @@ li.agenda:hover .carousel-item-info {
         padding-left: 1em;
     }
 
-    .social-share ul li{
+    .article-share ul li{
         display: block;
         padding: 0;
         text-align: left;
         width: 100%;
     }
-    .social-share ul li  a{
+    .article-share ul li  a{
+        font: .8em/1 'icomoon';
         height: auto;
         width: auto;
     }
-    .social-share ul li .box-likes,.social-share ul li  a,.social-share ul li span{
+    .article-share ul li .box-likes,.article-share ul li  a,.article-share ul li span{
         display: inline-block;
         padding-right: 10px;
         vertical-align: middle;
     }
-    .social-share ul li .box-likes:before, .box-likes::after {
+    .article-share ul li .box-likes:before, .article-share .box-likes::after {
         border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 1);
         border-style: solid;
         border-width: 6px 14px 6px 0px;
@@ -955,22 +962,19 @@ li.agenda:hover .carousel-item-info {
         left: -25%;
         position: absolute;
     }
-    .social-share ul li .box-likes:after {
+    .article-share ul li .box-likes:after {
         border-color: rgba(0, 0, 0, 0) rgba(255, 255, 255, 1);
         top: 7px;
         left: -10px;
     }
-    .social-share ul li  a{
-        font: .8em/1 'icomoon';
-    }
-    .social-share ul li .box-likes{
+    .article-share ul li .box-likes{
         border-width: 2px;
         font-size: 1.3em;
         height: 32px;
         margin-left: 15px;
         width: 60px;
     }
-    .social-share ul li span{
+    .article-share ul li span{
         height: 12px;
     }
 

@@ -39,7 +39,7 @@
 
 
             <div class="article-meta">
-                <div class="social-share">
+                <div class="social-share article-share">
                     <ul id="sharrre">
                         <li id="facebook-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Like"></li>
                         <li id="twitter-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Tweet"></li>
@@ -63,7 +63,7 @@
                     'post__not_in' => array($post->ID),
                     'orderby' => 'rand',
                 ));
-                
+
                 while ($related_query->have_posts()) : $related_query->the_post();
                     ?>
 
@@ -77,7 +77,7 @@
                 ?>
             </ul>
         </div>
-        </div>    
+        </div>
     </article>
 
     <section>
