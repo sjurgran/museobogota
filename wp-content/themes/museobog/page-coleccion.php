@@ -45,6 +45,6 @@ Template Name: Collection
 
 	<section class="main-block">
 		<h1 class="block-title"><?php _e('Obra destacada del mes', 'museobog'); ?></h1>
-
+aa
 		<?php get_template_part( 'loop', 'featured' ); ?>
 	</section>
