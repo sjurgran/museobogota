@@ -302,7 +302,7 @@ footer a{
 [class*="icon-"]:before,
 [class*="icon-"]:after,
 #social-nav a:before, .social-share a:before {
-    font: 1em/1 'icomoon';
+    font: 1em/1.125 'icomoon';
     speak: none;
     text-transform: none;
 
@@ -509,15 +509,15 @@ header .search-form input[type="search"]::-webkit-input-placeholder {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-    text-transform: lowercase;  
+    text-transform: lowercase;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-    text-transform: lowercase; 
+    text-transform: lowercase;
 }
 
-:-ms-input-placeholder {  
-    text-transform: lowercase; 
+:-ms-input-placeholder {
+    text-transform: lowercase;
 }
 
 /* ==========================================================================
@@ -758,7 +758,7 @@ li.agenda:hover .carousel-item-info {
     width: 20px !important;
 }
 .submit-left{
-   left: 10px !important; 
+   left: 10px !important;
 }
 .nav-padding{
     padding-right: 40px !important;
@@ -807,7 +807,7 @@ li.agenda:hover .carousel-item-info {
     /* ==========================================================================
       Header
       ========================================================================== */
-    
+
     #header {
         text-align: left;
     }
@@ -860,9 +860,9 @@ li.agenda:hover .carousel-item-info {
         padding: 0;
     }
     #social-nav a {
-        height: 1.6em;
+        height: 1.7em;
         margin-left: 4px;
-        width: 1.6em;
+        width: 1.7em;
     }
     #social-nav a:before {
         font-size: 1.5em;
