@@ -297,6 +297,26 @@ function add_title_before_caption($caption, $img_id) {
 }
 add_filter( 'cleaner_gallery_caption', 'add_title_before_caption', 20, 2 );
 
+
+/**
+ * Search SEO friendly
+ */
+function search_url_rewrite_rule() {
+    if ( is_search() && !empty($_GET['s'])) {
+        wp_redirect(home_url("/search/") . urlencode(get_query_var('s')));
+        exit();
+    }
+}
+add_action('template_redirect', 'search_url_rewrite_rule');
+
+function search_only_custom_post_types( $query ) {
+    if ( $query->is_search() ) {
+        $query->set( 'post_type', array('agenda','collection', 'work') );
+    }
+    return $query;
+}
+add_filter('pre_get_posts','search_only_custom_post_types');
+
 //
 function diffDate($datei) {
 

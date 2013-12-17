@@ -299,7 +299,7 @@ footer a{
 [class*="icon-"]:before,
 [class*="icon-"]:after,
 #social-nav a:before, .social-share a:before {
-    font: 1em/1 'icomoon';
+    font: 1em/1.125 'icomoon';
     speak: none;
     text-transform: none;
 
@@ -338,7 +338,7 @@ footer a{
 #social-nav a[title="twitter"]:before,.social-share a[title="twitter"]:before  {
     content: "\e603";
 }
-#social-nav a[title="flickr"]:before,.social-share a[title="flickr"]:before  {
+#social-nav a[title="flickr"]:before,#flickr-fake-share a:before  {
     content: "\e604";
 }
 
@@ -506,15 +506,15 @@ header .search-form input[type="search"]::-webkit-input-placeholder {
 }
 
 :-moz-placeholder { /* Firefox 18- */
-    text-transform: lowercase;  
+    text-transform: lowercase;
 }
 
 ::-moz-placeholder {  /* Firefox 19+ */
-    text-transform: lowercase; 
+    text-transform: lowercase;
 }
 
-:-ms-input-placeholder {  
-    text-transform: lowercase; 
+:-ms-input-placeholder {
+    text-transform: lowercase;
 }
 
 /* ==========================================================================
@@ -865,9 +865,9 @@ li.agenda:hover .carousel-item-info {
         padding: 0;
     }
     #social-nav a {
-        height: 1.6em;
+        height: 1.7em;
         margin-left: 4px;
-        width: 1.6em;
+        width: 1.7em;
     }
 
     #social-nav{
@@ -1003,6 +1003,10 @@ li.agenda:hover .carousel-item-info {
         vertical-align: top;
         width: 32%;
     }
+    .home-share ul li{
+        width: 28%;
+        padding-left: 5%;
+    }
     .home-share ul li:first-child {
         padding: 0;
     }
@@ -1082,10 +1086,7 @@ li.agenda:hover .carousel-item-info {
         top: 7px;
         left: -10px;
     }
-    .social-share ul li  a{
-        font: .8em/1 'icomoon';
-    }
-    .social-share ul li .box-likes{
+    .article-share ul li .box-likes{
         border-width: 2px;
         font-size: 1.3em;
         height: 32px;
