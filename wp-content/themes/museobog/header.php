@@ -33,13 +33,15 @@
                 </ul>
             </nav>
 
-            <div class="logo">
-                <a href="<?php echo pll_home_url('/'); ?>" rel="home">
-                    <h1 id="logo-scroll">b</h1>
+
+            <a href="<?php echo pll_home_url('/'); ?>" rel="home">
+                <h1 id="logo-scroll">b</h1>
+                <div class="logo">
                     <h1><?php bloginfo('name'); ?></h1>
                     <h2><?php bloginfo('description'); ?></h2>
-                </a>
-            </div>
+                </div>
+            </a>
+
 
             <div class="toggle-menu icon-menu replace-icon"><?php _e('menú', 'museobog'); ?></div>
             <nav id="main-nav" role="navigation">
