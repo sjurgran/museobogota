@@ -1,4 +1,5 @@
 <main role="main" id="main">
+	<?php get_template_part('breadcrumb'); ?>
 
 	<article>
 		<h1><?php _e('No hemos encontrado lo que buscabas', 'museobog'); ?></h1>

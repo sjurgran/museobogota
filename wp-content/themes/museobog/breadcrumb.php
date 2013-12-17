@@ -1,6 +1,6 @@
 <nav class="menu breadcrumb">
 	<a class="crumb" href="<?php echo pll_home_url('/'); ?>"><?php _e('inicio', 'museobog'); ?></a>
-        <span class="crumb">></span> 
+        <span class="crumb">></span>
 	<?php
 	$before = '<span class="crumb">';
 	$after = '</span>';
@@ -16,6 +16,8 @@
 		echo $before . get_the_title() . $after;
 	} elseif ( is_post_type_archive() ) {
 		echo $before . post_type_archive_title('', false) . $after;
+	} elseif ( is_404() ) {
+		echo $before . '404' . $after;
 	}
 	?>
 </nav>
