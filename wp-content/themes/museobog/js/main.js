@@ -41,6 +41,38 @@ white = [
 (function($) {
 
     /*
+     * Menu Scroll
+     */
+    var heightNav = $("#language-nav").height();
+    $(window).scroll(function() {
+        var wSroll = $(window).scrollTop();
+        if (wSroll > heightNav && $(window).width() > 720) {
+            
+            $("#logo-scroll").addClass("show")
+            $(".logo").addClass("hidden");
+            $("#logo-bogota").addClass("hidden");
+            $("header").addClass("fixed");
+            $(".menu-item").addClass("display-inline");
+            $(".search-form").addClass("search-width");
+            $(".search-submit ").addClass("submit-left");
+            $(".menu-language ").addClass("nav-padding");
+        }
+        if (wSroll < heightNav && $(window).width() > 720) {
+            
+            $("#logo-scroll").removeClass("show");
+            $(".logo").removeClass("hidden");
+            $("#logo-bogota").removeClass("hidden");
+            $("header").removeClass("fixed");
+            $(".menu-item").removeClass("display-inline");
+            $(".search-form").removeClass("search-width");
+            $(".search-submit ").removeClass("submit-left");
+            $(".menu-language").removeClass("nav-padding");
+        }
+
+    });
+
+
+    /*
      * GOOGLE MAPS
      */
     function loadMapScript() {
