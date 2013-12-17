@@ -108,7 +108,14 @@ input[type="search"]:focus {
 /* =============================================================================
    Layout - Header
    ========================================================================== */
-
+header {
+    width: 100%;
+    box-sizing: border-box;
+    -moz-box-sizing: border-box;
+}
+header #logo-bogota{
+    display: none;
+}
 #header {
     padding: 0 20px;
     text-align: center;
@@ -496,6 +503,22 @@ article-meta{
     font-weight: 100;
     text-transform: uppercase;
 }
+header .search-form input[type="search"]::-webkit-input-placeholder {
+
+    text-transform: lowercase;
+}
+
+:-moz-placeholder { /* Firefox 18- */
+    text-transform: lowercase;  
+}
+
+::-moz-placeholder {  /* Firefox 19+ */
+    text-transform: lowercase; 
+}
+
+:-ms-input-placeholder {  
+    text-transform: lowercase; 
+}
 
 /* ==========================================================================
    Obra
@@ -645,7 +668,8 @@ html[xmlns] .slides {display: block;}
     position: relative;
 }
 li.agenda {
-    margin-right: 20px;
+    display: inline-block;
+    margin: 0 15px 15px 0;
     position: relative;
 }
 .big-time {
@@ -716,6 +740,30 @@ li.agenda:hover .carousel-item-info {
 /* ==========================================================================
    States
    ========================================================================== */
+.hidden{
+    display: none !important;
+}
+.show{
+    display: block !important   ;
+}
+.fixed{
+    position: fixed !important;
+}
+
+.display-inline{
+    display: inline-block !important;
+}
+.search-width{
+    left: -16px;
+    width: 20px !important;
+}
+.submit-left{
+   left: 10px !important; 
+}
+.nav-padding{
+    padding-right: 40px !important;
+}
+
 
 .toggled-menu {
     left: 17em;
@@ -759,16 +807,19 @@ li.agenda:hover .carousel-item-info {
     /* ==========================================================================
       Header
       ========================================================================== */
+    
     #header {
         text-align: left;
     }
-    #language-nav {
-        text-align: center;
+    header #language-nav ul{
+        padding-right: 200px;
     }
-    .menu-language {
-        padding: 2em 0 1em;
+    header .menu-language{
+        padding: 2.3em 0 1em;
     }
-
+     header .toggle-search{
+        display: none
+    }
     #main-nav {
         background: none;
         color: #000;
@@ -804,6 +855,9 @@ li.agenda:hover .carousel-item-info {
     .img_bogota_header {
         display: inline;
         width: 132px;
+    }
+    #main-nav .menu{
+        padding: 0;
     }
     #social-nav a {
         height: 1.6em;
@@ -990,7 +1044,10 @@ li.agenda:hover .carousel-item-info {
         top: 7px;
         left: -10px;
     }
-    .article-share ul li .box-likes{
+    .social-share ul li  a{
+        font: .8em/1 'icomoon';
+    }
+    .social-share ul li .box-likes{
         border-width: 2px;
         font-size: 1.3em;
         height: 32px;
