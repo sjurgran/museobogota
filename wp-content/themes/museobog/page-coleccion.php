@@ -6,7 +6,7 @@ Template Name: Collection
 <main role="main" id="main">
 	<?php get_template_part( 'breadcrumb' ); ?>
 
-	<section class="main-block">
+	<section class="main-block collection-description">
 		<?php while ( have_posts() ) : the_post(); ?>
 
 			<?php $page_id = $post->ID; ?>
@@ -43,8 +43,7 @@ Template Name: Collection
 	wp_reset_postdata();
 	?>
 
-	<section class="main-block">
+	<section class="main-block home-featured">
 		<h1 class="block-title"><?php _e('Obra destacada del mes', 'museobog'); ?></h1>
-aa
 		<?php get_template_part( 'loop', 'featured' ); ?>
 	</section>
