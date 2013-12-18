@@ -778,27 +778,27 @@ li.agenda:hover .carousel-item-info {
    States
    ========================================================================== */
 
-.hidden{
+.comprimido .logo ,.comprimido #logo-bogota{
     display: none !important;
 }
-.show{
+.comprimido #logo-scroll{
     display: block !important   ;
 }
-.fixed{
+.comprimido #header{
     position: fixed !important;
 }
 
-.display-inline{
+.comprimido .menu-item{
     display: inline-block !important;
 }
-.search-width{
+.comprimido  .search-form{
     right: 35px !important;;
     width: 20px !important;
 }
-.submit-left{
+.comprimido  .search-submit{
     left: 10px !important;
 }
-.nav-padding{
+.comprimido .menu-language{
     padding-right: 40px !important;
 }
 

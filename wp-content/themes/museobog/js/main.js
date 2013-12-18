@@ -49,25 +49,12 @@ white = [
         winWidth = $(window).width();
         if (wSroll > heightNav && winWidth > 720) {
             
-            $("#logo-scroll").addClass("show")
-            $(".logo").addClass("hidden");
-            $("#logo-bogota").addClass("hidden");
-            $("header").addClass("fixed");
-            $(".menu-item").addClass("display-inline");
-            $(".search-form").addClass("search-width");
-            $(".search-submit ").addClass("submit-left");
-            $(".menu-language ").addClass("nav-padding");
+            $("#header").addClass("comprimido");
+            
         }
         if (wSroll < heightNav && winWidth > 720) {
             
-            $("#logo-scroll").removeClass("show");
-            $(".logo").removeClass("hidden");
-            $("#logo-bogota").removeClass("hidden");
-            $("header").removeClass("fixed");
-            $(".menu-item").removeClass("display-inline");
-            $(".search-form").removeClass("search-width");
-            $(".search-submit ").removeClass("submit-left");
-            $(".menu-language").removeClass("nav-padding");
+            $("#header").removeClass("comprimido");
         }
 
     });
