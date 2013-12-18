@@ -1,43 +1,70 @@
 /* ==========================================================================
    Fonts
-   NEXA: 900 Black - 800 Heavy - 700 XBold - 600 Bold - 400 Regular - 300 Book - 200 Light - 100 Thin
+   NEXA: 900 Black - 800 Heavy - 700 XBold - 400 Book
    ========================================================================== */
 
-@font-face {
-    font-family: 'Nexa'; /* Nexa Regular */
-    src: url('../fonts/2875F4_D_0.eot');
-    src: url('../fonts/2875F4_D_0.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/2875F4_D_0.woff') format('woff'),
-        url('../fonts/2875F4_D_0.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-}
 @font-face {
     font-family: 'Nexa'; /* Nexa Book */
     src: url('../fonts/2875F4_4_0.eot');
     src: url('../fonts/2875F4_4_0.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/2875F4_4_0.woff') format('woff'),
-        url('../fonts/2875F4_4_0.ttf') format('truetype');
-    font-weight: 300;
+         url('../fonts/2875F4_4_0.woff') format('woff'),
+         url('../fonts/2875F4_4_0.ttf') format('truetype');
+    font-weight: normal;
     font-style: normal;
+}
+@font-face {
+    font-family: 'Nexa';/* Nexa-Book-Italic */
+    src: url('../fonts/2875F4_3_0.eot');
+    src: url('../fonts/2875F4_3_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_3_0.woff') format('woff'),
+         url('../fonts/2875F4_3_0.ttf') format('truetype');
+    font-weight: normal;
+    font-style: italic;
 }
 @font-face {
     font-family: 'Nexa'; /* Nexa XBold */
     src: url('../fonts/2875F4_E_0.eot');
     src: url('../fonts/2875F4_E_0.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/2875F4_E_0.woff') format('woff'),
-        url('../fonts/2875F4_E_0.ttf') format('truetype');
+         url('../fonts/2875F4_E_0.woff') format('woff'),
+         url('../fonts/2875F4_E_0.ttf') format('truetype');
     font-weight: bold;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Nexa';/* Nexa-XBold-Italic */
+    src: url('../fonts/2875F4_9_0.eot');
+    src: url('../fonts/2875F4_9_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_9_0.woff') format('woff'),
+         url('../fonts/2875F4_9_0.ttf') format('truetype');
+    font-weight: bold;
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Nexa';/* Nexa Heavy */
+    src: url('../fonts/2875F4_B_0.eot');
+    src: url('../fonts/2875F4_B_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_B_0.woff') format('woff'),
+         url('../fonts/2875F4_B_0.ttf') format('truetype');
+    font-weight: 800;
     font-style: normal;
 }
 @font-face {
     font-family: 'Nexa'; /* Nexa Black */
     src: url('../fonts/2875F4_A_0.eot');
     src: url('../fonts/2875F4_A_0.eot?#iefix') format('embedded-opentype'),
-        url('../fonts/2875F4_A_0.woff') format('woff'),
-        url('../fonts/2875F4_A_0.ttf') format('truetype');
+         url('../fonts/2875F4_A_0.woff') format('woff'),
+         url('../fonts/2875F4_A_0.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
+}
+@font-face {
+    font-family: 'Nexa';/* Nexa-Black-Italic */
+    src: url('../fonts/2875F4_0_0.eot');
+    src: url('../fonts/2875F4_0_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/2875F4_0_0.woff') format('woff'),
+         url('../fonts/2875F4_0_0.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
 }
 
 @font-face {
@@ -57,7 +84,6 @@
 
 body {
     font-family: 'Nexa';
-    font-weight: 300;
     left: 0;
     position: relative;
     transition: left 0.6s;
@@ -88,7 +114,7 @@ h1 {
 }
 h5 {
     font-size: 0.88em;
-    font-weight: bold;
+    font-weight: 800;
     margin: 0;
     text-transform: uppercase;
 }
@@ -222,7 +248,7 @@ footer{
 }
 footer h2, footer h2{
     font-size: .8em;
-    font-weight: bolder;
+    font-weight: 900;
 
 }
 footer p{
@@ -352,7 +378,7 @@ footer a{
 }
 .logo h1 {
     font-size: 1.38em;
-    font-weight: 700;
+    font-weight: bold;
     letter-spacing: -0.05em;
     line-height: 1em;
     margin: 0;
@@ -360,7 +386,7 @@ footer a{
 }
 .logo h2 {
     font-size: 0.52em;
-    font-weight: 300;
+    font-weight: normal;
     line-height: 1em;
     margin: 0;
 }
@@ -475,7 +501,7 @@ article-meta{
 .send-message{
     font-size: .95em;
     font-style: italic;
-    font-weight: 600;
+    font-weight: bold;
 }
 ::-webkit-input-placeholder {
     color:#000;
@@ -534,7 +560,7 @@ header .search-form input[type="search"]::-webkit-input-placeholder {
 }
 .social-share ul li span{
     display:block;
-    font-weight: 600;
+    font-weight: bold;
 }
 .social-share ul li .box-likes{
     border: 3px solid #000;
@@ -617,7 +643,7 @@ html[xmlns] .slides {display: block;}
 .slider-subtitle {
     color: #fff;
     font-size: 1em;
-    font-weight: 300;
+    font-weight: normal;
     margin: 0;
     text-transform: uppercase;
 }
@@ -646,7 +672,7 @@ html[xmlns] .slides {display: block;}
 .button {
     background: #000;
     color: #fff;
-    font-weight: 600;
+    font-weight: bold;
     padding: 8px 12px 4px;
     text-decoration: none;
     text-transform: uppercase;
@@ -672,7 +698,7 @@ li.agenda {
 .big-time {
     color: #fff;
     font-size: 1.25em;
-    font-weight: bold;
+    font-weight: 800;
     padding: 8px 4px;
     position: absolute;
     text-transform: uppercase;
@@ -682,7 +708,7 @@ li.agenda {
     background: rgba(0, 0, 0, 0.8);
     box-sizing: border-box;
     color: #fff;
-    font-weight: 600;
+    font-weight: 800;
     display: none;
     height: 100%;
     left: 0;
@@ -757,11 +783,11 @@ li.agenda:hover .carousel-item-info {
     display: inline-block !important;
 }
 .search-width{
-    right: 35px !important;; 
+    right: 35px !important;;
     width: 20px !important;
 }
 .submit-left{
-    left: 10px !important; 
+    left: 10px !important;
 }
 .nav-padding{
     padding-right: 40px !important;
@@ -889,13 +915,6 @@ li.agenda:hover .carousel-item-info {
         width: 132px;
     }
 
-    .logo h1 {
-        font-size: 1.66em;
-        line-height: .7em;
-    }
-    header .logo h2 {
-        font-size: 0.6em;
-    }
     header #logo-scroll{
         background: #000;
         border-radius: 50%;
