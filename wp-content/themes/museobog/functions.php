@@ -219,8 +219,43 @@ function museo_custom_fields($groups) {
     $groups[] = $my_group;
     return $groups;
 }
-
 add_filter('kc_post_settings', 'museo_custom_fields');
+
+/**
+ * Opciones y textos del tema
+ */
+function museo_theme_options( $settings ) {
+    $options = array(
+        array(
+            'id'     => 'agenda_options',
+            'title'  => 'Agenda',
+            'fields' => array(
+                array(
+                    'id'      => 'events_text_es',
+                    'title'   => 'Texto inicial Agenda',
+                    'type'    => 'editor'
+                ),
+                array(
+                    'id'      => 'events_text_en',
+                    'title'   => 'Texto inicial Agenda Inglés',
+                    'type'    => 'editor'
+                )
+            )
+        )
+    );
+
+    $my_settings = array(
+        'prefix'        => 'museo',
+        'menu_location' => 'themes.php',
+        'menu_title'    => 'Opciones Generales',
+        'page_title'    => 'Opciones Generales',
+        'options'       => $options
+    );
+
+    $settings[] = $my_settings;
+    return $settings;
+}
+add_filter( 'kc_plugin_settings', 'museo_theme_options' );
 
 /**
  * Format dates for carousel

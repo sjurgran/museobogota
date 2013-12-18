@@ -1,6 +1,15 @@
 <main role="main" id="main">
 	<?php get_template_part( 'breadcrumb' ); ?>
 
+	<section class="main-block events-intro">
+		<?php
+			$language_prefix = pll_current_language();
+			$language_intro_text_id = 'events_text_'.$language_prefix;
+			$welcome = kc_get_option( 'museo', 'agenda_options', $language_intro_text_id );
+			echo wpautop($welcome);
+		?>
+	</section>
+
 	<section class="main-block">
 		<h1 class="block-title"><?php _e('Calendario de eventos', 'museobog'); ?></h1>
 
