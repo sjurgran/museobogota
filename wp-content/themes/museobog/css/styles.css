@@ -943,7 +943,7 @@ li.agenda:hover .carousel-item-info {
     }
 
 
-   
+
 
     .search-form{
         background: none;
@@ -1161,11 +1161,21 @@ li.agenda:hover .carousel-item-info {
 
     article.category-exposiciones {
         display: inline-block;
-        margin-right: 1%;
+        margin-right: 2%;
         vertical-align: top;
-        width: 32%;
+        width: 31.5%;
     }
     article.category-exposiciones:last-child {
+        margin-right: 0;
+    }
+
+    article.category-contacto {
+        display: inline-block;
+        margin-right: 2%;
+        vertical-align: top;
+        width: 48%;
+    }
+    article.category-contacto:last-child {
         margin-right: 0;
     }
 
