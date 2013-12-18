@@ -332,9 +332,7 @@ function get_museo_page_link($slug, $echo_anchor=true, $subpage='') {
     $page_link = get_permalink($pll_page_id);
 
     if ($subpage) {
-        $subpage_object = get_page_by_path($slug.'/'.$subpage);
-        $pll_subpage_id = pll_get_post($subpage_object->ID);
-        $page_link .= '#post-'.$pll_subpage_id;
+        $page_link .= '#'.$subpage;
     }
 
     if ($echo_anchor) {
