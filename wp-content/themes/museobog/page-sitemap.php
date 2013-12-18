@@ -10,8 +10,9 @@ global $post_type;
 	<section class="main-block">
 		<?php
 			$page_el_museo = get_page_by_path('el-museo');
+			$el_museo_id = pll_get_post($page_el_museo->ID);
 		?>
-		<h2><a href="<?php echo get_permalink($page_el_museo); ?>"><?php echo $page_el_museo->post_title; ?></a></h2>
+		<h2><a href="<?php echo get_permalink($el_museo_id); ?>"><?php echo get_the_title($el_museo_id); ?></a></h2>
 	</section>
 
 	<section class="main-block">
