@@ -234,7 +234,7 @@ header {
     /*max-width: 280px;*/
 }
 .main-block p{
-    margin: .9em 0;
+    margin: .9em 0 0;
 }
 #map-canvas {
     height: 274px;
@@ -254,10 +254,16 @@ header {
     white-space: nowrap;
 }
 
+.collection-description {
+    border-top: 0;
+}
+
+
 /* ==========================================================================
    Layout - Footer
    ========================================================================== */
 footer{
+    margin-top: 1em;
     padding: 0 20px;
 }
 footer h2, footer h2{
@@ -568,10 +574,14 @@ header .search-form input[type="search"]::-webkit-input-placeholder {
 }
 .social-share ul li{
     display: inline-block;
-    padding-left: 20px;
+    padding-left: 5%;
     vertical-align: top;
-    width: 90px;
+    width: 28%;
 }
+.social-share ul li:first-child {
+    padding: 0;
+}
+
 .social-share ul li span{
     display:block;
     font-weight: bold;
@@ -686,6 +696,7 @@ html[xmlns] .slides {display: block;}
 .button {
     background: #000;
     color: #fff;
+    display: inline-block;
     font-weight: bold;
     padding: 8px 12px 4px;
     text-decoration: none;
@@ -771,6 +782,15 @@ li.agenda:hover .carousel-item-info {
 }
 .flex-disabled {
     display: none;
+}
+
+div.type-collection {
+    margin-bottom: 2.5em;
+    text-align: center;
+}
+div.type-collection h3 {
+    font-weight: normal;
+    margin-top: 0;
 }
 
 
@@ -1159,24 +1179,25 @@ li.agenda:hover .carousel-item-info {
         clear: both;
     }
 
-    article.category-exposiciones {
+    article.category-exposiciones,
+    div.type-collection {
         display: inline-block;
-        margin-right: 2%;
+        margin-left: 2%;
         vertical-align: top;
         width: 31.5%;
     }
-    article.category-exposiciones:last-child {
-        margin-right: 0;
+    article.category-exposiciones:nth-child(3n+3),
+    div.type-collection:nth-child(3n+2) {
+        margin-left: 0;
     }
 
     article.category-contacto {
         display: inline-block;
-        margin-right: 2%;
+        margin-left: 2%;
         vertical-align: top;
         width: 48%;
     }
-    article.category-contacto:last-child {
-        margin-right: 0;
+    article.category-contacto:nth-child(2n+3) {
+        margin-left: 0;
     }
-
 }
