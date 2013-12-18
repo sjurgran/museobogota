@@ -111,14 +111,14 @@ input[type="search"]:focus {
 header {
     width: 100%;
     box-sizing: border-box;
-    -moz-box-sizing: border-box;
 }
-header #logo-bogota{
+#logo-bogota{
     display: none;
 }
 #header {
     padding: 0 20px;
     text-align: center;
+    z-index: 1000;
 }
 
 #main-nav {
@@ -167,9 +167,6 @@ header #logo-bogota{
     position: absolute;
     right: 20px;
     top: 0;
-}
-.img_bogota_header {
-    display: none;
 }
 
 /* ==========================================================================
@@ -740,6 +737,12 @@ li.agenda:hover .carousel-item-info {
 /* ==========================================================================
    States
    ========================================================================== */
+#content-header-rigth{
+    position: absolute;
+    right: 20px;
+    top: 96px;
+    width: 132px;
+}
 .hidden{
     display: none !important;
 }
@@ -754,11 +757,11 @@ li.agenda:hover .carousel-item-info {
     display: inline-block !important;
 }
 .search-width{
-    left: -16px;
+    right: 35px !important;; 
     width: 20px !important;
 }
 .submit-left{
-   left: 10px !important;
+    left: 10px !important; 
 }
 .nav-padding{
     padding-right: 40px !important;
@@ -811,25 +814,35 @@ li.agenda:hover .carousel-item-info {
     #header {
         text-align: left;
     }
-    header #language-nav ul{
-        padding-right: 200px;
-    }
-    header .menu-language{
+
+    .menu-language{
         padding: 2.3em 0 1em;
     }
-     header .toggle-search{
+    .toggle-search{
         display: none
+    }
+    #language-nav ul{
+        padding-right: 200px;
+        text-align: right;
     }
     #main-nav {
         background: none;
         color: #000;
         display: inline-block;
         position: static;
+        width: 100%;
     }
     #main-nav .menu {
         padding: 0;
     }
+    #main-nav .menu a{
+        display: inline-block;
+        border-right: 2px solid #000;
+        height: 22px;
+        padding: 0 10px;
+    }
     #main-nav .menu-item {
+        border: none;
         padding: 0 ;
     }
     #main-nav a {
@@ -848,26 +861,56 @@ li.agenda:hover .carousel-item-info {
     }
 
     #social-nav {
-        float: right;
-        position: static;
+        right: 0;
         text-align: right;
     }
     .img_bogota_header {
         display: inline;
         width: 132px;
     }
-    #main-nav .menu{
-        padding: 0;
-    }
+
     #social-nav a {
         height: 1.7em;
         margin-left: 4px;
         width: 1.7em;
     }
+
+    #social-nav{
+        position: relative;
+    }
     #social-nav a:before {
         font-size: 1.5em;
     }
+    #logo-bogota {
+        display: block
+    }
+    #logo-bogota img{
+        margin-top: 10px;
+        width: 132px;
+    }
 
+    .logo h1 {
+        font-size: 1.66em;
+        line-height: .7em;
+    }
+    header .logo h2 {
+        font-size: 0.6em;
+    }
+    header #logo-scroll{
+        background: #000;
+        border-radius: 50%;
+        box-sizing: border-box;
+        display: none;
+        color: #fff;
+        font-size: 2.1em;
+        height: 40px;
+        line-height: initial;
+        padding: 3px 10px;
+        position: absolute;
+        text-transform: lowercase;
+        top: 0;
+        width: 40px;
+    }
     .search-form{
         background: none;
         padding: 0;
@@ -1065,7 +1108,7 @@ li.agenda:hover .carousel-item-info {
         float: left;
         margin-left: 2%;
         vertical-align: top;
-        width: 32%%;
+        width: 32%;
 
     }
     .footer-block:first-child{
