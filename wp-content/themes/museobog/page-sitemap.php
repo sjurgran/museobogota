@@ -8,11 +8,7 @@ global $post_type;
 	<?php get_template_part('breadcrumb'); ?>
 
 	<section class="main-block">
-		<?php
-			$page_el_museo = get_page_by_path('el-museo');
-			$el_museo_id = pll_get_post($page_el_museo->ID);
-		?>
-		<h2><a href="<?php echo get_permalink($el_museo_id); ?>"><?php echo get_the_title($el_museo_id); ?></a></h2>
+		<h2><?php get_museo_page_link('el-museo'); ?></a></h2>
 	</section>
 
 	<section class="main-block">
