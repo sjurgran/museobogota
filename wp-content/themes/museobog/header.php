@@ -48,10 +48,9 @@
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
             </nav>
 
-            <div id="search-content">
-                <div class="toggle-search icon-search replace-icon is-open"><?php _e('buscar', 'museobog'); ?></div>
-                <?php get_search_form(); ?>
-            </div>
+            <div class="toggle-search icon-search replace-icon is-open"><?php _e('buscar', 'museobog'); ?></div>
+            <?php get_search_form(); ?>
+
             <div id="content-header-rigth">
                 <div id="logo-bogota">
                     <img src="<?php bloginfo('template_directory'); ?>/images/logo_bogota_ByN.svg" alt="Logo Bogota" />

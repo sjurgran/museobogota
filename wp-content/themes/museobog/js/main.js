@@ -45,8 +45,9 @@ white = [
      */
     var heightNav = $("#language-nav").height();
     $(window).scroll(function() {
-        var wSroll = $(window).scrollTop();
-        if (wSroll > heightNav && $(window).width() > 720) {
+        var wSroll = $(window).scrollTop(),
+        winWidth = $(window).width();
+        if (wSroll > heightNav && winWidth > 720) {
             
             $("#logo-scroll").addClass("show")
             $(".logo").addClass("hidden");
@@ -57,7 +58,7 @@ white = [
             $(".search-submit ").addClass("submit-left");
             $(".menu-language ").addClass("nav-padding");
         }
-        if (wSroll < heightNav && $(window).width() > 720) {
+        if (wSroll < heightNav && winWidth > 720) {
             
             $("#logo-scroll").removeClass("show");
             $(".logo").removeClass("hidden");

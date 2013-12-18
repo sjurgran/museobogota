@@ -151,7 +151,21 @@ header {
 #main-nav a:after {
     content: " >";
 }
-
+#logo-scroll{
+    background: #000;
+    border-radius: 50%;
+    box-sizing: border-box;
+    display: none;
+    color: #fff;
+    font-size: 2.1em;
+    height: 40px;
+    line-height: initial;
+    padding: 3px 10px;
+    position: absolute;
+    text-transform: lowercase;
+    top: 0;
+    width: 40px;
+}
 .toggle-menu {
     cursor: pointer;
     float: left;
@@ -737,12 +751,7 @@ li.agenda:hover .carousel-item-info {
 /* ==========================================================================
    States
    ========================================================================== */
-#content-header-rigth{
-    position: absolute;
-    right: 20px;
-    top: 96px;
-    width: 132px;
-}
+
 .hidden{
     display: none !important;
 }
@@ -803,6 +812,16 @@ li.agenda:hover .carousel-item-info {
    Media Queries
    ========================================================================== */
 @media (min-width:720px) {
+
+    /* ==========================================================================
+   States
+   ========================================================================== */
+    #content-header-rigth{
+        position: absolute;
+        right: 20px;
+        top: 96px;
+        width: 132px;
+    }
 
     h1 {
         font-size: 1.75em;
@@ -896,21 +915,7 @@ li.agenda:hover .carousel-item-info {
     header .logo h2 {
         font-size: 0.6em;
     }
-    header #logo-scroll{
-        background: #000;
-        border-radius: 50%;
-        box-sizing: border-box;
-        display: none;
-        color: #fff;
-        font-size: 2.1em;
-        height: 40px;
-        line-height: initial;
-        padding: 3px 10px;
-        position: absolute;
-        text-transform: lowercase;
-        top: 0;
-        width: 40px;
-    }
+
     .search-form{
         background: none;
         padding: 0;
