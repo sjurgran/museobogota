@@ -330,6 +330,13 @@ function get_museo_page_link($slug, $echo_anchor=true, $subpage='') {
     $pll_page_id = pll_get_post($page_object->ID);
     $page_title = get_the_title($pll_page_id);
     $page_link = get_permalink($pll_page_id);
+
+    if ($subpage) {
+        $subpage_object = get_page_by_path($slug.'/'.$subpage);
+        $pll_subpage_id = pll_get_post($subpage_object->ID);
+        $page_link .= '#post-'.$pll_subpage_id;
+    }
+
     if ($echo_anchor) {
         printf('<a href="%s">%s</a>', $page_link, $page_title);
     } else {

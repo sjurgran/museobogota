@@ -22,7 +22,7 @@
                 Atención a la ciudadanía<br />
                 Defensor del ciudadano
             </p>
-            <p><a href="<?php echo get_museo_page_link('el-museo', false); ?>">Inscríbase y reciba noticias</a></p>
+            <p><a href="<?php echo get_museo_page_link('el-museo', false, 'inscribase'); ?>">Inscríbase y reciba noticias</a></p>
             <p>
                 <?php _e('Última actualización:', 'museobog'); ?> <?php site_last_modified('d/m/Y'); ?><br />
                 <?php
