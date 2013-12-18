@@ -34,7 +34,7 @@ Template Name: Collection
 	foreach ($children as $key => $post):
 		setup_postdata( $post );
 	?>
-		<section class="main-block">
+		<section class="main-block" id="post-<?php the_ID(); ?>">
 			<h1><?php the_title(); ?></h1>
 			<?php the_content(); ?>
 		</section>
