@@ -33,6 +33,9 @@ function minimal_theme_setup() {
     add_image_size('wide', 996, 999); //996 pixels wide (and "unlimited" height)
     add_image_size('half', 588, 391, true);
     add_image_size('big-thumb', 384, 384, true);
+
+    //disable cleaner gallery stylesheet
+    add_theme_support( 'cleaner-gallery' );
 }
 
 add_action('after_setup_theme', 'minimal_theme_setup');
