@@ -24,6 +24,8 @@
     $children = get_posts($args);
 
     foreach ($children as $key => $sub_page):
+
+        if ( isset($categories[$key]) ):
         ?>
 
         <section class="main-block">
@@ -49,14 +51,13 @@
         </section>
 
         <?php
+        endif;
+
         $post = $sub_page;
         setup_postdata($post);
         ?>
 
-        
-
-
-        <section class="main-block">
+        <section class="main-block" id="<?php echo $post->post_name; ?>">
             <h1><?php the_title(); ?></h1>
             <?php the_content(); ?>
         </section>

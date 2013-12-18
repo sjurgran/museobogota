@@ -33,6 +33,9 @@ function minimal_theme_setup() {
     add_image_size('wide', 996, 999); //996 pixels wide (and "unlimited" height)
     add_image_size('half', 588, 391, true);
     add_image_size('big-thumb', 384, 384, true);
+
+    //disable cleaner gallery stylesheet
+    add_theme_support( 'cleaner-gallery' );
 }
 
 add_action('after_setup_theme', 'minimal_theme_setup');
@@ -316,6 +319,28 @@ function search_only_custom_post_types( $query ) {
     return $query;
 }
 add_filter('pre_get_posts','search_only_custom_post_types');
+
+
+/**
+ * get page link in the current language, used in footer, sitemap and base (collection archive redirection)
+ */
+function get_museo_page_link($slug, $echo_anchor=true, $subpage='') {
+
+    $page_object = get_page_by_path($slug);
+    $pll_page_id = pll_get_post($page_object->ID);
+    $page_title = get_the_title($pll_page_id);
+    $page_link = get_permalink($pll_page_id);
+
+    if ($subpage) {
+        $page_link .= '#'.$subpage;
+    }
+
+    if ($echo_anchor) {
+        printf('<a href="%s">%s</a>', $page_link, $page_title);
+    } else {
+        return $page_link;
+    }
+}
 
 //
 function diffDate($datei) {
