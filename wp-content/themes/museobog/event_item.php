@@ -11,7 +11,7 @@ $end_date = format_event_date(get_post_meta($post->ID, "_end_date", true));
 $GLOBALS["diff"][] = diffDate($datePostStart);
 ?>
 
-<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
+<li <?php post_class("historial"); ?> id="post-<?php the_ID(); ?>">
     <a href="<?php the_permalink(); ?>">
         <time class="big-time"><?php echo $start_date; ?></time>
         <?php the_post_thumbnail(); ?>
