@@ -7,8 +7,8 @@
     font-family: 'Nexa'; /* Nexa Book */
     src: url('../fonts/2875F4_4_0.eot');
     src: url('../fonts/2875F4_4_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_4_0.woff') format('woff'),
-         url('../fonts/2875F4_4_0.ttf') format('truetype');
+        url('../fonts/2875F4_4_0.woff') format('woff'),
+        url('../fonts/2875F4_4_0.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -16,8 +16,8 @@
     font-family: 'Nexa';/* Nexa-Book-Italic */
     src: url('../fonts/2875F4_3_0.eot');
     src: url('../fonts/2875F4_3_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_3_0.woff') format('woff'),
-         url('../fonts/2875F4_3_0.ttf') format('truetype');
+        url('../fonts/2875F4_3_0.woff') format('woff'),
+        url('../fonts/2875F4_3_0.ttf') format('truetype');
     font-weight: normal;
     font-style: italic;
 }
@@ -25,8 +25,8 @@
     font-family: 'Nexa'; /* Nexa XBold */
     src: url('../fonts/2875F4_E_0.eot');
     src: url('../fonts/2875F4_E_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_E_0.woff') format('woff'),
-         url('../fonts/2875F4_E_0.ttf') format('truetype');
+        url('../fonts/2875F4_E_0.woff') format('woff'),
+        url('../fonts/2875F4_E_0.ttf') format('truetype');
     font-weight: bold;
     font-style: normal;
 }
@@ -34,8 +34,8 @@
     font-family: 'Nexa';/* Nexa-XBold-Italic */
     src: url('../fonts/2875F4_9_0.eot');
     src: url('../fonts/2875F4_9_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_9_0.woff') format('woff'),
-         url('../fonts/2875F4_9_0.ttf') format('truetype');
+        url('../fonts/2875F4_9_0.woff') format('woff'),
+        url('../fonts/2875F4_9_0.ttf') format('truetype');
     font-weight: bold;
     font-style: italic;
 }
@@ -43,8 +43,8 @@
     font-family: 'Nexa';/* Nexa Heavy */
     src: url('../fonts/2875F4_B_0.eot');
     src: url('../fonts/2875F4_B_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_B_0.woff') format('woff'),
-         url('../fonts/2875F4_B_0.ttf') format('truetype');
+        url('../fonts/2875F4_B_0.woff') format('woff'),
+        url('../fonts/2875F4_B_0.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
 }
@@ -52,8 +52,8 @@
     font-family: 'Nexa'; /* Nexa Black */
     src: url('../fonts/2875F4_A_0.eot');
     src: url('../fonts/2875F4_A_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_A_0.woff') format('woff'),
-         url('../fonts/2875F4_A_0.ttf') format('truetype');
+        url('../fonts/2875F4_A_0.woff') format('woff'),
+        url('../fonts/2875F4_A_0.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
 }
@@ -61,8 +61,8 @@
     font-family: 'Nexa';/* Nexa-Black-Italic */
     src: url('../fonts/2875F4_0_0.eot');
     src: url('../fonts/2875F4_0_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/2875F4_0_0.woff') format('woff'),
-         url('../fonts/2875F4_0_0.ttf') format('truetype');
+        url('../fonts/2875F4_0_0.woff') format('woff'),
+        url('../fonts/2875F4_0_0.ttf') format('truetype');
     font-weight: 900;
     font-style: italic;
 }
@@ -778,31 +778,6 @@ li.agenda:hover .carousel-item-info {
    States
    ========================================================================== */
 
-.comprimido .logo ,.comprimido #logo-bogota{
-    display: none !important;
-}
-.comprimido #logo-scroll{
-    display: block !important   ;
-}
-.comprimido #header{
-    position: fixed !important;
-}
-
-.comprimido .menu-item{
-    display: inline-block !important;
-}
-.comprimido  .search-form{
-    right: 35px !important;;
-    width: 20px !important;
-}
-.comprimido  .search-submit{
-    left: 10px !important;
-}
-.comprimido .menu-language{
-    padding-right: 40px !important;
-}
-
-
 .toggled-menu {
     left: 17em;
     overflow-x: hidden;
@@ -880,12 +855,7 @@ li.agenda:hover .carousel-item-info {
     #main-nav .menu {
         padding: 0;
     }
-    #main-nav .menu a{
-        display: inline-block;
-        border-right: 2px solid #000;
-        height: 22px;
-        padding: 0 10px;
-    }
+    
     #main-nav .menu-item {
         border: none;
         padding: 0 ;
@@ -943,7 +913,7 @@ li.agenda:hover .carousel-item-info {
     }
 
 
-   
+
 
     .search-form{
         background: none;
@@ -1167,6 +1137,41 @@ li.agenda:hover .carousel-item-info {
     }
     article.category-exposiciones:last-child {
         margin-right: 0;
+    }
+    /* ==========================================================================
+   States
+   ========================================================================== */
+
+    .comprimido{
+        position: fixed ;
+    }
+    .comprimido #main-nav a{
+        border-right: 2px solid #000;
+        height: 22px;
+        padding: 0 10px;
+    }
+    .comprimido #main-nav li:last-child a{
+        border-right: none;
+    }
+    .comprimido #logo-bogota, .comprimido .logo{
+        display: none ;
+    }
+    .comprimido #logo-scroll{
+        display: block    ;
+    }
+
+    .comprimido #main-nav li {
+        display: inline-block ;
+    }
+    .comprimido #language-nav ul{
+        padding-right: 40px ;
+    }
+    .comprimido  .search-form{
+        right: 35px ;
+        width: 20px ;
+    }
+    .comprimido  .search-submit{
+        left: 10px ;
     }
 
 }
