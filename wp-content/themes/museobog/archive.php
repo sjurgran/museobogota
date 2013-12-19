@@ -20,7 +20,7 @@
 		</div>
 	</section>
 
-	<section class="main-block">
+	<section class="main-block historial">
 		<h1 class="block-title"><?php _e('Historial', 'museobog'); ?></h1>
 
 		<ul>

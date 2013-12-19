@@ -718,10 +718,12 @@ html[xmlns] .slides {display: block;}
     padding: 0 50px;
     position: relative;
 }
-.historial {
+li.agenda {
     display: inline-block;
-    margin: 0 15px 19px 0;
     position: relative;
+}
+.historial li{
+    margin: 0 15px 19px 0;    
 }
 .big-time {
     color: #fff;
