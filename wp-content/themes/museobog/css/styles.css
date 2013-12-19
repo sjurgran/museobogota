@@ -737,6 +737,7 @@ html[xmlns] .slides {display: block;}
 }
 li.agenda {
     display: inline-block;
+    margin-right: 20px;
     position: relative;
 }
 .historial li{
