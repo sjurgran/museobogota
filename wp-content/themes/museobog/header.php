@@ -45,6 +45,7 @@
 
             <div class="toggle-menu icon-menu replace-icon"><?php _e('menú', 'museobog'); ?></div>
             <nav id="main-nav" role="navigation">
+                <div id="logo-menu">b</div>
                 <?php wp_nav_menu(array('theme_location' => 'primary', 'container' => false)); ?>
             </nav>
 

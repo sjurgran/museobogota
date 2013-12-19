@@ -146,7 +146,20 @@ header {
     text-align: center;
     z-index: 1000;
 }
-
+#logo-menu{
+        background: #FFF;
+        border-radius: 50%;
+        box-sizing: border-box;
+        color: #050505;
+        font-size: 2.3em;
+        font-weight: 600;
+        height: 50px;
+        line-height: initial;
+        margin: 40px 0 0 20px;  
+        padding: 8px 14px;
+        width: 50px;
+        
+    }
 #main-nav {
     background: #000;
     height: 100%;
@@ -158,11 +171,15 @@ header {
 #main-nav .menu {
     text-align: left;
     padding: 20px;
+    margin-top: 0;
 }
 #main-nav .menu-item {
     border-bottom: 2px solid #fff;
     display: list-item;
     padding: 1em 0;
+}
+#main-nav .menu-item:first-child{
+    border-top: 2px solid #fff;
 }
 #main-nav a {
     color: #fff;
@@ -870,6 +887,9 @@ div.type-collection h3 {
         padding-right: 200px;
         text-align: right;
     }
+    #logo-menu{
+        display: none;        
+    }
     #main-nav {
         background: none;
         color: #000;
@@ -880,7 +900,7 @@ div.type-collection h3 {
     #main-nav .menu {
         padding: 0;
     }
-    
+
     #main-nav .menu-item {
         border: none;
         padding: 0 ;
