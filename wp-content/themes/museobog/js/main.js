@@ -43,17 +43,20 @@ white = [
     /*
      * Menu Scroll
      */
-    var heightNav = $("#language-nav").height();
+    var heightNav = 60;
     $(window).scroll(function() {
         var wSroll = $(window).scrollTop(),
         winWidth = $(window).width();
-        if (wSroll > heightNav && winWidth > 720) {
-            
+        if (wSroll > heightNav && winWidth > 720 && ! $("#header").hasClass("comprimido")) {
+
+            var header_height = $("#header").height();
+            $(".wrap").css("margin-top", header_height);
             $("#header").addClass("comprimido");
-            
+
         }
-        if (wSroll < heightNav && winWidth > 720) {
-            
+        if (wSroll < heightNav && winWidth > 720 && $("#header").hasClass("comprimido")) {
+
+            $(".wrap").css("margin-top", 0);
             $("#header").removeClass("comprimido");
         }
 
