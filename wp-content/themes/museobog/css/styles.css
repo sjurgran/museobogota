@@ -147,19 +147,19 @@ header {
     z-index: 1000;
 }
 #logo-menu{
-        background: #FFF;
-        border-radius: 50%;
-        box-sizing: border-box;
-        color: #050505;
-        font-size: 2.3em;
-        font-weight: 600;
-        height: 50px;
-        line-height: initial;
-        margin: 40px 0 0 20px;
-        padding: 8px 14px;
-        width: 50px;
+    background: #FFF;
+    border-radius: 50%;
+    box-sizing: border-box;
+    color: #050505;
+    font-size: 2.3em;
+    font-weight: 600;
+    height: 50px;
+    line-height: initial;
+    margin: 40px 0 0 20px;
+    padding: 8px 14px;
+    width: 50px;
 
-    }
+}
 #main-nav {
     background: #000;
     height: 100%;
@@ -861,7 +861,7 @@ div.type-collection h3 {
 .alignright { float: right; }
 
 /* ==========================================================================
-   Media Queries
+   Media Queries Tablet
    ========================================================================== */
 @media (min-width:720px) {
 
@@ -1239,7 +1239,47 @@ div.type-collection h3 {
         vertical-align: top;
         width: 48%;
     }
+    article.category-contacto:last-child {
+        
+        width: 100%;
+    }
     article.category-contacto:nth-child(2n+3) {
         margin-left: 0;
     }
+}
+/* ==========================================================================
+   Media Queries Desktop
+   ========================================================================== */
+@media (min-width:1224px) {
+    
+    h1 {
+        font-size: 2em;
+    }
+    
+    #header,footer, #main {
+        padding: 0 50px;
+    }
+    #content-header-rigth, .search-form {
+        right: 50px;
+    }
+    
+    .crumb, .breadcrumb a {
+        font-size: 1.1em;
+    }
+    /* ==========================================================================
+   articulo
+   ========================================================================== */
+
+    .article-title h1{
+        font-size: 3em;
+    }
+    .article-title h3 {
+        font-size: 1.5em;
+    }
+    
+    .related-articles h2 {
+        font-size: 2em;
+    }
+
+
 }
