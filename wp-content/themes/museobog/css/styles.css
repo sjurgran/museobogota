@@ -518,10 +518,8 @@ article-meta{
 }
 .related-articles h2{
     font-weight: 900;
-    text-transform: uppercase;
-}
-.related-articles h2 {
     line-height: 1em;
+    text-transform: uppercase;
 }
 
 /* ==========================================================================
@@ -1187,6 +1185,12 @@ div.type-collection h3 {
     }
     .footer-logos {
         clear: both;
+    }
+    .related-articles{
+        margin-top: 20px;
+    }
+    .related-articles li{
+        margin-bottom: 20px;
     }
 
     article.category-exposiciones,
