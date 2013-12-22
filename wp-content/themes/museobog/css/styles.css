@@ -1294,6 +1294,17 @@ div.type-collection h3 {
     .related-articles h2 {
         font-size: 2em;
     }
+    /* ==========================================================================
+    museo
+   ========================================================================== */
+    
+    .main-block #email{
+        float: none;
+        margin-left: 20px;
+    } 
+    .main-block input[type="text"]{
+        min-width: 384px;
+    }
 
 
 }
