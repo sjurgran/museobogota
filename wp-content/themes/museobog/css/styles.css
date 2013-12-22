@@ -253,6 +253,9 @@ header {
 .main-block p{
     margin: .9em 0 0;
 }
+.main-block #form-museo{
+    margin-top: 10px;
+}
 #map-canvas {
     height: 274px;
     margin: 0;
@@ -1203,6 +1206,17 @@ div.type-collection h3 {
     article.category-exposiciones:nth-child(3n+3),
     div.type-collection:nth-child(3n+2) {
         margin-left: 0;
+    }/* ==========================================================================
+    museo
+   ========================================================================== */
+    .main-block input[type="text"]{
+        min-width: 48%;
+    }
+    .main-block #email{
+        float: right;
+    }    
+    .main-block input[type="submit"]{
+        min-width: 150px;
     }
     /* ==========================================================================
    States
@@ -1240,7 +1254,7 @@ div.type-collection h3 {
         width: 48%;
     }
     article.category-contacto:last-child {
-        
+
         width: 100%;
     }
     article.category-contacto:nth-child(2n+3) {
@@ -1251,18 +1265,18 @@ div.type-collection h3 {
    Media Queries Desktop
    ========================================================================== */
 @media (min-width:1224px) {
-    
+
     h1 {
         font-size: 2em;
     }
-    
+
     #header,footer, #main {
         padding: 0 50px;
     }
     #content-header-rigth, .search-form {
         right: 50px;
     }
-    
+
     .crumb, .breadcrumb a {
         font-size: 1.1em;
     }
@@ -1276,7 +1290,7 @@ div.type-collection h3 {
     .article-title h3 {
         font-size: 1.5em;
     }
-    
+
     .related-articles h2 {
         font-size: 2em;
     }
