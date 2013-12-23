@@ -1304,6 +1304,77 @@ div.type-collection h3 {
     museo
    ========================================================================== */
 
+
+
+    #content-footer-featured{
+        position: relative;
+        padding: 0 20px;
+    }
+    #content-footer-featured .more-info-button{
+        margin: 20px 0;
+        text-align: left;
+    }    
+
+    #featured-img{
+        width: 996px;
+    }
+    #featured-img,#content-footer-featured{
+        display: table-cell;
+        vertical-align: top;
+    }
+    #sharrre li{
+        display: block;
+        padding: 0;
+        text-align: left;
+        width: 100%;
+    }
+    #sharrre.box-likes {
+        border-width: 2px;
+        font-size: 1.3em;
+        height: 32px;
+        margin-left: 15px;
+        width: 60px;
+    }
+
+    #sharrre a,#sharrre span, #sharrre .box-likes{
+        display: inline-block;
+        padding-right: 10px;
+        vertical-align: middle
+    }
+    #sharrre a{
+        height: 40px;
+        padding-right: 28px;    
+    }
+    #sharrre  .box-likes:before, #sharrre  .box-likes::after {
+        border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 1);
+        border-style: solid;
+        border-width: 6px 14px 6px 0px;
+        content: '';
+        bottom: 32%;
+        left: -25%;
+        position: absolute;
+    }
+    #sharrre  .box-likes{
+        margin-left: 12px;   
+    }
+    #sharrre  .box-likes:after {
+        border-color: rgba(0, 0, 0, 0) rgba(255, 255, 255, 1);
+        top: 8px;
+        left: -10px;
+    }
+
+    .home-featured p {
+        margin: 0;
+    }
+
+    .home-share {
+        border-top: 2px solid #000;
+        display: block;
+        margin-top: 10px;
+        position: absolute;
+        top: 400px;
+        width: 200px;
+    }
     .main-block #email{
         float: none;
         margin-left: 20px;
