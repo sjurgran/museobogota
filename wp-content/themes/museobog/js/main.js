@@ -147,6 +147,11 @@ white = [
             nextText: '>',
             startAt: start,
         });
+
+        $(window).resize(function() {
+            clearTimeout(resizeTimer);
+            resizeTimer = setTimeout(fitCarousel, 200);
+        });
     }
 
     // check grid size on resize event
@@ -156,11 +161,6 @@ white = [
         $('#events-carousel').data('flexslider').vars.minItems = carousel_size;
         $('#events-carousel').data('flexslider').vars.maxItems = carousel_size;
     }
-
-    $(window).resize(function() {
-        clearTimeout(resizeTimer);
-        resizeTimer = setTimeout(fitCarousel, 200);
-    });
 
     //galerías
     if ($('#gallery-slider').length > 0) {
