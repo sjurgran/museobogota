@@ -1214,7 +1214,7 @@ div.type-collection h3 {
     }
     .main-block #email{
         float: right;
-    }    
+    }
     .main-block input[type="submit"]{
         min-width: 150px;
     }
@@ -1222,9 +1222,9 @@ div.type-collection h3 {
    States
    ========================================================================== */
 
-    .comprimido{
+    #header.comprimido{
         background: #fff;
-        box-shadow: 0px 2px 8px 0px;
+        border-bottom: 2px solid #000;
         position: fixed;
         top: 0;
     }
@@ -1264,22 +1264,55 @@ div.type-collection h3 {
 /* ==========================================================================
    Media Queries Desktop
    ========================================================================== */
-@media (min-width:1224px) {
+@media (min-width:1200px) {
 
     h1 {
         font-size: 2em;
     }
 
-    #header,footer, #main {
-        padding: 0 50px;
+    #header,
+    footer,
+    #main {
+        padding: 0;
+        max-width: 1200px;
+        position: relative;
+        margin: 0 auto;
     }
-    #content-header-rigth, .search-form {
-        right: 50px;
+    .search-form,
+    #content-header-rigth {
+        right: 0;
     }
 
     .crumb, .breadcrumb a {
         font-size: 1.1em;
     }
+
+    .slider-overlay {
+        margin-left: -600px;
+        width: 1200px;
+        left: 50%;
+    }
+    .slider-info {
+        margin-left: 3%;
+        width: 29%;
+    }
+    #main-slider .flex-control-nav,
+    #main-slider .flex-direction-nav {
+        left: 50%;
+        margin-left: -600px;
+        position: absolute;
+        text-align: right;
+        top: 0;
+        width: 1200px;
+    }
+    #main-slider .flex-prev {
+        left: 0;
+    }
+    #main-slider .flex-next {
+        right: 0;
+    }
+
+
     /* ==========================================================================
    Layout - Footer
    ========================================================================== */
@@ -1304,23 +1337,25 @@ div.type-collection h3 {
     museo
    ========================================================================== */
 
-
-
-    #content-footer-featured{
-        position: relative;
-        padding: 0 20px;
-    }
-    #content-footer-featured .more-info-button{
+    #content-featured-work .more-info-button{
+        display: inline-block;
         margin: 20px 0;
         text-align: left;
-    }    
+    }
+    #content-featured-work .more-info-button .button{
+        padding: 8px 8px 4px;
+    }
 
     #featured-img{
         width: 996px;
     }
-    #featured-img,#content-footer-featured{
-        display: table-cell;
+    #featured-img, #content-featured-work{
+        display: inline-block;
         vertical-align: top;
+    }
+    #content-featured-work {
+        margin-left: 24px;
+        width: 180px;
     }
     #sharrre li{
         display: block;
@@ -1343,7 +1378,7 @@ div.type-collection h3 {
     }
     #sharrre a{
         height: 40px;
-        padding-right: 28px;    
+        padding-right: 28px;
     }
     #sharrre  .box-likes:before, #sharrre  .box-likes::after {
         border-color: rgba(0, 0, 0, 0) rgba(0, 0, 0, 1);
@@ -1355,7 +1390,7 @@ div.type-collection h3 {
         position: absolute;
     }
     #sharrre  .box-likes{
-        margin-left: 12px;   
+        margin-left: 8px;
     }
     #sharrre  .box-likes:after {
         border-color: rgba(0, 0, 0, 0) rgba(255, 255, 255, 1);
@@ -1365,23 +1400,33 @@ div.type-collection h3 {
 
     .home-featured p {
         margin: 0;
+        width: auto;
     }
 
     .home-share {
+        background: #fff;
         border-top: 2px solid #000;
+        bottom: 0;
         display: block;
         margin-top: 10px;
         position: absolute;
-        top: 400px;
-        width: 200px;
+        width: 180px;
     }
     .main-block #email{
         float: none;
         margin-left: 20px;
-    } 
+    }
     .main-block input[type="text"]{
         min-width: 384px;
     }
 
 
+    #header.comprimido{
+        max-width: 100%;
+        padding: 0 3%;
+    }
+    .comprimido .search-form,
+    .comprimido #content-header-rigth {
+        right: 3%;
+    }
 }

@@ -7,8 +7,7 @@ $featured_query = new WP_Query(array(
 while ( $featured_query->have_posts() ) : $featured_query->the_post();
 ?>
 
-<figure id="featured-img"><?php the_post_thumbnail('wide'); ?></figure>
-<div id="content-footer-featured">
+<figure id="featured-img"><?php the_post_thumbnail('wide'); ?></figure><div id="content-featured-work">
     <div class="social-share home-share">
         <ul id="sharrre">
             <li id="facebook-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Like"></li>
