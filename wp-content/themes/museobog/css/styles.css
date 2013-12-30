@@ -827,6 +827,10 @@ div.type-collection h3 {
     margin-top: 0;
 }
 
+.sub-sub-page h4 {
+    margin: 1em 0;
+}
+
 
 /* ==========================================================================
    States
@@ -1247,17 +1251,15 @@ div.type-collection h3 {
         display: inline-block;
     }
 
-    article.category-contacto {
+    article.category-contacto,
+    .sub-sub-page {
         display: inline-block;
         margin-left: 2%;
         vertical-align: top;
         width: 48%;
     }
-    article.category-contacto:last-child {
-
-        width: 100%;
-    }
-    article.category-contacto:nth-child(2n+3) {
+    article.category-contacto:nth-child(2n+3),
+    .sub-sub-page:nth-child(2n) {
         margin-left: 0;
     }
 }
