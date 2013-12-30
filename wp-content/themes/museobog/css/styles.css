@@ -526,6 +526,12 @@ article.agenda{
 .related-articles ul {
     padding: 0;
 }
+.related-articles li.agenda {
+    width: 45%;
+}
+.related-articles li.agenda:last-child {
+    margin-right: 0;
+}
 
 /* ==========================================================================
     museo
@@ -1194,9 +1200,14 @@ div.type-collection h3 {
     }
     .related-articles{
         margin-top: 20px;
+        text-align: center;
     }
-    .related-articles li{
-        margin-bottom: 20px;
+    .related-articles h2 {
+        text-align: left;
+    }
+    .related-articles li.agenda{
+        margin: 0 auto 20px;
+        width: auto;
     }
 
     article.category-exposiciones,
@@ -1333,6 +1344,9 @@ div.type-collection h3 {
 
     .related-articles h2 {
         font-size: 2em;
+    }
+    .related-articles li.agenda {
+        margin: 0 20px 20px;
     }
     /* ==========================================================================
     museo
