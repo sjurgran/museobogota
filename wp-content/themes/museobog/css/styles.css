@@ -496,21 +496,20 @@ article.agenda{
     min-width: 280px
 }
 .article-info{
-    border-bottom: 2px solid #000;
 }
-.article-title h1{
+.article-info h1{
     line-height: .7em;
     margin: 25px 0 0;
 }
-.article-title h3{
+.article-info h3{
     margin: 0;
     font-size:.9em;
     font-weight:normal;
     text-transform: uppercase;
 
 }
-article-meta{
-    border-bottom: 1px solid #000;
+.article-meta{
+    border-top: 2px solid #000;
     padding-bottom: 1em;
 }
 .article-meta p{
@@ -523,6 +522,9 @@ article-meta{
     font-weight: 900;
     line-height: 1em;
     text-transform: uppercase;
+}
+.related-articles ul {
+    padding: 0;
 }
 
 /* ==========================================================================
@@ -1095,35 +1097,32 @@ div.type-collection h3 {
         display: block;
         padding: 1em 0 3em;
     }
-    .article-post{
-        position: relative;
-    }
-    .article-title, .article-content, .article-meta, .related-articles{
-        display:block;
-        width:33%;
 
+    .article-info, .article-meta, .related-articles{
+        display:block;
+        width:32%;
     }
-    .article-info{
-        border: none;
-        float:right;
-        margin: 0 0 0 33%;
-        top:0;
-        position: absolute;
-        vertical-align:top;
-        width: 67%;
+    .article-info {
+        float: left;
     }
-    .article-info p{
-        margin: 0
-    }
-    .article-title h1 {
+    .article-info h1 {
         font-size: 2.3em;
         line-height: normal;
     }
-    .article-title h3{
+    .article-info h3{
         font-size: 1.3em;
     }
-    .article-info p{
-        padding-left: 1em;
+    .article-content{
+        float:right;
+        margin-top: 25px;
+        width: 66%;
+    }
+    .article-content p {
+        margin-top: 0;
+    }
+
+    .article-meta {
+        clear: left;
     }
 
     .article-share ul li{

@@ -22,21 +22,17 @@
             ?>
 
             <?php the_post_thumbnail('full'); ?>
-        <div class="article-post">
-            <div class="article-title">
+
+            <div class="article-info">
                 <h1><?php the_title(); ?></h1>
                 <h3><?php echo $the_tag->name; ?></h3>
-            </div>
-            <div class="article-content">
-                <?php the_content(); ?>
-            </div>
-            <div class="article-info">
-
 
                 <?php the_excerpt(); ?>
             </div>
 
-
+            <div class="article-content">
+                <?php the_content(); ?>
+            </div>
 
             <div class="article-meta">
                 <div class="social-share article-share">
@@ -76,7 +72,6 @@
                 wp_reset_postdata();
                 ?>
             </ul>
-        </div>
         </div>
     </article>
 
