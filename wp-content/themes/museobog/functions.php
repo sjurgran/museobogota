@@ -241,6 +241,22 @@ function museo_theme_options( $settings ) {
                     'type'    => 'editor'
                 )
             )
+        ),
+        array(
+            'id'     => 'site_options',
+            'title'  => 'Sitio',
+            'fields' => array(
+                array(
+                    'id'      => 'font_size_es',
+                    'title'   => 'Tamaño de letra',
+                    'type'    => 'editor'
+                ),
+                array(
+                    'id'      => 'font_size_en',
+                    'title'   => 'Tamaño de letra Inglés',
+                    'type'    => 'editor'
+                )
+            )
         )
     );
 
@@ -285,7 +301,7 @@ function format_event_date($date) {
  * Number of events
  */
 function events_pagesize($query) {
-    if (is_admin() || !$query->is_main_query()) {
+    if (is_admin() || ! $query->is_main_query()) {
         return;
     }
 
@@ -294,7 +310,6 @@ function events_pagesize($query) {
         return;
     }
 }
-
 add_action('pre_get_posts', 'events_pagesize', 1);
 
 /**
@@ -318,7 +333,7 @@ function display_pagination($current_page, $total, $base_url = '', $format = '')
     echo paginate_links($args);
 
     echo '<span class="page_counter">';
-    printf(_n('', 'Página %s de %s', $total, 'museobog'), $current_page, $total);
+    printf(_n('', 'página %s de %s', $total, 'museobog'), $current_page, $total);
     echo '</span>';
 
     echo '</nav>';

@@ -198,6 +198,17 @@ white = [
         }
     });
 
+    //popup (tamaño de letra)
+    $('.modal').hide();
+    $('.popup').on('click', function(event) {
+        event.preventDefault();
+        var popup_content_id = $(this).attr('href');
+        $(popup_content_id).bPopup({
+            opacity: 0.8,
+        });
+        $(popup_content_id).removeClass('hidden');
+    });
+
 })(jQuery);
 function initializeMap() {
 

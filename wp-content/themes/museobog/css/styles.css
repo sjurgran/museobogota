@@ -303,7 +303,7 @@ footer a{
     border-top: 2px solid #000;
 }
 .footer-logos ul {
-    letter-spacing: 16px;
+    letter-spacing: 15px;
     text-align: center;
     padding: 0;
 }
@@ -486,6 +486,9 @@ footer a{
     font-weight: bold;
     text-decoration: none;
     text-transform: uppercase;
+}
+.menu li.lang-item-font {
+    display: none;
 }
 
 /* ==========================================================================
@@ -898,6 +901,28 @@ div.type-collection h3 {
     overflow: hidden;
 }
 
+.modal {
+    color: #fff;
+    padding-top: 40px;
+    width: 88%;
+}
+.b-close {
+    background: #fff;
+    border-radius: 50%;
+    color: #000;
+    cursor: pointer;
+    display: block;
+    font-size: 2em;
+    font-weight: 800;
+    line-height: 28px;
+    padding-top: 4px;
+    position: absolute;
+    right: 4px;
+    text-align: center;
+    top: 4px;
+    width: 32px;
+}
+
 /* ==========================================================================
    WordPress Generated Classes
    See: http://codex.wordpress.org/CSS#WordPress_Generated_Classes
@@ -943,6 +968,10 @@ div.type-collection h3 {
         padding-right: 27%;
         text-align: right;
     }
+    .menu li.lang-item-font {
+        display: inline-block;
+    }
+
     #logo-menu{
         display: none;
     }

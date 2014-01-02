@@ -20,6 +20,7 @@
         <?php
         wp_enqueue_script('flexslider', get_bloginfo('template_directory') . '/js/jquery.flexslider-min.js', array('jquery'), '2.2.0', true);
         wp_enqueue_script('sharrre', get_bloginfo('template_directory') . '/js/jquery.sharrre.min.js', array('jquery'), '1.3.5', true);
+        wp_enqueue_script('bpopup', get_bloginfo('template_directory') . '/js/jquery.bpopup.min.js', array('jquery'), '0.9.4', true);
         wp_enqueue_script('main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), null, true);
         wp_head();
         ?>
@@ -30,9 +31,21 @@
             <nav id="language-nav">
                 <ul class="menu menu-language">
                     <?php pll_the_languages(array('hide_if_empty' => 0)); ?>
+                    <li class="lang-item lang-item-font">
+                        <a class="popup" href="#letra"><?php _e('Tamaño de letra', 'museobog'); ?></a>
+                    </li>
                 </ul>
             </nav>
 
+            <div id="letra" class="modal">
+                <span class="b-close">x</span>
+                <?php
+                    $language_prefix = pll_current_language();
+                    $language_font_text_id = 'font_size_'.$language_prefix;
+                    $font_size = kc_get_option( 'museo', 'site_options', $language_font_text_id );
+                    echo wpautop($font_size);
+                ?>
+            </div>
 
             <a href="<?php echo pll_home_url('/'); ?>" rel="home">
                 <h1 id="logo-scroll">b</h1>
