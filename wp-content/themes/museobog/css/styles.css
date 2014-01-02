@@ -839,6 +839,29 @@ div.type-collection h3 {
     margin: 1em 0;
 }
 
+.pagination {
+    text-align: right;
+}
+.pagination a,
+.pagination span {
+    font-size: 0.88em;
+    margin: 0 0.25em;
+}
+.pagination a.prev,
+.pagination a.next {
+    background: #000;
+    border-radius: 50%;
+    color: #fff;
+    display: inline-block;
+    font-size: 1.125em;
+    font-weight: 800;
+    line-height: 18px;
+    padding-top: 4px;
+    text-align: center;
+    text-decoration: none;
+    width: 22px;
+}
+
 
 /* ==========================================================================
    States
@@ -1272,6 +1295,11 @@ div.type-collection h3 {
     .sub-sub-page:nth-child(2n) {
         margin-left: 0;
     }
+
+    .pagination a,
+    .pagination span {
+        font-size: 1em;
+    }
 }
 /* ==========================================================================
    Media Queries Desktop
@@ -1443,5 +1471,10 @@ div.type-collection h3 {
     .comprimido .search-form,
     .comprimido #content-header-rigth {
         right: 3%;
+    }
+
+    .pagination a,
+    .pagination span {
+        font-size: 1.125em;
     }
 }
