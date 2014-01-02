@@ -188,7 +188,8 @@ header {
     text-decoration: none;
     text-transform: uppercase;
 }
-#main-nav a:active {
+#main-nav a:active,
+#main-nav .current-menu-item a {
     color: #b3b3b3;
 }
 #main-nav a:after {
