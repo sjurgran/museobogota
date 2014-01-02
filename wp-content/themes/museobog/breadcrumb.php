@@ -19,7 +19,7 @@
 	} elseif ( is_404() ) {
 		echo $before . '404' . $after;
 	} elseif ( is_search() ) {
-		echo $before . __('busqueda', 'museobog') . $after;
+		echo $before . __('búsqueda', 'museobog') . $after;
 	}
 	?>
 </nav>

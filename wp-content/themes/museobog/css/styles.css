@@ -127,7 +127,7 @@ nav.breadcrumb a, nav.breadcrumb .crumb{
     text-transform: lowercase;
     text-decoration: none;
 }
-iinput[type="search"]:focus {
+input[type="search"]:focus {
     outline: none;
 }
 
@@ -445,7 +445,7 @@ footer a{
     border: none;
     color: #fff;
     vertical-align: middle;
-    width: 92%;
+    width: 90%;
 }
 .search-submit {
     background: none;
@@ -860,6 +860,14 @@ div.type-collection h3 {
     text-align: center;
     text-decoration: none;
     width: 22px;
+}
+
+.search-results-block ul {
+    padding: 0;
+}
+.search-results-block .hentry {
+    display: inline-block;
+    margin: 0 10px;
 }
 
 

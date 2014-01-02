@@ -1,10 +1,10 @@
 <main role="main" id="main">
 	<?php get_template_part( 'breadcrumb' ); ?>
 
-	<section class="main-block">
+	<section class="main-block search-results-block">
 		<?php if ( have_posts() ) : ?>
 
-			<h1 class="block-title"><?php printf( __( 'Resultados de busqueda para: %s', 'museobog' ), get_search_query() ); ?></h1>
+			<h1 class="block-title"><?php printf( __( 'Resultados de búsqueda para: %s', 'museobog' ), get_search_query() ); ?></h1>
 
 			<ul>
 				<?php while ( have_posts() ) : the_post(); ?>
@@ -33,6 +33,6 @@
 			?>
 
 		<?php else : ?>
-			<p><?php _e('No hemos encontrado resultados de busqueda. Intenta buscar usando otras palabras.', 'museobog'); ?></p>
+			<p><?php _e('No hemos encontrado resultados de búsqueda. Intenta buscar usando otras palabras.', 'museobog'); ?></p>
 		<?php endif; ?>
 	</section>
