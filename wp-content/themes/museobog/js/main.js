@@ -78,12 +78,9 @@ white = [
 
         loadMapScript();
     }
-    /*
-     * CONF GOOGLE MAPS
-     */
-
 
     var resizeTimer;
+    var sliderResizeTimer;
 
     //menu principal (móvil)
     var toggleMainMenu = function(event) {
@@ -120,15 +117,19 @@ white = [
     if ($(window).width() < 720) {
         $('.toggle-search').trigger('click');
     }
+
     if ($('#main-slider').length > 0) {
         $('#main-slider').flexslider({
             animation: 'slide',
-            startAt: 1,
-            slideshow: false,
             touch: false,
             prevText: '<',
             nextText: '>',
             start: getNavPosition
+        });
+
+        $(window).resize(function() {
+            clearTimeout(sliderResizeTimer);
+            sliderResizeTimer = setTimeout(getNavPosition, 200);
         });
     }
 
