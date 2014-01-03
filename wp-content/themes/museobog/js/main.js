@@ -81,6 +81,26 @@ white = [
 
     var resizeTimer;
     var sliderResizeTimer;
+    var generalResize;
+
+    //resize adjustments
+    $(window).resize(function() {
+        clearTimeout(generalResize);
+        generalResize = setTimeout(adjustHeader, 200);
+    });
+
+    function adjustHeader() {
+        if ($(window).width() < 720) {
+            $(".wrap").css("margin-top", 0);
+            $('body').removeClass('toggled-menu');
+            $('.toggle-search').removeClass('is-open');
+            $('.search-form').addClass('height-zero');
+        } else {
+            $('body').removeClass('toggled-menu');
+            $('.toggle-search').addClass('is-open');
+            $('.search-form').removeClass('height-zero');
+        }
+    }
 
     //menu principal (móvil)
     var toggleMainMenu = function(event) {
