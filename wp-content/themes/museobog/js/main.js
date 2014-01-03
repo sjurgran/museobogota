@@ -1,43 +1,4 @@
 var map;
-white = [
-    {
-        "featureType": "poi.attraction",
-        "elementType": "geometry",
-        "stylers": [
-            {"color": "#c9c9c8"}
-        ]
-    }, {
-        "featureType": "poi.business",
-        "elementType": "geometry",
-        "stylers": [
-            {"color": "#959495"}
-        ]
-    }, {
-        "featureType": "poi.government",
-        "elementType": "geometry",
-        "stylers": [
-            {"color": "#f2f2f4"}
-        ]
-    }, {
-        "featureType": "poi.government",
-        "stylers": [
-            {"color": "#c6c6c5"}
-        ]
-    }, {
-        "featureType": "poi.park",
-        "elementType": "geometry",
-        "stylers": [
-            {"color": "#ffffff"}
-        ]
-    }, {
-        "featureType": "landscape",
-        "stylers": [
-            {"color": "#ecebeb"}
-        ]
-    }, {
-    }
-
-];
 (function($) {
 
     /*
@@ -266,8 +227,5 @@ function initializeMap() {
         title: '',
         icon: flagIcon_front1,
     });
-
-
-    map.setOptions({styles: white});
 }
 

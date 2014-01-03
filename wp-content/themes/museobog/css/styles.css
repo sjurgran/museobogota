@@ -1342,7 +1342,7 @@ div.type-collection h3 {
 /* ==========================================================================
    Media Queries Desktop
    ========================================================================== */
-@media (min-width:1200px) {
+@media (min-width:1240px) {
 
     h1 {
         font-size: 2em;
@@ -1514,5 +1514,9 @@ div.type-collection h3 {
     .pagination a,
     .pagination span {
         font-size: 1.125em;
+    }
+
+    #map-canvas {
+        height: 454px;
     }
 }
