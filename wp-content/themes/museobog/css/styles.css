@@ -1324,28 +1324,38 @@ div.type-collection h3 {
         position: fixed;
         top: 0;
     }
+    .comprimido #language-nav,
+    .comprimido .search-form,
+    .comprimido #logo-bogota,
+    .comprimido .logo {
+        display: none;
+    }
+    .comprimido #main-nav {
+        margin: 1.75em 60px 0.75em
+    }
+    .comprimido #main-nav li {
+        display: inline-block;
+    }
     .comprimido #main-nav a{
         border-right: 2px solid #000;
         height: 22px;
         padding: 0 10px;
     }
-    .comprimido #main-nav .menu-item:hover .sub-menu,
-    .comprimido #main-nav .sub-menu {
-        display: none;
-    }
     .comprimido #main-nav li:last-child a{
         border-right: none;
     }
-    .comprimido #logo-bogota, .comprimido .logo{
+    .comprimido #main-nav .menu-item:hover .sub-menu,
+    .comprimido #main-nav .sub-menu {
         display: none;
     }
     .comprimido #logo-scroll{
         display: block;
     }
-
-    .comprimido #main-nav li {
-        display: inline-block;
+    .comprimido #content-header-rigth {
+        top: 12px;
     }
+
+
 
     article.category-contacto,
     .sub-sub-page {
@@ -1402,6 +1412,10 @@ div.type-collection h3 {
     .slider-info {
         margin-left: 3%;
         width: 29%;
+    }
+    #main-slider {
+        margin: 0 auto;
+        max-width: 1400px;
     }
     #main-slider .flex-control-nav,
     #main-slider .flex-direction-nav {
@@ -1532,12 +1546,13 @@ div.type-collection h3 {
 
 
     #header.comprimido{
-        max-width: 100%;
-        padding: 0 3%;
+        left: 0;
+        right: 0;
+        max-width: 1240px;
+        padding: 0 20px;
     }
-    .comprimido .search-form,
     .comprimido #content-header-rigth {
-        right: 3%;
+        right: 20px;
     }
 
     .pagination a,
