@@ -28,7 +28,7 @@
         if ( isset($categories[$key]) ):
         ?>
 
-        <section class="main-block">
+        <section class="main-block" id="<?php echo $categories[$key]->slug; ?>">
             <h1><?php echo $categories[$key]->name; ?></h1>
             <p><?php echo $categories[$key]->description; ?></p>
 

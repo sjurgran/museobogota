@@ -195,6 +195,9 @@ header {
 #main-nav a:after {
     content: " >";
 }
+#main-nav .sub-menu {
+    display: none;
+}
 #logo-scroll{
     background: #000;
     border-radius: 50%;
@@ -993,6 +996,7 @@ div.type-collection h3 {
     #main-nav a {
         color: #000;
         line-height: 1.2em;
+        vertical-align: top;
     }
     #main-nav a:hover {
         font-style: italic;
@@ -1003,6 +1007,26 @@ div.type-collection h3 {
     }
     #main-nav a:after {
         content: "";
+    }
+
+    #main-nav .menu-item:hover .sub-menu,
+    #main-nav .current-menu-item .sub-menu {
+        display: inline-block;
+        padding: 0 1em;
+    }
+    #main-nav .sub-menu .menu-item {
+        display: inline-block;
+    }
+    #main-nav .sub-menu .menu-item:first-child:after {
+        content: ' /';
+    }
+    #main-nav .sub-menu .current-menu-item:first-child:after {
+        color: #b3b3b3;
+    }
+    #main-nav .sub-menu a {
+        text-transform: lowercase;
+        font-weight: bold;
+        font-size: 1.125em;
     }
 
     #social-nav {
@@ -1041,9 +1065,6 @@ div.type-collection h3 {
     header .logo h2 {
         font-size: 0.6em;
     }
-
-
-
 
     .search-form{
         background: none;
@@ -1308,6 +1329,10 @@ div.type-collection h3 {
         height: 22px;
         padding: 0 10px;
     }
+    .comprimido #main-nav .menu-item:hover .sub-menu,
+    .comprimido #main-nav .sub-menu {
+        display: none;
+    }
     .comprimido #main-nav li:last-child a{
         border-right: none;
     }
@@ -1359,6 +1384,10 @@ div.type-collection h3 {
     .search-form,
     #content-header-rigth {
         right: 0;
+    }
+
+    #main-nav .sub-menu a {
+        font-size: 1.25em;
     }
 
     .crumb, .breadcrumb a {
