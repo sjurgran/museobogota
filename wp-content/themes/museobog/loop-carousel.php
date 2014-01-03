@@ -18,4 +18,4 @@ endwhile;
 /* Restore original Post Data */
 wp_reset_postdata();
 ?>
-<input id="lower" type="hidden" value="<? indexLower($diff); ?>" />
+<input id="lower" type="hidden" value="<?php indexLower($diff); ?>" />

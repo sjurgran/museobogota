@@ -169,14 +169,14 @@ function museo_custom_fields($groups) {
                     array(
                         'id' => 'start_date',
                         'title' => __('Fecha de inicio', 'museobog'),
-                        'type' => 'date',
+                        'type' => 'text',
                         'default' => date('Y-m-d'),
                         'desc' => 'Format: <code>' . date('Y-m-d') . '</code>'
                     ),
                     array(
                         'id' => 'end_date',
                         'title' => __('Fecha final', 'museobog'),
-                        'type' => 'date',
+                        'type' => 'text',
                         'default' => date('Y-m-d'),
                         'desc' => 'Format: <code>' . date('Y-m-d') . '</code>'
                     )
@@ -394,7 +394,9 @@ function get_museo_page_link($slug, $echo_anchor=true, $subpage='') {
 
 //
 function diffDate($datei) {
-
+    if ( strlen($datei) == 4 ) {
+        $datei .= '-01-01';
+    }
     $datef = date("Y-m-d");
     $datetime1 = new DateTime($datei);
     $datetime2 = new DateTime($datef);

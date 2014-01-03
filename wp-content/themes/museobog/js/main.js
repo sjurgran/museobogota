@@ -108,7 +108,7 @@ white = [
         items = Math.ceil(($(window).width() - 296) / 176); //176 es lo que se necesita para meter otro elemento
         console.log(items + " - " + $("#events-carousel").width());
         //items =  Math.floor($("#events-carousel").width()/ 176);
-        items = Math.max(items, 1); //por si la división da menor o igual a 0
+        items = Math.min(Math.max(items, 1), 6); //por si la división da menor o igual a 0 (máximo 6 en el carrusel)
 
         return items;
     }
@@ -133,19 +133,29 @@ white = [
     }
 
     if ($('#events-carousel').length > 0) {
-        var start = $('#lower').val();
+        var total = $('#events-carousel li').length;
+        var size = getCarouselSize();
+        var max_event_offset = Math.max(total-size, 0);
+        var max_real_offset = Math.ceil(max_event_offset / size);//para startAt se usa el número de pasos del carrusel (no el número de items)
+
+        var today_event = $('#lower').val();
+        var start_event = Math.max(today_event - Math.floor((size-1)/2), 0);//se tiene en cuenta que no empieza en el evento presente, sino que debe ir centrado
+        var event_offset = Math.ceil(start_event / size);
+
+        var start_at = Math.min(max_real_offset, event_offset);
+        //console.log (start_at);
         $('#events-carousel').flexslider({
             animation: 'slide',
             animationLoop: false,
             slideshow: false,
             itemWidth: 156,
             itemMargin: 20,
-            minItems: getCarouselSize(),
-            maxItems: getCarouselSize(),
+            minItems: size,
+            maxItems: size,
             controlNav: false,
             prevText: '<',
             nextText: '>',
-            startAt: start,
+            startAt: start_at,
         });
 
         $(window).resize(function() {

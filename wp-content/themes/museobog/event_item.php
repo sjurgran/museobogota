@@ -8,7 +8,8 @@ $datePostStart = get_post_meta($post->ID, "_start_date", true);
 $start_date = format_event_date($datePostStart);
 $end_date = format_event_date(get_post_meta($post->ID, "_end_date", true));
 
-$GLOBALS["diff"][] = diffDate($datePostStart);
+$diff_today = diffDate($datePostStart);
+$GLOBALS["diff"][] = $diff_today;
 ?>
 
 <li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
