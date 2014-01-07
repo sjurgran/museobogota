@@ -155,14 +155,14 @@ var map;
     }
 
     //galerías
-    if ($('#gallery-slider').length > 0) {
+    /*if ($('#gallery-slider').length > 0) {
         $('#gallery-slider').flexslider({
             animation: 'slide',
             controlNav: false,
             prevText: '<',
             nextText: '>'
         });
-    }
+    }*/
 
     //botones share
     $('#facebook-share').sharrre({

@@ -74,9 +74,3 @@
             </ul>
         </div>
     </article>
-
-    <section>
-        <div id="gallery-slider" class="flexslider">
-            <?php echo $gallery; ?>
-        </div>
-    </section>
