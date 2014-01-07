@@ -307,6 +307,9 @@ function events_pagesize($query) {
 
     if (is_post_type_archive('agenda')) {
         $query->set('posts_per_page', 18);
+        $query->set('order', 'DESC');
+        $query->set('orderby', 'meta_value');
+        $query->set('meta_key', '_start_date');
         return;
     }
 }
