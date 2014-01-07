@@ -15,7 +15,10 @@
 
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
-        <!--[if lt IE 9]><script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js" media="all"></script><![endif]-->
+        <!--[if lt IE 9]>
+        <script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js" media="all"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/respond.min.js" media="all"></script>
+        <![endif]-->
 
         <?php
         wp_enqueue_script('flexslider', get_bloginfo('template_directory') . '/js/jquery.flexslider.js', array('jquery'), '2.2.0', true);

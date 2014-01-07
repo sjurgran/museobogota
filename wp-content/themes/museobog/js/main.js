@@ -84,8 +84,7 @@ var map;
     var getCarouselSize = function() {
         //window size for 1 item 296 = 20+50+156+50+20
         items = Math.ceil(($(window).width() - 296) / 176); //176 es lo que se necesita para meter otro elemento
-        console.log(items + " - " + $("#events-carousel").width());
-        //items =  Math.floor($("#events-carousel").width()/ 176);
+        //console.log(items + " - " + $("#events-carousel").width());
         items = Math.min(Math.max(items, 1), 6); //por si la división da menor o igual a 0 (máximo 6 en el carrusel)
 
         return items;
