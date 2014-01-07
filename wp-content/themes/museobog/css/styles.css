@@ -354,7 +354,6 @@ footer a{
 .footer-logos ul .humanidad {
     background-position: -520px 0;
     width: 129px;
-
 }
 .footer-logos ul .basuracero{
     background-position: -650px 0;
@@ -1372,6 +1371,30 @@ div.type-collection h3 {
     .pagination a,
     .pagination span {
         font-size: 1em;
+    }
+
+    .footer-logos ul li{
+        background-size: initial;
+        height: 47px;
+        line-height: 47px;
+        width: 180px;
+
+    }
+    .footer-logos ul .denuncia{
+        background-position: -180px 0;
+    }
+    .footer-logos ul .plan{
+        background-position: -360px 0;
+    }
+    .footer-logos ul .patrimonio{
+        background-position: -540px 0;
+    }
+    .footer-logos ul .humanidad {
+        background-position: -721px 0;
+        width: 179px;
+    }
+    .footer-logos ul .basuracero{
+        background-position: -900px 0;
     }
 }
 /* ==========================================================================
