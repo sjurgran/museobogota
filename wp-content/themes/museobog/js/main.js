@@ -197,8 +197,8 @@ var map;
         var popup_content_id = $(this).attr('href');
         $(popup_content_id).bPopup({
             opacity: 0.8,
+            position: ['auto', 20]
         });
-        $(popup_content_id).removeClass('hidden');
     });
 
 })(jQuery);

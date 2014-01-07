@@ -27,6 +27,16 @@
     </head>
     <body <?php body_class(); ?>>
 
+        <div id="letra" class="modal">
+            <span class="b-close">x</span>
+            <?php
+                $language_prefix = pll_current_language();
+                $language_font_text_id = 'font_size_'.$language_prefix;
+                $font_size = kc_get_option( 'museo', 'site_options', $language_font_text_id );
+                echo wpautop($font_size);
+            ?>
+        </div>
+
         <header role="banner" id="header">
             <nav id="language-nav">
                 <ul class="menu menu-language">
@@ -36,16 +46,6 @@
                     </li>
                 </ul>
             </nav>
-
-            <div id="letra" class="modal">
-                <span class="b-close">x</span>
-                <?php
-                    $language_prefix = pll_current_language();
-                    $language_font_text_id = 'font_size_'.$language_prefix;
-                    $font_size = kc_get_option( 'museo', 'site_options', $language_font_text_id );
-                    echo wpautop($font_size);
-                ?>
-            </div>
 
             <a href="<?php echo pll_home_url('/'); ?>" rel="home">
                 <h1 id="logo-scroll">b</h1>
