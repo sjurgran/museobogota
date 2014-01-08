@@ -16,6 +16,7 @@
         <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>" />
 
         <!--[if lt IE 9]>
+        <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ie8.css">
         <script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js" media="all"></script>
         <script src="<?php bloginfo('template_directory'); ?>/js/respond.min.js" media="all"></script>
         <![endif]-->

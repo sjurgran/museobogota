@@ -1,0 +1,57 @@
+@font-face {
+    font-family: 'Nexa-XBold'; /* Nexa XBold */
+    src: url('../fonts/2875F4_E_0.eot');
+    src: url('../fonts/2875F4_E_0.eot?#iefix') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'Nexa-Heavy';/* Nexa Heavy */
+    src: url('../fonts/2875F4_B_0.eot');
+    src: url('../fonts/2875F4_B_0.eot?#iefix') format('embedded-opentype');
+}
+@font-face {
+    font-family: 'Nexa-Black'; /* Nexa Black */
+    src: url('../fonts/2875F4_A_0.eot');
+    src: url('../fonts/2875F4_A_0.eot?#iefix') format('embedded-opentype');
+}
+h1,
+#main-nav a,
+.main-block h2,
+footer h2,
+.related-articles h2,
+.slider-title {
+    font-family: 'Nexa-Black';
+    font-weight: normal;
+}
+h5,
+.big-time,
+.carousel-item-info,
+.pagination a.prev,
+.pagination a.next,
+.b-close {
+    font-family: 'Nexa-Heavy';
+    font-weight: normal;
+}
+nav.breadcrumb,
+.labels,
+.logo h1,
+.lang-item a,
+.send-message,
+.social-share ul li span,
+.button,
+.flex-prev,
+.flex-next,
+#main-nav .sub-menu a {
+    font-family: 'Nexa-XBold';
+    font-weight: normal;
+}
+
+#logo-menu,
+#logo-scroll,
+.flex-prev,
+.flex-next,
+.pagination a.prev,
+.pagination a.next,
+.b-close,
+.flex-control-nav a {
+    behavior: url(/PIE.htc);
+}

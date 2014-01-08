@@ -158,7 +158,6 @@ header {
     margin: 40px 0 0 20px;
     padding: 8px 14px;
     width: 50px;
-    behavior: url(/PIE.htc);
 }
 #main-nav {
     background: #000;
@@ -212,7 +211,6 @@ header {
     text-transform: lowercase;
     top: 0;
     width: 40px;
-    behavior: url(/PIE.htc);
 }
 .toggle-menu {
     cursor: pointer;
@@ -291,7 +289,7 @@ footer{
     margin-top: 1em;
     padding: 0 20px;
 }
-footer h2, footer h2{
+footer h2{
     font-size: .8em;
     font-weight: 900;
 
@@ -511,7 +509,7 @@ article.agenda{
 .article-info h3{
     margin: 0;
     font-size:.9em;
-    font-weight:normal;
+    font-weight: normal;
     text-transform: uppercase;
 
 }
@@ -822,7 +820,6 @@ li.agenda:hover .carousel-item-info {
     text-decoration: none;
     top: 50%;
     width: 32px;
-    behavior: url(/PIE.htc);
 }
 .flex-prev {
     left: 0;
@@ -868,7 +865,6 @@ div.type-collection h3 {
     text-align: center;
     text-decoration: none;
     width: 22px;
-    behavior: url(/PIE.htc);
 }
 
 .search-results-block ul {
@@ -926,7 +922,6 @@ div.type-collection h3 {
     text-align: center;
     top: 4px;
     width: 32px;
-    behavior: url(/PIE.htc);
 }
 
 /* ==========================================================================
@@ -1091,7 +1086,6 @@ div.type-collection h3 {
         color: #000;
         padding: 5px 0 2px 30px;
         width: 100%;
-        behavior: url(/PIE.htc);
     }
 
     .logo{
@@ -1152,7 +1146,6 @@ div.type-collection h3 {
         display: inline-block;
         height: 11px;
         width: 11px;
-        behavior: url(/PIE.htc);
     }
     .flex-control-nav a.flex-active {
         border-color: #000;
@@ -1526,7 +1519,7 @@ div.type-collection h3 {
 
     #sharrre a,#sharrre span, #sharrre .box-likes{
         display: inline-block;
-        padding-right: 10px;
+        padding-right: 8px;
         vertical-align: middle
     }
     #sharrre a{
