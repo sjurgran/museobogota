@@ -45,6 +45,11 @@ nav.breadcrumb,
     font-weight: normal;
 }
 
+#main-logo {
+    position: relative;
+    z-index: 1;
+}
+
 #logo-menu,
 #logo-scroll,
 .flex-prev,
@@ -54,8 +59,4 @@ nav.breadcrumb,
 .b-close,
 .flex-control-nav a {
     behavior: url(/PIE.htc);
-}
-
-#logo-scroll {
-    z-index: 2000;
 }
