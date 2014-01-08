@@ -55,3 +55,7 @@ nav.breadcrumb,
 .flex-control-nav a {
     behavior: url(/PIE.htc);
 }
+
+#logo-scroll {
+    z-index: 2000;
+}
