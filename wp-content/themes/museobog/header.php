@@ -29,7 +29,7 @@
         ?>
 
         <!--[if lt IE 9]>
-        <script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js" media="all"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/selectivizr.js" media="all"></script>
         <script src="<?php bloginfo('template_directory'); ?>/js/respond.min.js" media="all"></script>
         <![endif]-->
     </head>
