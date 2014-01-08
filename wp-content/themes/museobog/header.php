@@ -70,7 +70,7 @@
 
             <div id="content-header-rigth">
                 <div id="logo-bogota">
-                    <img src="<?php bloginfo('template_directory'); ?>/images/logo_bogota_ByN.svg" alt="Logo Bogota" />
+                    <img src="<?php bloginfo('template_directory'); ?>/images/logo_bogota_ByN.svg" alt="Logo Bogota" onerror="this.onerror=null; this.src='<?php bloginfo('template_directory'); ?>/images/logo_bogota_ByN.png'"/>
                 </div>
 
                 <nav id="social-nav">

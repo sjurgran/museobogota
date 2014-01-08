@@ -4,7 +4,7 @@
 <footer role="contentinfo">
     <div class="footer-content">
         <div class="footer-block">
-            <img src="<?php bloginfo('template_directory'); ?>/images/logo_bogota_color.svg" class="imgBogota"/>
+            <img src="<?php bloginfo('template_directory'); ?>/images/logo_bogota_color.svg" class="imgBogota" onerror="this.onerror=null; this.src='<?php bloginfo('template_directory'); ?>/images/logo_bogota_color.png'"/>
             <h2>INSTITUTO DISTRITAL DE PATRIMONIO CULTURAL</h2>
             <p>
                 Sector de Cutura, Recreación y Deporte<br />
