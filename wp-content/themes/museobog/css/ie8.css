@@ -45,9 +45,8 @@ nav.breadcrumb,
     font-weight: normal;
 }
 
-#main-logo {
-    position: relative;
-    z-index: 1;
+#logo-scroll {
+    z-index: 2000;
 }
 
 #logo-menu,

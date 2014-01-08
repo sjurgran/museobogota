@@ -55,7 +55,7 @@
                 </ul>
             </nav>
 
-            <a href="<?php echo pll_home_url('/'); ?>" rel="home" id="main-logo">
+            <a href="<?php echo pll_home_url('/'); ?>" rel="home">
                 <h1 id="logo-scroll">b</h1>
                 <div class="logo">
                     <h1><?php bloginfo('name'); ?></h1>
