@@ -826,7 +826,9 @@ li.agenda:hover .carousel-item-info {
     right: 0;
 }
 .tr-freetype .flex-prev,
-.tr-freetype .flex-next {
+.tr-freetype .flex-next,
+.tr-coretext .flex-prev,
+.tr-coretext .flex-next {
     line-height: 24px;
     padding-top: 8px;
 }
@@ -869,7 +871,9 @@ div.type-collection h3 {
     width: 22px;
 }
 .tr-freetype .pagination a.prev,
-.tr-freetype .pagination a.next {
+.tr-freetype .pagination a.next,
+.tr-coretext .pagination a.prev,
+.tr-coretext .pagination a.next {
     line-height: 18px;
     padding-top: 4px;
 }
@@ -929,7 +933,8 @@ div.type-collection h3 {
     top: 4px;
     width: 32px;
 }
-.tr-freetype .b-close {
+.tr-freetype .b-close,
+.tr-coretext .b-close {
     line-height: 28px;
     padding-top: 4px;
 }
