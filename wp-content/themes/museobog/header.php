@@ -21,6 +21,7 @@
         <![endif]-->
 
         <?php
+        wp_enqueue_script('typerenderingmix', get_bloginfo('template_directory') . '/js/trmix.min.js', false, '0.3', true);
         wp_enqueue_script('flexslider', get_bloginfo('template_directory') . '/js/jquery.flexslider.js', array('jquery'), '2.2.0', true);
         wp_enqueue_script('sharrre', get_bloginfo('template_directory') . '/js/jquery.sharrre.min.js', array('jquery'), '1.3.5', true);
         wp_enqueue_script('bpopup', get_bloginfo('template_directory') . '/js/jquery.bpopup.min.js', array('jquery'), '0.9.4', true);
