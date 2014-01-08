@@ -18,7 +18,6 @@
         <!--[if lt IE 9]>
         <link rel="stylesheet" href="<?php bloginfo('template_directory'); ?>/css/ie8.css">
         <script src="<?php bloginfo('template_directory'); ?>/js/html5shiv.js" media="all"></script>
-        <script src="<?php bloginfo('template_directory'); ?>/js/respond.min.js" media="all"></script>
         <![endif]-->
 
         <?php
@@ -28,6 +27,11 @@
         wp_enqueue_script('main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), null, true);
         wp_head();
         ?>
+
+        <!--[if lt IE 9]>
+        <script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js" media="all"></script>
+        <script src="<?php bloginfo('template_directory'); ?>/js/respond.min.js" media="all"></script>
+        <![endif]-->
     </head>
     <body <?php body_class(); ?>>
 

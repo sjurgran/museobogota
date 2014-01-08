@@ -53,10 +53,6 @@
 
 <?php wp_footer(); ?>
 
-<!--[if lt IE 9]>
-<script src="<?php bloginfo('template_directory'); ?>/js/selectivizr-min.js" media="all"></script>
-<![endif]-->
-
 <!-- Google Analytics - Optimized version by Mathias Bynens -->
 <!-- See: http://mathiasbynens.be/notes/async-analytics-snippet -->
 <!-- Change the UA-XXXX-XX string to your site's ID -->
