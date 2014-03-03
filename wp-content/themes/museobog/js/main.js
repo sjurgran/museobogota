@@ -4,7 +4,7 @@ var map;
     /*
      * Menu Scroll
      */
-    var heightNav = 116;
+    var heightNav = 140;
     $(window).scroll(function() {
         var wSroll = $(window).scrollTop(),
         winWidth = $(window).width();

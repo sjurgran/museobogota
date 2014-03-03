@@ -203,13 +203,15 @@ header {
     box-sizing: border-box;
     display: none;
     color: #fff;
-    font-size: 2.1em;
-    height: 40px;
-    padding: 3px 10px;
+    font-size: 2em;
+    height: 36px;
+    line-height: 36px;
+    margin: 11px 0;
+    padding: 4px 9px;
     position: absolute;
     text-transform: lowercase;
     top: 0;
-    width: 40px;
+    width: 36px;
 }
 .toggle-menu {
     cursor: pointer;
@@ -278,6 +280,14 @@ header {
 
 .collection-description {
     border-top: 0;
+}
+
+/*we don't want anchor links behind fixed header*/
+.main-block[id]:before {
+    content: "";
+    display: block;
+    height: 67px;
+    margin-top: -67px;
 }
 
 
@@ -1344,7 +1354,10 @@ div.type-collection h3 {
         display: none;
     }
     .comprimido #main-nav {
-        margin: 1.75em 60px 0.75em
+        margin: 1em 60px 0.5em;
+    }
+    .comprimido #main-nav .menu {
+        margin-bottom: 0.5em;
     }
     .comprimido #main-nav li {
         display: inline-block;
@@ -1365,7 +1378,7 @@ div.type-collection h3 {
         display: block;
     }
     .comprimido #content-header-rigth {
-        top: 12px;
+        top: 0;
     }
 
 
