@@ -378,7 +378,7 @@ footer a{
     -moz-osx-font-smoothing: grayscale;
 }
 .social-share a:before {
-    font: 2.5em/1 'icomoon';
+    font: 2em/1.125 'icomoon';
 }
 
 .replace-icon,
