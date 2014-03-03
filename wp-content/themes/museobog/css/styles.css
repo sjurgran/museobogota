@@ -195,7 +195,14 @@ header {
     content: " >";
 }
 #main-nav .sub-menu {
-    display: none;
+    padding-left: 12px;
+}
+#main-nav .sub-menu .menu-item {
+    border: none;
+    padding: 0.75em 0 0;
+}
+#main-nav .sub-menu a {
+    font-size: 1.125em;
 }
 #logo-scroll{
     background: #000;
@@ -1032,6 +1039,9 @@ div.type-collection h3 {
         content: "";
     }
 
+    #main-nav .sub-menu {
+        display: none;
+    }
     #main-nav .menu-item:hover .sub-menu,
     #main-nav .current-menu-item .sub-menu {
         display: inline-block;
@@ -1039,6 +1049,7 @@ div.type-collection h3 {
     }
     #main-nav .sub-menu .menu-item {
         display: inline-block;
+        padding: 0;
     }
     #main-nav .sub-menu .menu-item:first-child:after {
         content: ' /';
