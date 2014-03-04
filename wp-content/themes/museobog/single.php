@@ -39,6 +39,7 @@
                     <ul id="sharrre">
                         <li id="facebook-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Like"></li>
                         <li id="twitter-share" data-url="<?php the_permalink(); ?>" data-text="<?php the_title(); ?>" data-title="Tweet"></li>
+                        <li id="flickr-fake-share"><a title="Visit Flickr" href="http://flickr.com"></a></li>
                     </ul>
                 </div>
 
