@@ -26,6 +26,7 @@
         wp_enqueue_script('sharrre', get_bloginfo('template_directory') . '/js/jquery.sharrre.min.js', array('jquery'), '1.3.5', true);
         wp_enqueue_script('bpopup', get_bloginfo('template_directory') . '/js/jquery.bpopup.min.js', array('jquery'), '0.9.4', true);
         wp_enqueue_script('main', get_bloginfo('template_directory') . '/js/main.js', array('jquery'), null, true);
+        wp_localize_script( 'main', 'theme_url', content_url('themes/museobog/') );
         wp_head();
         ?>
 

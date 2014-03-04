@@ -1,4 +1,5 @@
 var map;
+
 (function($) {
 
     /*
@@ -201,17 +202,15 @@ var map;
     });
 
 })(jQuery);
+
 function initializeMap() {
 
-    var museoBogota = new google.maps.LatLng(4.596002290218719, -74.07288287008362);
-    var flagIcon_front = new google.maps.MarkerImage("http://museobog.8manos.in/wp-content/themes/museobog/images/marker1.png");
-    var flagIcon_front1 = new google.maps.MarkerImage("http://museobog.8manos.in/wp-content/themes/museobog/images/marker.png");
+    var museoBogota = new google.maps.LatLng(4.59600229, -74.07288287);
+    var flagIcon_front = new google.maps.MarkerImage(theme_url+"images/marker1.png");
+    var flagIcon_front1 = new google.maps.MarkerImage(theme_url+"images/marker.png");
     var mapOptions = {
-        scrollwheel: false,
         zoom: 17,
-        center: museoBogota,
-        disableDefaultUI: true,
-        mapTypeId: google.maps.MapTypeId.ROADMAP,
+        center: museoBogota
     }
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     var marker = new google.maps.Marker({
@@ -221,7 +220,7 @@ function initializeMap() {
         icon: flagIcon_front,
     });
     var marker1 = new google.maps.Marker({
-        position: new google.maps.LatLng(4.594890078283823, -74.07349441373901),
+        position: new google.maps.LatLng(4.59489008, -74.07349441),
         map: map,
         title: '',
         icon: flagIcon_front1,

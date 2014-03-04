@@ -273,6 +273,9 @@ header {
     padding: 0;
     width: 100%;
 }
+#map-canvas img {
+    max-width: none;
+}
 .labels {
     color: red;
     background-color: white;
