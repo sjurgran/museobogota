@@ -30,6 +30,7 @@ function minimal_theme_setup() {
     // Most themes need featured images.
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(156, 156, true);
+    add_image_size('slide', 1400, 586, true);
     add_image_size('wide', 996, 999); //996 pixels wide (and "unlimited" height)
     add_image_size('half', 588, 391, true);
     add_image_size('big-thumb', 384, 384, true);

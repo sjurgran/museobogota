@@ -102,6 +102,7 @@ var map;
     if ($('#main-slider').length > 0) {
         $('#main-slider').flexslider({
             animation: 'slide',
+            slideshow: false,
             touch: false,
             prevText: '<',
             nextText: '>',

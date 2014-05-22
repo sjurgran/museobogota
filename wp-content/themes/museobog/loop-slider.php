@@ -17,7 +17,7 @@ while ( $slider_query->have_posts() ) : $slider_query->the_post();
 
 	<li <?php post_class(); ?> id="post-<?php the_ID(); ?>">
 		<a class="slider-picture" href="<?php echo $event_url; ?>">
-			<?php the_post_thumbnail('full'); ?>
+			<?php the_post_thumbnail('slide'); ?>
 			<div class="slider-overlay">
 				<h2 class="slider-title"><?php the_title(); ?></h2>
 				<h3 class="slider-subtitle icon-plus"><?php echo $the_tag->name; ?></h3>
