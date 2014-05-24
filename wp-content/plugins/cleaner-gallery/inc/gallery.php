@@ -181,7 +181,7 @@ function cleaner_gallery( $output, $attr ) {
 		$output .= "\n\t\t\t</div>";
 
 	/* Close the gallery <div>. */
-	$output .= "\n\t\t\t</div><!-- .gallery -->\n";
+	$output .= "\n\t\t\t</ul><!-- .gallery -->\n";
 
 	/* Return out very nice, valid HTML gallery. */
 	return $output;

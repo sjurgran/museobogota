@@ -906,6 +906,74 @@ div.type-collection h3 {
     margin: 0 10px;
 }
 
+#gallery-slider {
+    position: relative;
+}
+#gallery-slider .gallery-item {
+    border-color: #000;
+    border-style: solid;
+    border-width: 2px 0;
+    height: 280px;
+    margin-bottom: 80px;
+    padding: 8px 0;
+    position: relative;
+    text-align: center;
+}
+#gallery-slider .gallery-item:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    margin-right: -0.25em; /* Adjusts for spacing */
+    vertical-align: middle;
+}
+#gallery-slider img {
+    display: inline-block;
+    max-height: 100%;
+    width: auto;
+}
+#gallery-slider .gallery-caption {
+    background: rgba(0, 0, 0, 0.8);
+    bottom: 0;
+    box-sizing: border-box;
+    color: #fff;
+    height: auto;
+    padding: 0 8px 40px;
+    position: absolute;
+    text-align: left;
+    width: 100%;
+}
+#gallery-slider .caption-btn {
+    border-radius: 50%;
+    cursor: pointer;
+    left: 50%;
+    line-height: 28px;
+    margin-left: -16px;
+    padding: 4px 0 0;
+    position: absolute;
+    text-align: center;
+    width: 32px;
+}
+#gallery-slider .open-caption {
+    background: #000;
+    color: #fff;
+    display: none;
+    font-size: 24px;
+    font-weight: 900;
+    top: 8px;
+}
+#gallery-slider .close-caption {
+    background: #fff;
+    bottom: 8px;
+    color: #000;
+    font-size: 32px;
+    font-weight: 800;
+}
+#gallery-slider .flex-prev,
+#gallery-slider .flex-next {
+    top: 100%;
+    margin-top: -72px;
+}
+
 
 /* ==========================================================================
    States
@@ -957,6 +1025,18 @@ div.type-collection h3 {
 .tr-coretext .b-close {
     line-height: 28px;
     padding-top: 4px;
+}
+
+
+#gallery-slider .gallery-caption.closed {
+    height: 0;
+    padding: 0;
+}
+#gallery-slider .gallery-caption.closed .open-caption {
+    display: block;
+}
+#gallery-slider .gallery-caption.closed .close-caption {
+    display: none;
 }
 
 /* ==========================================================================
@@ -1188,6 +1268,29 @@ div.type-collection h3 {
     }
     .flex-control-nav a.flex-active {
         border-color: #000;
+    }
+
+    #gallery-slider .gallery-item {
+        height: 480px;
+        margin-bottom: 16px;
+        padding: 16px 0;
+    }
+    #gallery-slider img {
+        max-width: 640px;
+    }
+    #gallery-slider .open-caption {
+        left: auto;
+        right: 8px;
+        top: -40px;
+    }
+    #gallery-slider .close-caption {
+        float: right;
+        margin: 16px 0;
+        position: static;
+    }
+    #gallery-slider .flex-prev, #gallery-slider .flex-next {
+        top: 50%;
+        margin-top: -16px;
     }
 
     .main-block {
@@ -1495,6 +1598,16 @@ div.type-collection h3 {
     }
     #main-slider .flex-next {
         right: 0;
+    }
+
+    #gallery-slider .gallery-item {
+        height: 640px;
+    }
+    #gallery-slider img {
+        max-width: 1000px;
+    }
+    #gallery-slider .open-caption {
+        right: 16px;
     }
 
 

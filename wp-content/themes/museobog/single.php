@@ -11,7 +11,7 @@
             }
 
             $gallery_args = array(
-                'size' => 'full',
+                'size' => 'gallery',
                 'columns' => -1,
                 'link' => 'none',
                 'itemtag' => 'li',
@@ -19,9 +19,15 @@
                 'captiontag' => 'div'
             );
             $gallery = gallery_shortcode( $gallery_args );
-            ?>
 
-            <?php the_post_thumbnail('full'); ?>
+            if ( is_singular( 'collection' ) ) {
+                echo '<div id="gallery-slider" class="flexslider">';
+                echo $gallery;
+                echo '</div>';
+            } else {
+                the_post_thumbnail('slide');
+            }
+            ?>
 
             <div class="article-info">
                 <h1><?php the_title(); ?></h1>

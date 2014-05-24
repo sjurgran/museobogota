@@ -156,14 +156,23 @@ var map;
     }
 
     //galerías
-    /*if ($('#gallery-slider').length > 0) {
+    if ($('#gallery-slider').length > 0) {
         $('#gallery-slider').flexslider({
             animation: 'slide',
+            slideshow: false,
             controlNav: false,
             prevText: '<',
             nextText: '>'
         });
-    }*/
+    }
+    function toggleCaption() {
+        $(this).parent().toggleClass('closed');
+    }
+    $('.caption-btn').click(toggleCaption);
+    //al comienzo oculto el caption y activo el botón de cerrar (prog. enhancement)
+    $('.close-caption').each(function() {
+        $(this).click();
+    });
 
     //botones share
     $('#facebook-share').sharrre({

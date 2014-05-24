@@ -31,6 +31,7 @@ function minimal_theme_setup() {
     add_theme_support('post-thumbnails');
     set_post_thumbnail_size(156, 156, true);
     add_image_size('slide', 1400, 586, true);
+    add_image_size('gallery', 1000, 640);
     add_image_size('wide', 996, 999); //996 pixels wide (and "unlimited" height)
     add_image_size('half', 588, 391, true);
     add_image_size('big-thumb', 384, 384, true);
@@ -344,10 +345,11 @@ function display_pagination($current_page, $total, $base_url = '', $format = '')
 }
 
 /**
- * Título de imágen antes del captio en la gaĺería
+ * Título de imágen antes del caption en la gaĺería
  */
 function add_title_before_caption($caption, $img_id) {
-    $output = '<span class="close-caption">X</span>';
+    $output = '<span class="open-caption caption-btn">i</span>';
+    $output .= '<span class="close-caption caption-btn">x</span>';
     $output .= '<h4 class="gallery-title">'.get_the_title($img_id).'</h4>';
     $output .= '<p>'.$caption.'</p>';
     return $output;
