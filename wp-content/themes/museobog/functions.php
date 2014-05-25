@@ -356,6 +356,14 @@ function add_title_before_caption($caption, $img_id) {
 }
 add_filter( 'cleaner_gallery_caption', 'add_title_before_caption', 20, 2 );
 
+/**
+ * Wrap para la galería con Flex Slider
+ */
+function flex_gallery( $output) {
+    return '<div id="gallery-slider" class="flexslider">' . $output . '</div>';
+}
+add_filter( 'post_gallery', 'flex_gallery', 10, 4 );
+
 
 /**
  * Search SEO friendly

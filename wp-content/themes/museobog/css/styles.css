@@ -1293,6 +1293,10 @@ div.type-collection h3 {
         margin-top: -16px;
     }
 
+    .article-content #gallery-slider img {
+        max-width: 100%;
+    }
+
     .main-block {
         border: 0;
     }
@@ -1608,6 +1612,10 @@ div.type-collection h3 {
     }
     #gallery-slider .open-caption {
         right: 16px;
+    }
+
+    .article-content #gallery-slider img {
+        max-width: 100%;
     }
 
 

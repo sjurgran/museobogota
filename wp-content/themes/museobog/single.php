@@ -21,9 +21,7 @@
             $gallery = gallery_shortcode( $gallery_args );
 
             if ( is_singular( 'collection' ) ) {
-                echo '<div id="gallery-slider" class="flexslider">';
                 echo $gallery;
-                echo '</div>';
             } else {
                 the_post_thumbnail('slide');
             }
