@@ -26,7 +26,7 @@ class PLL_Switcher {
 		);
 
 		if ($type != 'menu')
-			$options['dropdown'] = array('string' => __('Displays as dropdown', 'polylang'), 'default' => 0);
+			$options = array('dropdown' => array('string' => __('Displays as dropdown', 'polylang'), 'default' => 0)) + $options;
 
 		return array_map(create_function('$v', "return \$v['$key'];"), $options);
 	}
@@ -52,8 +52,8 @@ class PLL_Switcher {
 			$classes = array('lang-item', 'lang-item-' . esc_attr($id), 'lang-item-' . esc_attr($slug));
 
 			if ($current_lang = pll_current_language() == $slug) {
-				if ($hide_current)
-					continue; // hide current language
+				if ($hide_current && !$dropdown)
+					continue; // hide current language except for dropdown
 				else
 					$classes[] = 'current-lang';
 			}

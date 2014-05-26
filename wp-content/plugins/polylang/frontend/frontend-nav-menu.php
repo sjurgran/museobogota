@@ -22,10 +22,7 @@ class PLL_Frontend_Nav_Menu {
 		add_filter('nav_menu_link_attributes', array(&$this, 'nav_menu_link_attributes'), 10, 3);
 
 		// filters menus by language
-		if (isset($_POST['wp_customize'], $_POST['customized']))
-			add_action('pll_language_defined', array(&$this, 'customizer_locations')); // theme customizer
-		else
-			add_filter('theme_mod_nav_menu_locations', array($this, 'nav_menu_locations'), 20);
+		add_filter('theme_mod_nav_menu_locations', array($this, 'nav_menu_locations'), 20);
 	}
 
 	/*
@@ -96,18 +93,21 @@ class PLL_Frontend_Nav_Menu {
 		$r_ids = $k_ids = array();
 
 		foreach ($items as $item) {
-			if (is_array($item->classes) && in_array('current-lang', $item->classes)) {
-				$item->classes = array_diff($item->classes, array('current-menu-item'));
-				$r_ids = array_merge($r_ids, $this->get_ancestors($item)); // remove the classes for these ancestors
+			if (!empty($item->classes) && is_array($item->classes)) {
+				if (in_array('current-lang', $item->classes)) {
+					$item->classes = array_diff($item->classes, array('current-menu-item'));
+					$r_ids = array_merge($r_ids, $this->get_ancestors($item)); // remove the classes for these ancestors
+				}
+				elseif (in_array('current-menu-item', $item->classes)) {
+					$k_ids = array_merge($k_ids, $this->get_ancestors($item)); // keep the classes for these ancestors
+				}
 			}
-			elseif (is_array($item->classes) && in_array('current-menu-item', $item->classes))
-				$k_ids = array_merge($k_ids, $this->get_ancestors($item)); // keep the classes for these ancestors
 		}
 
 		$r_ids = array_diff($r_ids, $k_ids);
 
 		foreach ($items as $item) {
-			if (in_array($item->db_id, $r_ids))
+			if (!empty($item->db_id) && in_array($item->db_id, $r_ids))
 				$item->classes = array_diff($item->classes, array('current-menu-ancestor', 'current-menu-parent', 'current_page_parent', 'current_page_ancestor'));
 		}
 
@@ -138,36 +138,35 @@ class PLL_Frontend_Nav_Menu {
 	 * @return array|bool modified list of nav menus locations
 	 */
 	public function nav_menu_locations($menus) {
-		if (is_array($menus))
-			$theme = get_option('stylesheet');
+		if (is_array($menus)) {
+			// support for theme customizer
+			// let's look for multilingual menu locations directly in $_POST as tehre are not in customizer object
+			if (isset($_POST['wp_customize'], $_POST['customized'])) {
+				$customized = json_decode(wp_unslash($_POST['customized']));
 
-			foreach ($menus as $loc => $menu) {
-				if (!empty($this->options['nav_menus'][$theme][$loc][$this->curlang->slug]))
-					$menus[$loc] = $this->options['nav_menus'][$theme][$loc][$this->curlang->slug];
-			}
-
-		return $menus;
-	}
-
-	/*
-	 * hack $_POST to allow the customizer to find the right menu in the right language
-	 *
-	 * @since 1.2
-	 */
-	public function customizer_locations() {
-		$customized = json_decode($_POST['customized']);
-
-		if (is_object($customized)) {
-			foreach ($customized as $key => $c) {
-				if (false !== strpos($key, 'nav_menu_locations[')) {
-					$loc = substr(trim($key, ']'), 19);
-					if (($pos = strpos($loc, '___')) && substr($loc, $pos+3) == $this->curlang->slug) {
-						$loc = 'nav_menu_locations[' . substr($loc, 0, $pos) . ']';
-						$customized->$loc = $c;
+				if (is_object($customized)) {
+					foreach ($customized as $key => $c) {
+						if (false !== strpos($key, 'nav_menu_locations[')) {
+							$loc = substr(trim($key, ']'), 19);
+							if (($pos = strpos($loc, '___')) && substr($loc, $pos+3) == $this->curlang->slug) {
+								$loc = substr($loc, 0, $pos);
+								$menus[$loc] = $c;
+							}
+						}
 					}
 				}
 			}
-			$_POST['customized'] = json_encode($customized);
+
+			// otherwise get multilingual menu locations from DB
+			else {
+				$theme = get_option('stylesheet');
+
+				foreach ($menus as $loc => $menu) {
+					if (!empty($this->options['nav_menus'][$theme][$loc][$this->curlang->slug]))
+						$menus[$loc] = $this->options['nav_menus'][$theme][$loc][$this->curlang->slug];
+				}
+			}
 		}
+		return $menus;
 	}
 }

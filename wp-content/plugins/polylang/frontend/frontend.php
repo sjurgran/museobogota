@@ -22,7 +22,7 @@ class PLL_Frontend extends PLL_Base{
 		add_action('pll_language_defined', array(&$this, 'pll_language_defined'), 1, 2);
 
 		// filters posts by language
-		add_filter('parse_query', array(&$this, 'parse_query'), 6); // after PLL_Frontend_Filters::parse_query
+		add_filter('parse_query', array(&$this, 'parse_query'), 6);
 
 		// not before 'check_language_code_in_url'
 		if (!defined('PLL_AUTO_TRANSLATE') || PLL_AUTO_TRANSLATE)
@@ -74,11 +74,21 @@ class PLL_Frontend extends PLL_Base{
 	public function parse_query($query) {
 		$qv = $query->query_vars;
 
+		// to avoid conflict beetwen taxonomies
+		// FIXME generalize post format like taxonomies (untranslated but filtered)
+		$has_tax = false;
+		if (isset($query->tax_query->queries))
+			foreach ($query->tax_query->queries as $tax)
+				if ('post_format' != $tax['taxonomy'])
+					$has_tax = true;
+
 		// allow filtering recent posts and secondary queries by the current language
 		// take care not to break queries for non visible post types such as nav_menu_items
 		// do not filter if lang is set to an empty value
-		if (/*$query->is_home &&*/ !empty($this->curlang) && !isset($qv['lang']) && (empty($qv['post_type']) || $this->model->is_translated_post_type($qv['post_type'])))
-			$query->set('lang', $this->curlang->slug);
+		// do not filter single page and translated taxonomies to avoid conflicts
+		if (!empty($this->curlang) && !isset($qv['lang']) && !$has_tax && empty($qv['page_id']) && empty($qv['pagename']) && (empty($qv['post_type']) || $this->model->is_translated_post_type($qv['post_type']))) {
+			$this->choose_lang->set_lang_query_var($query, $this->curlang);
+		}
 
 		// modifies query vars when the language is queried
 		if (!empty($qv['lang'])) {
@@ -98,12 +108,6 @@ class PLL_Frontend extends PLL_Base{
 				unset($query->queried_object);
 			}
 		}
-
-		// to avoid conflict beetwen taxonomies
-		if (isset($query->tax_query->queries))
-			foreach ($query->tax_query->queries as $tax)
-				if (pll_is_translated_taxonomy($tax['taxonomy']))
-					unset($query->query_vars['lang']);
 	}
 
 	/*
