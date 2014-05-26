@@ -1,8 +1,6 @@
 <?php
-$posttags = get_the_tags();
-if ($posttags) {
-    $the_tag = reset($posttags);
-}
+$subtitle = get_post_meta($post->ID, "_subtitle", true);
+
 $datePostStart = get_post_meta($post->ID, "_start_date", true);
 
 $start_date = format_event_date($datePostStart);
@@ -19,7 +17,7 @@ $GLOBALS["diff"][] = $diff_today;
         <div class="carousel-item-info">
             <h5><?php the_title(); ?></h5>
 
-            <p><?php echo $the_tag->name; ?></p>
+            <p><?php echo $subtitle; ?></p>
             <time><?php _e('Hasta', 'museobog'); ?> <?php echo $end_date; ?></time>
         </div>
     </a>

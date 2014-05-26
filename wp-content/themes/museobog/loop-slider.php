@@ -6,10 +6,7 @@ $slider_query = new WP_Query(array(
 
 while ( $slider_query->have_posts() ) : $slider_query->the_post();
 
-	$posttags = get_the_tags();
-	if ($posttags) {
-		$the_tag = reset($posttags);
-	}
+	$subtitle = get_post_meta($post->ID, "_subtitle", true);
 
 	$event_id = get_post_meta( $post->ID, "_link", true );
 	$event_url = get_permalink( $event_id );
@@ -20,7 +17,7 @@ while ( $slider_query->have_posts() ) : $slider_query->the_post();
 			<?php the_post_thumbnail('slide'); ?>
 			<div class="slider-overlay">
 				<h2 class="slider-title"><?php the_title(); ?></h2>
-				<h3 class="slider-subtitle icon-plus"><?php echo $the_tag->name; ?></h3>
+				<h3 class="slider-subtitle icon-plus"><?php echo $subtitle; ?></h3>
 			</div>
 		</a>
 		<div class="slider-info">

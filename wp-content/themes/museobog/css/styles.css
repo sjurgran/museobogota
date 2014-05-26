@@ -305,6 +305,7 @@ header {
    Layout - Footer
    ========================================================================== */
 footer{
+    clear: both;
     margin-top: 1em;
     padding: 0 20px;
 }
@@ -805,6 +806,7 @@ li.agenda {
     left: 0;
     padding: 2.5em 4px 4px;
     position: absolute;
+    text-align: left;
     top: 0;
     width: 100%;
 }

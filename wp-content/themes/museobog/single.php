@@ -5,9 +5,14 @@
     <article <?php post_class(); ?>>
         <?php
         while (have_posts()) : the_post();
-            $posttags = get_the_tags();
-            if ($posttags) {
-                $the_tag = reset($posttags);
+            $subtitle = get_post_meta($post->ID, "_subtitle", true);
+
+            $types = get_the_terms( $post->ID, 'type' );
+            if ( $types ) {
+                foreach ( $types as $type_object ) {
+                    $types_array[] = $type_object->name;
+                }
+                $post_types = join( ", ", $types_array );
             }
 
             $gallery_args = array(
@@ -29,7 +34,13 @@
 
             <div class="article-info">
                 <h1><?php the_title(); ?></h1>
-                <h3><?php echo $the_tag->name; ?></h3>
+                <h3><?php echo $subtitle; ?></h3>
+
+                <?php if ( $types ): ?>
+                    <p>
+                        <strong>Tipo: </strong><?php echo $post_types; ?>
+                    </p>
+                <?php endif; ?>
 
                 <?php the_excerpt(); ?>
             </div>
@@ -57,10 +68,12 @@
 
             <ul>
                 <?php
+                $post_tags = wp_get_post_tags( $post->ID, array( 'fields' => 'ids' ) );
+
                 $related_query = new WP_Query(array(
                     'post_type' => 'agenda',
                     'posts_per_page' => 2,
-                    'tag_id' => $the_tag->ID,
+                    'tag__in' => $post_tags,
                     'post__not_in' => array($post->ID),
                     'orderby' => 'rand',
                 ));

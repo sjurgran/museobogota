@@ -109,8 +109,7 @@ function museo_custom_post_types() {
     $args = array(
         'public' => true,
         'label' => 'Slider',
-        'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-        'taxonomies' => array('post_tag')
+        'supports' => array('title', 'editor', 'thumbnail', 'excerpt')
     );
     register_post_type('slider', $args);
 
@@ -140,8 +139,30 @@ function museo_custom_post_types() {
     );
     register_post_type('work', $args);
 }
-
 add_action('init', 'museo_custom_post_types');
+
+/**
+ * Taxonomies
+ */
+function museo_taxonomies() {
+    register_taxonomy( 'type', array('agenda', 'collection', 'work'), array(
+        'labels'       => array(
+            'name'               => __('Tipos', 'museobog'),
+            'singular_name'      => __('Tipo', 'museobog'),
+            'add_new_item'       => __('Añadir Nuevo Tipo', 'museobog'),
+            'edit_item'          => __('Editar Tipo', 'museobog'),
+            'new_item'           => __('Nuevo Tipo', 'museobog'),
+            'view_item'          => __('Ver Tipo', 'museobog'),
+            'search_items'       => __('Buscar Tipos', 'museobog'),
+            'not_found'          => __('No se encontro Tipo', 'museobog'),
+            'not_found_in_trash' => __('No se encontro Tipo en papelera', 'museobog'),
+            'parent_item_colon'  => __('Tipo padre', 'museobog')
+        ),
+        'show_admin_column' => true,
+        'hierarchical' => true
+    ) );
+}
+add_action( 'init', 'museo_taxonomies' );
 
 /**
  * Widgets
@@ -162,12 +183,19 @@ add_action('widgets_init', 'museo_widgets_init');
  * Custom fields
  */
 function museo_custom_fields($groups) {
+    $subtitle = array(
+        'id' => 'subtitle',
+        'title' => __('Subtitulo', 'museobog'),
+        'type' => 'text'
+    );
+
     $my_group = array(
         'agenda' => array(
             array(
-                'id' => 'dates',
-                'title' => __('Fechas', 'museobog'),
+                'id' => 'info',
+                'title' => __('Info', 'museobog'),
                 'fields' => array(
+                    $subtitle,
                     array(
                         'id' => 'start_date',
                         'title' => __('Fecha de inicio', 'museobog'),
@@ -190,6 +218,7 @@ function museo_custom_fields($groups) {
                 'id' => 'info',
                 'title' => __('Info', 'museobog'),
                 'fields' => array(
+                    $subtitle,
                     array(
                         'id' => 'link',
                         'title' => __('Enlace', 'museobog'),
@@ -205,14 +234,24 @@ function museo_custom_fields($groups) {
         ),
         'collection' => array(
             array(
-                'id' => 'date',
-                'title' => __('Fecha', 'museobog'),
+                'id' => 'info',
+                'title' => __('Info', 'museobog'),
                 'fields' => array(
+                    $subtitle,
                     array(
                         'id' => 'date',
                         'title' => __('Fecha', 'museobog'),
                         'type' => 'text'
                     )
+                )
+            )
+        ),
+        'work' => array(
+            array(
+                'id' => 'info',
+                'title' => __('Info', 'museobog'),
+                'fields' => array(
+                    $subtitle
                 )
             )
         )
