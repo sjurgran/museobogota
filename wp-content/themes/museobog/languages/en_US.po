@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Museo\n"
-"POT-Creation-Date: 2014-01-07 09:32-0500\n"
-"PO-Revision-Date: 2014-01-07 09:35-0500\n"
+"POT-Creation-Date: 2014-05-26 08:46-0500\n"
+"PO-Revision-Date: 2014-05-26 08:48-0500\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_US\n"
@@ -20,15 +20,15 @@ msgid "No hemos encontrado lo que buscabas"
 msgstr "It seems we can't find what you're looking for"
 
 #: ../404.php:7
-#, fuzzy, php-format
+#, php-format
 msgid "Puedes regresar al <a href=\"%s\">inicio</a> o realizar una búsqueda."
 msgstr ""
 "You can visit our <a href=\"%s\">home page</a> or search what you're looking "
 "for."
 
 #: ../archive.php:14 ../index.php:9
-msgid "Calendario de eventos"
-msgstr "Events calendar"
+msgid "Actividades"
+msgstr "Activities"
 
 #: ../archive.php:24
 msgid "Historial"
@@ -42,7 +42,7 @@ msgstr "home"
 msgid "búsqueda"
 msgstr "search"
 
-#: ../event_item.php:23
+#: ../event_item.php:21
 msgid "Hasta"
 msgstr "Until"
 
@@ -66,51 +66,92 @@ msgstr "Design"
 msgid "Desarrollo"
 msgstr "Programming"
 
-#: ../functions.php:117
+#: ../functions.php:118
 msgid "Eventos"
 msgstr "Events"
 
-#: ../functions.php:126
+#: ../functions.php:127
 msgid "Colecciones"
 msgstr "Collections"
 
-#: ../functions.php:135
+#: ../functions.php:136
 msgid "Obras"
 msgstr "Featured Works"
 
-#: ../functions.php:167
-msgid "Fechas"
-msgstr "Dates"
+#: ../functions.php:150
+msgid "Tipos"
+msgstr "Types"
 
-#: ../functions.php:171
-msgid "Fecha de inicio"
-msgstr "Start date"
+#: ../functions.php:151
+msgid "Tipo"
+msgstr "Type"
 
-#: ../functions.php:178
-msgid "Fecha final"
-msgstr "End date"
+#: ../functions.php:152
+msgid "Añadir Nuevo Tipo"
+msgstr "Add New Type"
 
-#: ../functions.php:189
+#: ../functions.php:153
+msgid "Editar Tipo"
+msgstr "Edit Type"
+
+#: ../functions.php:154
+msgid "Nuevo Tipo"
+msgstr "New Type"
+
+#: ../functions.php:155
+msgid "Ver Tipo"
+msgstr "View Type"
+
+#: ../functions.php:156
+msgid "Buscar Tipos"
+msgstr "Search Types"
+
+#: ../functions.php:157
+msgid "No se encontro Tipo"
+msgstr "Type not found"
+
+#: ../functions.php:158
+msgid "No se encontro Tipo en papelera"
+msgstr "Type not found in thrash"
+
+#: ../functions.php:159
+msgid "Tipo padre"
+msgstr "Parent Type"
+
+#: ../functions.php:188
+msgid "Subtitulo"
+msgstr "Subtitle"
+
+#: ../functions.php:196 ../functions.php:219 ../functions.php:238
+#: ../functions.php:252
 msgid "Info"
 msgstr ""
 
-#: ../functions.php:193
+#: ../functions.php:201
+msgid "Fecha de inicio"
+msgstr "Start date"
+
+#: ../functions.php:208
+msgid "Fecha final"
+msgstr "End date"
+
+#: ../functions.php:224
 msgid "Enlace"
 msgstr "Link"
 
-#: ../functions.php:207 ../functions.php:211
+#: ../functions.php:243
 msgid "Fecha"
 msgstr "Fecha"
 
-#: ../header.php:45
+#: ../header.php:55
 msgid "Tamaño de letra"
 msgstr "Font size"
 
-#: ../header.php:59
+#: ../header.php:69
 msgid "menú"
 msgstr "menu"
 
-#: ../header.php:65
+#: ../header.php:75
 msgid "buscar"
 msgstr "search"
 
@@ -118,7 +159,7 @@ msgstr "search"
 msgid "Obra destacada del mes"
 msgstr "Featured work"
 
-#: ../loop-collection.php:25 ../loop-featured.php:19 ../loop-slider.php:33
+#: ../loop-collection.php:25 ../loop-featured.php:19 ../loop-slider.php:30
 msgid "más información"
 msgstr "more information"
 
@@ -141,20 +182,23 @@ msgstr "There are no results for your search. Try a different search"
 msgid "Search"
 msgstr ""
 
-#: ../single.php:45
+#: ../single.php:61
 msgid "Artículo creado"
 msgstr "Article created"
 
-#: ../single.php:46
+#: ../single.php:62
 msgid "Modificado"
 msgstr "Modified"
 
-#: ../single.php:51
+#: ../single.php:67
 msgid "Eventos Relacionados"
 msgstr "Related Events"
 
+#~ msgid "Fechas"
+#~ msgstr "Dates"
+
+#~ msgid "Calendario de eventos"
+#~ msgstr "Events calendar"
+
 #~ msgid "Mapa del sitio"
 #~ msgstr "Sitemap"
-
-#~ msgid "Buscar"
-#~ msgstr "Search"

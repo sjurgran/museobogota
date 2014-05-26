@@ -220,7 +220,8 @@ function initializeMap() {
     var flagIcon_front1 = new google.maps.MarkerImage(theme_url+"images/marker.png");
     var mapOptions = {
         zoom: 17,
-        center: museoBogota
+        center: museoBogota,
+        scrollwheel: false
     }
     map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
     var marker = new google.maps.Marker({

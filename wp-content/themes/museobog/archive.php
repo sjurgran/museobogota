@@ -11,7 +11,7 @@
 	</section>
 
 	<section class="main-block">
-		<h1 class="block-title"><?php _e('Calendario de eventos', 'museobog'); ?></h1>
+		<h1 class="block-title"><?php _e('Actividades', 'museobog'); ?></h1>
 
 		<div id="events-carousel" class="flexslider">
 			<ul class="slides">

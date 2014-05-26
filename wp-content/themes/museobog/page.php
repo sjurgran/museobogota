@@ -42,7 +42,7 @@
                 ?>
                 <article <?php post_class(); ?>>
                     <?php the_post_thumbnail($img_size); ?>
-                    <h2><?php the_title(); ?></h2>
+                    <h2 class="sub-article-title"><?php the_title(); ?></h2>
                     <?php the_content(); ?>
                 </article>
                 <?php
