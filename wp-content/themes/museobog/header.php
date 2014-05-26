@@ -50,7 +50,7 @@
         <header role="banner" id="header">
             <nav id="language-nav">
                 <ul class="menu menu-language">
-                    <?php pll_the_languages(array('hide_if_empty' => 0)); ?>
+                    <?php //pll_the_languages(array('hide_if_no_translation' => 1)); ?>
                     <li class="lang-item lang-item-font">
                         <a class="popup" href="#letra"><?php _e('Tamaño de letra', 'museobog'); ?></a>
                     </li>
