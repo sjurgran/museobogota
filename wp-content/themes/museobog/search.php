@@ -11,8 +11,14 @@
 
 					<div <?php post_class(); ?>>
 						<a href="<?php the_permalink(); ?>">
-							<?php the_post_thumbnail(); ?>
-							<h2><?php the_title(); ?></h2>
+							<?php
+							if (class_exists('MultiPostThumbnails') && MultiPostThumbnails::has_post_thumbnail(get_post_type(), 'small-img')) {
+								MultiPostThumbnails::the_post_thumbnail(get_post_type(), 'small-img');
+							} else {
+								the_post_thumbnail();
+							}
+							?>
+							<h2 class="sub-article-title"><?php the_title(); ?></h2>
 						</a>
 					</div>
 

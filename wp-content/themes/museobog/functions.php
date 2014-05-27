@@ -164,6 +164,19 @@ function museo_taxonomies() {
 }
 add_action( 'init', 'museo_taxonomies' );
 
+function museo_additional_img() {
+    if (class_exists('MultiPostThumbnails')) {
+        new MultiPostThumbnails(
+            array(
+                'label' => __('Imagen pequeña', 'museobog'),
+                'id' => 'small-img',
+                'post_type' => 'agenda'
+            )
+        );
+    }
+}
+add_action( 'init', 'museo_additional_img' );
+
 /**
  * Widgets
  */
